@@ -1,0 +1,41 @@
+# Environment
+.env
+
+# Docker volumes
+pg_data/
+
+# Large SQL dumps
+demo-medium-en-20170815.sql
+demo-medium-en.zip
+
+# OS
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Symlinked docs
+docs/
+
+# Subagent outputs
+subagents_outputs/
+
+# Claude ephemeral (config files ARE tracked)
+.claude/cache/
+.claude/debug/
+.claude/downloads/
+.claude/file-history/
+.claude/session-env/
+.claude/shell-snapshots/
+.claude/todos/
+.claude/tasks/
+.claude/history.jsonl
+.claude/stats-cache.json
+.claude/.credentials.json
+.claude/*.backup.*
