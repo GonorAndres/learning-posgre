@@ -125,6 +125,18 @@ Same queries, same data, different systems. Full analysis in [`bigquery/pg_vs_bq
 | Load | `google-cloud-bigquery` with ADC auth |
 | BigQuery SQL | Standard SQL equivalents with annotated syntax differences |
 
+### Visualization and Geospatial
+
+| Visualization | What it shows |
+|:-------------|:-------------|
+| Delay heatmap | Hour x day-of-week delay clustering (plotly) |
+| Revenue Pareto curve | Route revenue concentration with 80/20 line |
+| Load factor bars | Aircraft efficiency ranked (Boeing 777 at 72.8% to Cessna at 16%) |
+| Performance chart | Before/after indexing speedups (13x to 1,300x) |
+| Interactive route map | 104 airports + route lines colored by delay rate (folium) |
+| Delay hotspot map | Airports colored green-to-red by delay severity |
+| Geospatial SQL | Haversine distances in PG (`point` type) vs BQ (`ST_GEOGPOINT`) |
+
 ---
 
 ## Project Structure
@@ -140,6 +152,9 @@ learning_posgre/
     03_utilization.sql            # Load factor, turnaround time, fleet efficiency
     04_optimization.sql           # EXPLAIN ANALYZE before/after indexing
     05_materialized_views.sql     # Pre-computed dashboard views
+    06_geospatial.sql             # Haversine distances, route maps, revenue/km
+  notebooks/
+    flight_analytics.ipynb        # Interactive charts and maps (plotly + folium)
   internals/
     01_explain_deep_dive.sql      # Execution plan anatomy
     02_index_strategies.sql       # 5 index types compared
@@ -158,6 +173,7 @@ learning_posgre/
     01_delays_bq.sql              # Delay analysis in BigQuery SQL
     02_revenue_bq.sql             # Revenue analysis in BigQuery SQL
     03_utilization_bq.sql         # Utilization in BigQuery SQL
+    04_geospatial_bq.sql          # Geospatial with ST_GEOGPOINT / ST_DISTANCE
     pg_vs_bq_comparison.md        # Performance, cost, and architecture comparison
 ```
 
@@ -189,7 +205,7 @@ python pipeline/run_pipeline.py
 
 ## Technologies
 
-PostgreSQL 16 | BigQuery | Python | Docker Compose | EXPLAIN ANALYZE | Materialized Views | Table Partitioning | GIN Indexes | JSONB | Window Functions | ETL Pipeline | `gcloud` ADC
+PostgreSQL 16 | BigQuery | Python | Docker Compose | EXPLAIN ANALYZE | Materialized Views | Table Partitioning | GIN Indexes | JSONB | Window Functions | ETL Pipeline | Plotly | Folium | GIS | `gcloud` ADC
 
 ---
 
