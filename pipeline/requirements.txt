@@ -1,0 +1,6 @@
+psycopg2-binary>=2.9
+google-cloud-bigquery>=3.0
+pandas>=2.0
+pyarrow>=14.0
+python-dotenv>=1.0
+db-dtypes>=1.0
