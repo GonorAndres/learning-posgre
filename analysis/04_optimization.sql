@@ -86,12 +86,13 @@ CREATE INDEX IF NOT EXISTS idx_flights_arrived
     ON flights(departure_airport, arrival_airport)
     WHERE status = 'Arrived';
 
--- Expression index: for date-based grouping
--- Note: date_trunc on timestamptz is not IMMUTABLE (timezone-dependent).
--- Cast to date instead, which is IMMUTABLE.
-\echo 'Creating expression index on scheduled_departure::date...'
-CREATE INDEX IF NOT EXISTS idx_flights_sched_date
-    ON flights((scheduled_departure::date));
+-- Range index: for date-range scans on scheduled_departure.
+-- Note: expression indexes on timestamptz (e.g. ::date, date_trunc) are STABLE,
+-- not IMMUTABLE, because they depend on the session timezone. A plain B-tree
+-- on the raw timestamptz column supports range queries efficiently.
+\echo 'Creating index on flights(scheduled_departure)...'
+CREATE INDEX IF NOT EXISTS idx_flights_sched_dep
+    ON flights(scheduled_departure);
 
 -- Index for ticket_flights lookups by flight
 \echo 'Creating index on ticket_flights(flight_id)...'

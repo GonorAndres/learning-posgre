@@ -1,0 +1,190 @@
+SET
+=== EXISTING INDEXES ===
+        tablename        |                          indexname                           |                                                                               indexdef                                                                               
+-------------------------+--------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ aircrafts_data          | aircrafts_pkey                                               | CREATE UNIQUE INDEX aircrafts_pkey ON bookings.aircrafts_data USING btree (aircraft_code)
+ airports_data           | airports_data_pkey                                           | CREATE UNIQUE INDEX airports_data_pkey ON bookings.airports_data USING btree (airport_code)
+ boarding_passes         | boarding_passes_flight_id_boarding_no_key                    | CREATE UNIQUE INDEX boarding_passes_flight_id_boarding_no_key ON bookings.boarding_passes USING btree (flight_id, boarding_no)
+ boarding_passes         | boarding_passes_flight_id_seat_no_key                        | CREATE UNIQUE INDEX boarding_passes_flight_id_seat_no_key ON bookings.boarding_passes USING btree (flight_id, seat_no)
+ boarding_passes         | boarding_passes_pkey                                         | CREATE UNIQUE INDEX boarding_passes_pkey ON bookings.boarding_passes USING btree (ticket_no, flight_id)
+ bookings                | bookings_pkey                                                | CREATE UNIQUE INDEX bookings_pkey ON bookings.bookings USING btree (book_ref)
+ flights                 | flights_flight_no_scheduled_departure_key                    | CREATE UNIQUE INDEX flights_flight_no_scheduled_departure_key ON bookings.flights USING btree (flight_no, scheduled_departure)
+ flights                 | flights_pkey                                                 | CREATE UNIQUE INDEX flights_pkey ON bookings.flights USING btree (flight_id)
+ flights                 | idx_flights_arrived                                          | CREATE INDEX idx_flights_arrived ON bookings.flights USING btree (departure_airport, arrival_airport) WHERE ((status)::text = 'Arrived'::text)
+ flights                 | idx_flights_dep_status                                       | CREATE INDEX idx_flights_dep_status ON bookings.flights USING btree (departure_airport, status)
+ mv_aircraft_utilization | mv_aircraft_utilization_aircraft_code_idx                    | CREATE UNIQUE INDEX mv_aircraft_utilization_aircraft_code_idx ON bookings.mv_aircraft_utilization USING btree (aircraft_code)
+ mv_daily_revenue        | mv_daily_revenue_flight_date_fare_class_idx                  | CREATE UNIQUE INDEX mv_daily_revenue_flight_date_fare_class_idx ON bookings.mv_daily_revenue USING btree (flight_date, fare_class)
+ mv_daily_revenue        | mv_daily_revenue_flight_date_idx                             | CREATE INDEX mv_daily_revenue_flight_date_idx ON bookings.mv_daily_revenue USING btree (flight_date)
+ mv_route_delay_summary  | mv_route_delay_summary_delay_pct_idx                         | CREATE INDEX mv_route_delay_summary_delay_pct_idx ON bookings.mv_route_delay_summary USING btree (delay_pct DESC)
+ mv_route_delay_summary  | mv_route_delay_summary_departure_airport_arrival_airport_idx | CREATE UNIQUE INDEX mv_route_delay_summary_departure_airport_arrival_airport_idx ON bookings.mv_route_delay_summary USING btree (departure_airport, arrival_airport)
+ seats                   | seats_pkey                                                   | CREATE UNIQUE INDEX seats_pkey ON bookings.seats USING btree (aircraft_code, seat_no)
+ ticket_flights          | idx_tf_flight_id                                             | CREATE INDEX idx_tf_flight_id ON bookings.ticket_flights USING btree (flight_id)
+ ticket_flights          | ticket_flights_pkey                                          | CREATE UNIQUE INDEX ticket_flights_pkey ON bookings.ticket_flights USING btree (ticket_no, flight_id)
+ tickets                 | idx_tickets_book_ref                                         | CREATE INDEX idx_tickets_book_ref ON bookings.tickets USING btree (book_ref)
+ tickets                 | tickets_pkey                                                 | CREATE UNIQUE INDEX tickets_pkey ON bookings.tickets USING btree (ticket_no)
+(20 rows)
+
+
+=== BEFORE INDEX: Flights from SVO with status Arrived ===
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on flights  (cost=40.08..898.46 rows=4425 width=63) (actual time=30.793..31.308 rows=4432 loops=1)
+   Recheck Cond: ((departure_airport = 'SVO'::bpchar) AND ((status)::text = 'Arrived'::text))
+   Heap Blocks: exact=72
+   ->  Bitmap Index Scan on idx_flights_arrived  (cost=0.00..38.98 rows=4425 width=0) (actual time=30.763..30.764 rows=4432 loops=1)
+         Index Cond: (departure_airport = 'SVO'::bpchar)
+ Planning Time: 0.968 ms
+ Execution Time: 31.512 ms
+(7 rows)
+
+
+=== BEFORE INDEX: Route delay analysis ===
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ HashAggregate  (cost=2626.53..2779.76 rows=3605 width=202) (actual time=106.995..107.254 rows=390 loops=1)
+   Group Key: dep.airport_name, arr.airport_name
+   Filter: (count(*) >= 50)
+   Batches: 1  Memory Usage: 657kB
+   Rows Removed by Filter: 228
+   ->  Hash Join  (cost=10.68..1891.29 rows=49016 width=138) (actual time=0.146..41.752 rows=49235 loops=1)
+         Hash Cond: (f.arrival_airport = arr.airport_code)
+         ->  Hash Join  (cost=5.34..1752.05 rows=49016 width=81) (actual time=0.078..29.240 rows=49235 loops=1)
+               Hash Cond: (f.departure_airport = dep.airport_code)
+               ->  Seq Scan on flights f  (cost=0.00..1612.80 rows=49016 width=24) (actual time=0.020..14.917 rows=49235 loops=1)
+                     Filter: ((status)::text = 'Arrived'::text)
+                     Rows Removed by Filter: 16429
+               ->  Hash  (cost=4.04..4.04 rows=104 width=65) (actual time=0.039..0.040 rows=104 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 18kB
+                     ->  Seq Scan on airports_data dep  (cost=0.00..4.04 rows=104 width=65) (actual time=0.002..0.011 rows=104 loops=1)
+         ->  Hash  (cost=4.04..4.04 rows=104 width=65) (actual time=0.053..0.054 rows=104 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 18kB
+               ->  Seq Scan on airports_data arr  (cost=0.00..4.04 rows=104 width=65) (actual time=0.008..0.021 rows=104 loops=1)
+ Planning Time: 1.476 ms
+ Execution Time: 107.731 ms
+(20 rows)
+
+
+=== BEFORE INDEX: Revenue for specific flight ===
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=89.47..89.48 rows=1 width=40) (actual time=381.006..381.007 rows=1 loops=1)
+   ->  Index Scan using idx_tf_flight_id on ticket_flights tf  (cost=0.43..89.06 rows=82 width=6) (actual time=81.793..380.880 rows=69 loops=1)
+         Index Cond: (flight_id = 12345)
+ Planning Time: 0.695 ms
+ Execution Time: 381.070 ms
+(5 rows)
+
+
+=== CREATING INDEXES ===
+Creating composite index on flights(departure_airport, status)...
+NOTICE:  relation "idx_flights_dep_status" already exists, skipping
+CREATE INDEX
+Creating partial index on flights WHERE status = Arrived...
+CREATE INDEX
+Creating index on flights(scheduled_departure)...
+NOTICE:  relation "idx_flights_arrived" already exists, skipping
+CREATE INDEX
+Creating index on ticket_flights(flight_id)...
+CREATE INDEX
+Creating index on bookings(book_ref)...
+NOTICE:  relation "idx_tf_flight_id" already exists, skipping
+NOTICE:  relation "idx_tickets_book_ref" already exists, skipping
+CREATE INDEX
+Running ANALYZE...
+ANALYZE
+ANALYZE
+ANALYZE
+
+=== AFTER INDEX: Flights from SVO with status Arrived ===
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on flights  (cost=40.68..900.21 rows=4502 width=63) (actual time=0.107..0.551 rows=4432 loops=1)
+   Recheck Cond: ((departure_airport = 'SVO'::bpchar) AND ((status)::text = 'Arrived'::text))
+   Heap Blocks: exact=72
+   ->  Bitmap Index Scan on idx_flights_arrived  (cost=0.00..39.55 rows=4502 width=0) (actual time=0.093..0.094 rows=4432 loops=1)
+         Index Cond: (departure_airport = 'SVO'::bpchar)
+ Planning Time: 0.657 ms
+ Execution Time: 0.709 ms
+(7 rows)
+
+
+=== AFTER INDEX: Route delay analysis ===
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ HashAggregate  (cost=2631.87..2785.09 rows=3605 width=202) (actual time=90.604..90.879 rows=390 loops=1)
+   Group Key: dep.airport_name, arr.airport_name
+   Filter: (count(*) >= 50)
+   Batches: 1  Memory Usage: 657kB
+   Rows Removed by Filter: 228
+   ->  Hash Join  (cost=10.68..1892.73 rows=49276 width=138) (actual time=0.137..35.641 rows=49235 loops=1)
+         Hash Cond: (f.arrival_airport = arr.airport_code)
+         ->  Hash Join  (cost=5.34..1752.76 rows=49276 width=81) (actual time=0.058..24.428 rows=49235 loops=1)
+               Hash Cond: (f.departure_airport = dep.airport_code)
+               ->  Seq Scan on flights f  (cost=0.00..1612.80 rows=49276 width=24) (actual time=0.007..12.115 rows=49235 loops=1)
+                     Filter: ((status)::text = 'Arrived'::text)
+                     Rows Removed by Filter: 16429
+               ->  Hash  (cost=4.04..4.04 rows=104 width=65) (actual time=0.038..0.039 rows=104 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 18kB
+                     ->  Seq Scan on airports_data dep  (cost=0.00..4.04 rows=104 width=65) (actual time=0.002..0.011 rows=104 loops=1)
+         ->  Hash  (cost=4.04..4.04 rows=104 width=65) (actual time=0.066..0.066 rows=104 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 18kB
+               ->  Seq Scan on airports_data arr  (cost=0.00..4.04 rows=104 width=65) (actual time=0.008..0.034 rows=104 loops=1)
+ Planning Time: 0.600 ms
+ Execution Time: 91.347 ms
+(20 rows)
+
+
+=== AFTER INDEX: Revenue for specific flight ===
+                                                                 QUERY PLAN                                                                  
+---------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=90.23..90.24 rows=1 width=40) (actual time=0.093..0.094 rows=1 loops=1)
+   ->  Index Scan using idx_tf_flight_id on ticket_flights tf  (cost=0.43..89.81 rows=83 width=6) (actual time=0.021..0.079 rows=69 loops=1)
+         Index Cond: (flight_id = 12345)
+ Planning Time: 0.235 ms
+ Execution Time: 0.126 ms
+(5 rows)
+
+
+=== INDEX SIZE ANALYSIS ===
+                          index_name                          | index_size | times_used | tuples_read | tuples_fetched 
+--------------------------------------------------------------+------------+------------+-------------+----------------
+ ticket_flights_pkey                                          | 91 MB      |    1894298 |     1894366 |        1894364
+ boarding_passes_pkey                                         | 73 MB      |          0 |           0 |              0
+ boarding_passes_flight_id_boarding_no_key                    | 41 MB      |          0 |           0 |              0
+ boarding_passes_flight_id_seat_no_key                        | 41 MB      |     147731 |     5668343 |              0
+ tickets_pkey                                                 | 25 MB      |          3 |      829073 |              0
+ idx_tickets_book_ref                                         | 16 MB      |       4493 |     2499173 |         841023
+ idx_tf_flight_id                                             | 16 MB      |     201440 |    12566905 |        7846177
+ bookings_pkey                                                | 13 MB      |         11 |      593443 |         593433
+ flights_flight_no_scheduled_departure_key                    | 2048 kB    |          2 |       82518 |              0
+ flights_pkey                                                 | 1456 kB    |        106 |      132439 |          65676
+ idx_flights_sched_dep                                        | 928 kB     |          0 |           0 |              0
+ idx_flights_dep_status                                       | 488 kB     |         62 |      262714 |              0
+ idx_flights_arrived                                          | 360 kB     |        129 |     1011292 |         492350
+ seats_pkey                                                   | 48 kB      |          0 |           0 |              0
+ mv_route_delay_summary_delay_pct_idx                         | 32 kB      |          1 |          38 |             38
+ mv_daily_revenue_flight_date_fare_class_idx                  | 32 kB      |          0 |           0 |              0
+ mv_route_delay_summary_departure_airport_arrival_airport_idx | 32 kB      |          0 |           0 |              0
+ mv_aircraft_utilization_aircraft_code_idx                    | 16 kB      |          0 |           0 |              0
+ aircrafts_pkey                                               | 16 kB      |          4 |          36 |             36
+ mv_daily_revenue_flight_date_idx                             | 16 kB      |          0 |           0 |              0
+ airports_data_pkey                                           | 16 kB      |       2512 |        3954 |           3954
+(21 rows)
+
+
+=== TABLE SIZES ===
+       table_name        | total_size | data_size  | index_size | live_rows 
+-------------------------+------------+------------+------------+-----------
+ boarding_passes         | 264 MB     | 109 MB     | 155 MB     |   1894295
+ ticket_flights          | 262 MB     | 154 MB     | 108 MB     |   2360335
+ tickets                 | 150 MB     | 109 MB     | 42 MB      |    829071
+ bookings                | 43 MB      | 30 MB      | 13 MB      |    593433
+ flights                 | 11 MB      | 6336 kB    | 5312 kB    |     65664
+ mv_route_delay_summary  | 200 kB     | 128 kB     | 72 kB      |       618
+ seats                   | 144 kB     | 64 kB      | 80 kB      |      1339
+ mv_daily_revenue        | 88 kB      | 32 kB      | 56 kB      |       275
+ airports_data           | 72 kB      | 24 kB      | 48 kB      |       104
+ mv_aircraft_utilization | 40 kB      | 8192 bytes | 32 kB      |         8
+ aircrafts_data          | 32 kB      | 8192 bytes | 24 kB      |         9
+(11 rows)
+

@@ -1,0 +1,106 @@
+SET
+=== DATASET OVERVIEW ===
+ total_flights | arrived | cancelled | scheduled | in_progress 
+---------------+---------+-----------+-----------+-------------
+         65664 |   49235 |       429 |     15383 |         617
+(1 row)
+
+
+=== TOP 20 ROUTES BY DELAY PERCENTAGE (>50 flights) ===
+             departure              |              arrival               | total_flights | delayed_flights | delay_pct | avg_delay_min 
+------------------------------------+------------------------------------+---------------+-----------------+-----------+---------------
+ Voronezh International Airport     | Pulkovo Airport                    |            90 |              10 |      11.1 |         191.3
+ Koltsovo Airport                   | Surgut Airport                     |            91 |              10 |      11.0 |         197.8
+ Domodedovo International Airport   | Kazan International Airport        |            91 |              10 |      11.0 |         193.1
+ Sheremetyevo International Airport | Uytash Airport                     |            91 |              10 |      11.0 |         202.3
+ Cheboksary Airport                 | Sheremetyevo International Airport |            91 |              10 |      11.0 |         192.3
+ Kurumoch International Airport     | Sochi International Airport        |            91 |              10 |      11.0 |         191.2
+ Sheremetyevo International Airport | Pobedilovo Airport                 |            91 |              10 |      11.0 |         192.0
+ Domodedovo International Airport   | Belgorod International Airport     |            90 |               9 |      10.0 |         189.4
+ Petrozavodsk Airport               | Domodedovo International Airport   |            90 |               9 |      10.0 |         184.7
+ Uray Airport                       | Domodedovo International Airport   |            90 |               9 |      10.0 |         197.2
+ Chelyabinsk Balandino Airport      | Volgograd International Airport    |            90 |               9 |      10.0 |         176.0
+ Khrabrovo Airport                  | Domodedovo International Airport   |            90 |               9 |      10.0 |         189.2
+ Syktyvkar Airport                  | Domodedovo International Airport   |            91 |               9 |       9.9 |         196.3
+ Kurumoch International Airport     | Kursk East Airport                 |            91 |               9 |       9.9 |         198.0
+ Bolshoye Savino Airport            | Chelyabinsk Balandino Airport      |            91 |               9 |       9.9 |         193.8
+ Domodedovo International Airport   | Khrabrovo Airport                  |            91 |               9 |       9.9 |         210.6
+ Sheremetyevo International Airport | Khrabrovo Airport                  |            91 |               9 |       9.9 |         192.8
+ Roshchino International Airport    | Pulkovo Airport                    |            91 |               9 |       9.9 |         213.9
+ Domodedovo International Airport   | Ulyanovsk Baratayevka Airport      |            90 |               8 |       8.9 |         198.4
+ Domodedovo International Airport   | Khabarovsk-Novy Airport            |            90 |               8 |       8.9 |         179.8
+(20 rows)
+
+
+=== WORST 15 DEPARTURE AIRPORTS BY AVG DELAY ===
+ code |            airport             |    city     | total_flights | delayed | delay_pct | avg_delay_all_min | avg_delay_late_min 
+------+--------------------------------+-------------+---------------+---------+-----------+-------------------+--------------------
+ KUF  | Kurumoch International Airport | Samara      |           273 |      22 |       8.1 |              18.3 |              193.2
+ NAL  | Nalchik Airport                | Nalchik     |           273 |      21 |       7.7 |              17.3 |              189.6
+ GDZ  | Gelendzhik Airport             | Gelendzhik  |           169 |      13 |       7.7 |              17.0 |              186.5
+ KLF  | Grabtsevo Airport              | Kaluga      |           182 |      13 |       7.1 |              16.2 |              189.0
+ VOZ  | Voronezh International Airport | Voronezh    |           180 |      12 |       6.7 |              16.0 |              197.8
+ CEK  | Chelyabinsk Balandino Airport  | Chelyabinsk |           608 |      42 |       6.9 |              15.9 |              189.1
+ RTW  | Saratov Central Airport        | Saratov     |           364 |      24 |       6.6 |              15.8 |              196.7
+ UIK  | Ust-Ilimsk Airport             | Ust Ilimsk  |           260 |      18 |       6.9 |              15.6 |              185.7
+ SCW  | Syktyvkar Airport              | Syktyvkar   |           377 |      25 |       6.6 |              15.3 |              187.0
+ ULY  | Ulyanovsk East Airport         | Ulyanovsk   |           285 |      17 |       6.0 |              15.2 |              205.4
+ CSY  | Cheboksary Airport             | Cheboksary  |           454 |      28 |       6.2 |              14.7 |              194.6
+ OGZ  | Beslan Airport                 | Beslan      |           181 |      11 |       6.1 |              14.7 |              193.3
+ AAQ  | Anapa Vityazevo Airport        | Anapa       |           195 |      12 |       6.2 |              14.6 |              188.1
+ IKT  | Irkutsk Airport                | Irkutsk     |           546 |      32 |       5.9 |              14.3 |              195.1
+ HTA  | Chita-Kadala Airport           | Chita       |           143 |       8 |       5.6 |              14.1 |              200.8
+(15 rows)
+
+
+=== DELAY RATE BY HOUR OF DAY (LOCAL TIME) ===
+ hour_local | flights | delayed | delay_pct | avg_offset_min 
+------------+---------+---------+-----------+----------------
+          9 |    4560 |     214 |       4.7 |           12.0
+         10 |    4431 |     224 |       5.1 |           12.6
+         11 |    6393 |     312 |       4.9 |           12.5
+         12 |    4601 |     235 |       5.1 |           13.0
+         13 |    4977 |     250 |       5.0 |           12.6
+         14 |    4727 |     236 |       5.0 |           12.7
+         15 |    4033 |     181 |       4.5 |           11.5
+         16 |    4644 |     240 |       5.2 |           13.0
+         17 |    3479 |     141 |       4.1 |           10.9
+         18 |    3708 |     186 |       5.0 |           12.8
+         19 |    2599 |     119 |       4.6 |           11.6
+         20 |    1083 |      56 |       5.2 |           12.8
+(12 rows)
+
+
+=== DELAY RATE BY DAY OF WEEK ===
+ day_of_week | day_name  | flights | delay_pct 
+-------------+-----------+---------+-----------
+           1 | Monday    |    6966 |       5.0
+           2 | Tuesday   |    6978 |       4.1
+           3 | Wednesday |    7105 |       5.3
+           4 | Thursday  |    7147 |       4.6
+           5 | Friday    |    6404 |       5.2
+           6 | Saturday  |    7396 |       4.8
+           7 | Sunday    |    7239 |       5.1
+(7 rows)
+
+
+=== DELAY RECOVERY: LATE DEPARTURES THAT MADE UP TIME ===
+ departed_late | recovered_on_arrival | recovery_pct | stayed_late 
+---------------+----------------------+--------------+-------------
+          2394 |                    0 |          0.0 |        2394
+(1 row)
+
+
+=== DELAY RATE BY AIRCRAFT TYPE ===
+      aircraft       | max_range_km | total_flights | delay_pct | avg_offset_min 
+---------------------+--------------+---------------+-----------+----------------
+ Airbus A321-200     |         5600 |          2902 |       5.9 |           14.5
+ Boeing 737-300      |         4200 |          1894 |       5.4 |           13.4
+ Sukhoi Superjet-100 |         3000 |         12652 |       4.9 |           12.5
+ Cessna 208 Caravan  |         1200 |         13789 |       4.9 |           12.4
+ Bombardier CRJ-200  |         2700 |         13439 |       4.7 |           12.2
+ Boeing 767-300      |         7900 |          1812 |       4.1 |           10.9
+ Boeing 777-300      |        11100 |           907 |       3.9 |           10.7
+ Airbus A319-100     |         6700 |          1840 |       3.9 |           10.4
+(8 rows)
+

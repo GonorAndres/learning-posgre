@@ -1,0 +1,236 @@
+SET
+=== BASELINE: Current indexes on flights ===
+
+=== 1a. COMPOSITE INDEX (departure_airport, status) ===
+ERROR:  column "indexname" does not exist
+LINE 1: SELECT indexname, pg_size_pretty(pg_relation_size(indexrelid...
+               ^
+HINT:  Perhaps you meant to reference the column "pg_stat_user_indexes.indexrelname".
+CREATE INDEX
+ANALYZE
+Query matching BOTH columns:
+                                          QUERY PLAN                                          
+----------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on flights (actual time=0.126..0.666 rows=4432 loops=1)
+   Recheck Cond: ((departure_airport = 'SVO'::bpchar) AND ((status)::text = 'Arrived'::text))
+   Heap Blocks: exact=72
+   ->  Bitmap Index Scan on idx_flights_arrived (actual time=0.110..0.111 rows=4432 loops=1)
+         Index Cond: (departure_airport = 'SVO'::bpchar)
+ Planning Time: 28.082 ms
+ Execution Time: 0.875 ms
+(7 rows)
+
+
+Query matching LEADING column only:
+                                         QUERY PLAN                                          
+---------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on flights (actual time=0.249..0.873 rows=5912 loops=1)
+   Recheck Cond: (departure_airport = 'SVO'::bpchar)
+   Heap Blocks: exact=73
+   ->  Bitmap Index Scan on idx_demo_dep_status (actual time=0.234..0.234 rows=5912 loops=1)
+         Index Cond: (departure_airport = 'SVO'::bpchar)
+ Planning Time: 0.120 ms
+ Execution Time: 1.080 ms
+(7 rows)
+
+
+Query matching TRAILING column only (cannot use this composite index):
+                            QUERY PLAN                             
+-------------------------------------------------------------------
+ Seq Scan on flights (actual time=0.010..8.761 rows=49235 loops=1)
+   Filter: ((status)::text = 'Arrived'::text)
+   Rows Removed by Filter: 16429
+ Planning Time: 0.097 ms
+ Execution Time: 10.279 ms
+(5 rows)
+
+
+=== 1b. REVERSED COMPOSITE INDEX (status, departure_airport) ===
+CREATE INDEX
+ANALYZE
+Same query with reversed index available:
+                             QUERY PLAN                             
+--------------------------------------------------------------------
+ Seq Scan on flights (actual time=0.016..10.909 rows=49235 loops=1)
+   Filter: ((status)::text = 'Arrived'::text)
+   Rows Removed by Filter: 16429
+ Planning Time: 0.486 ms
+ Execution Time: 12.572 ms
+(5 rows)
+
+
+Index sizes (both composites):
+ERROR:  column "indexname" does not exist
+LINE 1: SELECT indexname, pg_size_pretty(pg_relation_size(indexrelid...
+               ^
+HINT:  Perhaps you meant to reference the column "pg_stat_user_indexes.indexrelname".
+
+=== 2. PARTIAL INDEX (only Arrived flights) ===
+CREATE INDEX
+ANALYZE
+                                                 QUERY PLAN                                                 
+------------------------------------------------------------------------------------------------------------
+ GroupAggregate (actual time=0.088..16.935 rows=618 loops=1)
+   Group Key: departure_airport, arrival_airport
+   ->  Index Only Scan using idx_demo_arrived_only on flights (actual time=0.052..6.918 rows=49235 loops=1)
+         Heap Fetches: 0
+ Planning Time: 1.448 ms
+ Execution Time: 17.030 ms
+(6 rows)
+
+
+Partial index vs full index size:
+
+=== 3. EXPRESSION INDEX (month extraction) ===
+ERROR:  column "indexname" does not exist
+LINE 1: SELECT indexname, pg_size_pretty(pg_relation_size(indexrelid...
+               ^
+HINT:  Perhaps you meant to reference the column "pg_stat_user_indexes.indexrelname".
+ERROR:  functions in index expression must be marked IMMUTABLE
+ANALYZE
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Sort (actual time=79.719..79.721 rows=5 loops=1)
+   Sort Key: (date_trunc('month'::text, scheduled_departure))
+   Sort Method: quicksort  Memory: 25kB
+   ->  HashAggregate (actual time=79.566..79.695 rows=5 loops=1)
+         Group Key: date_trunc('month'::text, scheduled_departure)
+         Batches: 1  Memory Usage: 793kB
+         ->  Index Only Scan using flights_flight_no_scheduled_departure_key on flights (actual time=12.618..67.316 rows=65664 loops=1)
+               Heap Fetches: 0
+ Planning Time: 0.434 ms
+ Execution Time: 80.252 ms
+(10 rows)
+
+
+Filter to a specific month:
+                                                   QUERY PLAN                                                    
+-----------------------------------------------------------------------------------------------------------------
+ Seq Scan on flights (actual time=0.033..14.963 rows=16854 loops=1)
+   Filter: (date_trunc('month'::text, scheduled_departure) = '2017-07-01 00:00:00+00'::timestamp with time zone)
+   Rows Removed by Filter: 48810
+ Planning Time: 0.416 ms
+ Execution Time: 15.481 ms
+(5 rows)
+
+
+=== 4. GIN INDEX (JSONB on contact_data) ===
+Before GIN (seq scan):
+                                     QUERY PLAN                                     
+------------------------------------------------------------------------------------
+ Gather (actual time=1092.102..1099.553 rows=0 loops=1)
+   Workers Planned: 2
+   Workers Launched: 2
+   ->  Parallel Seq Scan on tickets (actual time=1083.130..1083.130 rows=0 loops=3)
+         Filter: (contact_data @> '{"email": "example@postgrespro.ru"}'::jsonb)
+         Rows Removed by Filter: 276357
+ Planning Time: 4.935 ms
+ Execution Time: 1099.577 ms
+(8 rows)
+
+CREATE INDEX
+ANALYZE
+
+After GIN (bitmap index scan):
+                                        QUERY PLAN                                         
+-------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on tickets (actual time=0.164..0.165 rows=0 loops=1)
+   Recheck Cond: (contact_data @> '{"email": "example@postgrespro.ru"}'::jsonb)
+   ->  Bitmap Index Scan on idx_demo_contact_gin (actual time=0.162..0.162 rows=0 loops=1)
+         Index Cond: (contact_data @> '{"email": "example@postgrespro.ru"}'::jsonb)
+ Planning Time: 0.762 ms
+ Execution Time: 0.231 ms
+(6 rows)
+
+
+GIN: check if key exists:
+                                           QUERY PLAN                                            
+-------------------------------------------------------------------------------------------------
+ Finalize Aggregate (actual time=292.551..297.562 rows=1 loops=1)
+   ->  Gather (actual time=292.377..297.553 rows=3 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         ->  Partial Aggregate (actual time=207.895..207.896 rows=1 loops=3)
+               ->  Parallel Seq Scan on tickets (actual time=0.057..167.910 rows=276357 loops=3)
+                     Filter: (contact_data ? 'phone'::text)
+ Planning Time: 0.298 ms
+ Execution Time: 297.610 ms
+(9 rows)
+
+
+=== 5. COVERING INDEX with INCLUDE ===
+CREATE INDEX
+ANALYZE
+Regular index (needs heap fetch for amount):
+                                                QUERY PLAN                                                
+----------------------------------------------------------------------------------------------------------
+ GroupAggregate (actual time=2.228..10.187 rows=52 loops=1)
+   Group Key: flight_id
+   Buffers: shared hit=1540 read=1163
+   ->  Index Scan using idx_demo_tf_flight on ticket_flights (actual time=1.897..9.665 rows=2698 loops=1)
+         Index Cond: ((flight_id >= 1000) AND (flight_id <= 1100))
+         Buffers: shared hit=1540 read=1163
+ Planning:
+   Buffers: shared hit=30 read=8
+ Planning Time: 107.257 ms
+ Execution Time: 10.237 ms
+(10 rows)
+
+DROP INDEX
+CREATE INDEX
+ANALYZE
+
+Covering index with INCLUDE (index-only scan, no heap fetch):
+                                                     QUERY PLAN                                                      
+---------------------------------------------------------------------------------------------------------------------
+ GroupAggregate (actual time=1.995..3.793 rows=52 loops=1)
+   Group Key: flight_id
+   Buffers: shared hit=1 read=13
+   ->  Index Only Scan using idx_demo_tf_flight_cover on ticket_flights (actual time=1.972..3.415 rows=2698 loops=1)
+         Index Cond: ((flight_id >= 1000) AND (flight_id <= 1100))
+         Heap Fetches: 0
+         Buffers: shared hit=1 read=13
+ Planning:
+   Buffers: shared hit=11 read=1
+ Planning Time: 0.405 ms
+ Execution Time: 3.842 ms
+(11 rows)
+
+
+=== ALL DEMO INDEXES: Size comparison ===
+        index_name        |   table_name   | index_size | times_used 
+--------------------------+----------------+------------+------------
+ idx_demo_contact_gin     | tickets        | 73 MB      |          1
+ idx_demo_tf_flight_cover | ticket_flights | 71 MB      |          0
+ idx_demo_dep_status      | flights        | 488 kB     |          1
+ idx_demo_status_dep      | flights        | 488 kB     |          0
+ idx_demo_arrived_only    | flights        | 360 kB     |          1
+(5 rows)
+
+
+=== TABLE SIZES (for reference) ===
+       table_name        | data_size  | total_index_size 
+-------------------------+------------+------------------
+ ticket_flights          | 154 MB     | 179 MB
+ boarding_passes         | 109 MB     | 155 MB
+ tickets                 | 109 MB     | 115 MB
+ bookings                | 30 MB      | 13 MB
+ flights                 | 6336 kB    | 5688 kB
+ mv_route_delay_summary  | 128 kB     | 64 kB
+ seats                   | 64 kB      | 48 kB
+ mv_daily_revenue        | 32 kB      | 48 kB
+ airports_data           | 24 kB      | 16 kB
+ aircrafts_data          | 8192 bytes | 16 kB
+ mv_aircraft_utilization | 8192 bytes | 16 kB
+(11 rows)
+
+
+=== CLEANUP ===
+DROP INDEX
+DROP INDEX
+DROP INDEX
+DROP INDEX
+NOTICE:  index "idx_demo_flight_month" does not exist, skipping
+DROP INDEX
+DROP INDEX
+All demo indexes removed.

@@ -1,0 +1,96 @@
+SET
+=== FLEET OVERVIEW ===
+      aircraft       | max_range_km | total_flights | total_flight_hours | avg_duration_min | avg_hours_per_flight 
+---------------------+--------------+---------------+--------------------+------------------+----------------------
+ Cessna 208 Caravan  |         1200 |         13789 |            32274.3 |            140.4 |                 2.34
+ Bombardier CRJ-200  |         2700 |         13439 |            26621.1 |            118.9 |                 1.98
+ Sukhoi Superjet-100 |         3000 |         12652 |            18326.6 |             86.9 |                 1.45
+ Airbus A321-200     |         5600 |          2902 |             3557.2 |             73.5 |                 1.23
+ Boeing 737-300      |         4200 |          1894 |             4517.7 |            143.1 |                 2.39
+ Airbus A319-100     |         6700 |          1840 |            10461.5 |            341.1 |                 5.69
+ Boeing 767-300      |         7900 |          1812 |             7412.4 |            245.4 |                 4.09
+ Boeing 777-300      |        11100 |           907 |             2133.7 |            141.2 |                 2.35
+(8 rows)
+
+
+=== SEAT CAPACITY BY AIRCRAFT AND CLASS ===
+      aircraft       | economy_seats | comfort_seats | business_seats | total_seats 
+---------------------+---------------+---------------+----------------+-------------
+ Boeing 777-300      |           324 |            48 |             30 |         402
+ Boeing 767-300      |           192 |             0 |             30 |         222
+ Airbus A321-200     |           142 |             0 |             28 |         170
+ Airbus A320-200     |           120 |             0 |             20 |         140
+ Boeing 737-300      |           118 |             0 |             12 |         130
+ Airbus A319-100     |            96 |             0 |             20 |         116
+ Sukhoi Superjet-100 |            85 |             0 |             12 |          97
+ Bombardier CRJ-200  |            50 |             0 |              0 |          50
+ Cessna 208 Caravan  |            12 |             0 |              0 |          12
+(9 rows)
+
+
+=== LOAD FACTOR BY AIRCRAFT TYPE ===
+      aircraft       | flights | avg_passengers | capacity | avg_load_factor_pct | min_load_factor_pct | max_load_factor_pct 
+---------------------+---------+----------------+----------+---------------------+---------------------+---------------------
+ Boeing 777-300      |     907 |          292.8 |      402 |                72.8 |                 5.5 |                94.8
+ Boeing 737-300      |    1894 |           81.9 |      130 |                63.0 |                 0.0 |               100.0
+ Boeing 767-300      |    1812 |          124.1 |      222 |                55.9 |                 0.0 |                98.6
+ Sukhoi Superjet-100 |   12652 |           52.1 |       97 |                53.7 |                 0.0 |               100.0
+ Airbus A319-100     |    1840 |           52.6 |      116 |                45.4 |                 0.0 |               100.0
+ Bombardier CRJ-200  |   13439 |           20.5 |       50 |                41.0 |                 0.0 |               100.0
+ Airbus A321-200     |    2902 |           64.1 |      170 |                37.7 |                 0.0 |               100.0
+ Cessna 208 Caravan  |   13789 |            1.9 |       12 |                16.0 |                 0.0 |               100.0
+(8 rows)
+
+
+=== ROUTES WITH LOWEST LOAD FACTOR (30+ flights) ===
+             departure              |                  arrival                   | flights | avg_load_pct | avg_passengers | capacity 
+------------------------------------+--------------------------------------------+---------+--------------+----------------+----------
+ Sheremetyevo International Airport | Pskov Airport                              |      91 |          0.0 |            0.0 |       12
+ Domodedovo International Airport   | Yoshkar-Ola Airport                        |      91 |          0.0 |            0.0 |       12
+ Vorkuta Airport                    | Surgut Airport                             |     180 |          0.0 |            0.0 |       12
+ Pskov Airport                      | Sheremetyevo International Airport         |      90 |          0.0 |            0.0 |       12
+ Beloyarskiy Airport                | Roshchino International Airport            |      39 |          0.0 |            0.0 |       12
+ Volgograd International Airport    | Cheboksary Airport                         |      91 |          0.0 |            0.0 |       12
+ Nalchik Airport                    | Krasnodar Pashkovsky International Airport |      91 |          0.0 |            0.0 |       12
+ Petrozavodsk Airport               | Grabtsevo Airport                          |      38 |          0.0 |            0.0 |       12
+ Grabtsevo Airport                  | Petrozavodsk Airport                       |      39 |          0.0 |            0.0 |       12
+ Vnukovo International Airport      | Yoshkar-Ola Airport                        |     182 |          0.0 |            0.0 |       12
+ Irkutsk Airport                    | Mirny Airport                              |      91 |          0.0 |            0.0 |       50
+ Yemelyanovo Airport                | Barnaul Airport                            |      91 |          0.0 |            0.0 |       12
+ Domodedovo International Airport   | Pskov Airport                              |      38 |          0.0 |            0.0 |       12
+ Surgut Airport                     | Vorkuta Airport                            |     181 |          0.0 |            0.0 |       12
+ Tunoshna Airport                   | Pulkovo Airport                            |      90 |          0.0 |            0.0 |       12
+ Surgut Airport                     | Chelyabinsk Balandino Airport              |     181 |          0.0 |            0.0 |       12
+ Tolmachevo Airport                 | Gorno-Altaysk Airport                      |      90 |          0.0 |            0.0 |       12
+ Penza Airport                      | Sochi International Airport                |      91 |          0.0 |            0.0 |       12
+ Yemelyanovo Airport                | Ust-Ilimsk Airport                         |     181 |          0.0 |            0.0 |       12
+ Barnaul Airport                    | Yemelyanovo Airport                        |      91 |          0.0 |            0.0 |       12
+(20 rows)
+
+
+=== AIRCRAFT TURNAROUND TIME ===
+      aircraft       | turnaround_count | avg_turnaround_min | median_turnaround_min | min_turnaround_min | p90_turnaround_min 
+---------------------+------------------+--------------------+-----------------------+--------------------+--------------------
+ Airbus A319-100     |               64 |               13.1 |                   3.0 |                1.0 |               17.5
+ Boeing 767-300      |              200 |               27.8 |                  13.0 |                1.0 |               32.4
+ Airbus A321-200     |              325 |              147.2 |                  49.0 |                1.0 |              479.0
+ Sukhoi Superjet-100 |              257 |              157.1 |                 146.0 |                1.0 |              352.0
+ Bombardier CRJ-200  |              155 |              228.1 |                 247.0 |                2.0 |              450.0
+ Boeing 737-300      |              217 |              314.2 |                  37.0 |                1.0 |              794.0
+ Cessna 208 Caravan  |              102 |              318.7 |                 350.5 |                2.0 |              426.9
+ Boeing 777-300      |              197 |              357.4 |                  79.0 |                2.0 |              711.0
+(8 rows)
+
+
+=== FLIGHTS AND LOAD FACTOR BY DAY OF WEEK ===
+ dow | day_name | flights | avg_passengers | avg_load_pct 
+-----+----------+---------+----------------+--------------
+   1 | Mon      |    6966 |           38.7 |         39.0
+   2 | Tue      |    6978 |           39.3 |         40.6
+   3 | Wed      |    7105 |           37.0 |         37.5
+   4 | Thu      |    7147 |           37.9 |         38.9
+   5 | Fri      |    6404 |           40.7 |         41.2
+   6 | Sat      |    7396 |           37.3 |         38.2
+   7 | Sun      |    7239 |           38.1 |         39.4
+(7 rows)
+

@@ -1,0 +1,115 @@
+SET
+=== SETUP: Haversine distance function ===
+CREATE FUNCTION
+haversine_km(point, point) created.
+
+=== TOP 20 LONGEST ROUTES BY DISTANCE ===
+             departure              |     dep_city      |              arrival               |     arr_city      | distance_km | total_flights 
+------------------------------------+-------------------+------------------------------------+-------------------+-------------+---------------
+ Domodedovo International Airport   | Moscow            | Yelizovo Airport                   | Petropavlovsk     |        6775 |            39
+ Yelizovo Airport                   | Petropavlovsk     | Domodedovo International Airport   | Moscow            |        6775 |            39
+ Mineralnyye Vody Airport           | Mineralnye Vody   | Sokol Airport                      | Magadan           |        6711 |            13
+ Sokol Airport                      | Magadan           | Mineralnyye Vody Airport           | Mineralnye Vody   |        6711 |            13
+ Yuzhno-Sakhalinsk Airport          | Yuzhno-Sakhalinsk | Domodedovo International Airport   | Moscow            |        6659 |            90
+ Domodedovo International Airport   | Moscow            | Yuzhno-Sakhalinsk Airport          | Yuzhno-Sakhalinsk |        6659 |            90
+ Sheremetyevo International Airport | Moscow            | Yuzhno-Sakhalinsk Airport          | Yuzhno-Sakhalinsk |        6642 |            90
+ Yuzhno-Sakhalinsk Airport          | Yuzhno-Sakhalinsk | Sheremetyevo International Airport | Moscow            |        6642 |            90
+ Vladivostok International Airport  | Vladivostok       | Vnukovo International Airport      | Moscow            |        6435 |            90
+ Vnukovo International Airport      | Moscow            | Vladivostok International Airport  | Vladivostok       |        6435 |            90
+ Ugolny Airport                     | Anadyr            | Domodedovo International Airport   | Moscow            |        6226 |            13
+ Domodedovo International Airport   | Moscow            | Ugolny Airport                     | Anadyr            |        6226 |            13
+ Vnukovo International Airport      | Moscow            | Ugolny Airport                     | Anadyr            |        6220 |            12
+ Ugolny Airport                     | Anadyr            | Vnukovo International Airport      | Moscow            |        6220 |            13
+ Khabarovsk-Novy Airport            | Khabarovsk        | Pulkovo Airport                    | St. Petersburg    |        6207 |            91
+ Pulkovo Airport                    | St. Petersburg    | Khabarovsk-Novy Airport            | Khabarovsk        |        6207 |            90
+ Sheremetyevo International Airport | Moscow            | Ugolny Airport                     | Anadyr            |        6177 |            13
+ Ugolny Airport                     | Anadyr            | Sheremetyevo International Airport | Moscow            |        6177 |            13
+ Domodedovo International Airport   | Moscow            | Khabarovsk-Novy Airport            | Khabarovsk        |        6150 |            90
+ Khabarovsk-Novy Airport            | Khabarovsk        | Domodedovo International Airport   | Moscow            |        6150 |            90
+(20 rows)
+
+
+=== DELAY RATE BY DISTANCE BUCKET ===
+ distance_bucket | routes | total_flights | delay_pct | avg_distance_km 
+-----------------+--------+---------------+-----------+-----------------
+ 1: <500 km      |     68 |          8528 |       4.8 |             374
+ 2: 500-1000 km  |    156 |         17549 |       5.1 |             730
+ 3: 1000-2000 km |    222 |         15692 |       4.8 |            1457
+ 4: 2000-4000 km |    134 |          5605 |       4.3 |            2826
+ 5: 4000+ km     |     38 |          1861 |       4.5 |            5630
+(5 rows)
+
+
+=== AIRPORT CONNECTIVITY (top 20 by destinations) ===
+ code |              airport               |      city       | destinations | total_departures | avg_route_km 
+------+------------------------------------+-----------------+--------------+------------------+--------------
+ DME  | Domodedovo International Airport   | Moscow          |           53 |             4776 |         1488
+ SVO  | Sheremetyevo International Airport | Moscow          |           48 |             4432 |         1362
+ VKO  | Vnukovo International Airport      | Moscow          |           30 |             2555 |         1381
+ LED  | Pulkovo Airport                    | St. Petersburg  |           24 |             2825 |         1402
+ OVB  | Tolmachevo Airport                 | Novosibirsk     |           15 |             1571 |         1242
+ SVX  | Koltsovo Airport                   | Yekaterinburg   |           13 |             1026 |         1087
+ AER  | Sochi International Airport        | Sochi           |           12 |              867 |         1215
+ ROV  | Rostov-on-Don Airport              | Rostov          |           11 |              920 |          828
+ KJA  | Yemelyanovo Airport                | Krasnoyarsk     |           10 |             1052 |         1139
+ IKT  | Irkutsk Airport                    | Irkutsk         |            9 |              546 |         2742
+ TJM  | Roshchino International Airport    | Tyumen          |            9 |              636 |         1209
+ KZN  | Kazan International Airport        | Kazan           |            9 |              701 |         1257
+ SGC  | Surgut Airport                     | Surgut          |            9 |              789 |         1109
+ PEE  | Bolshoye Savino Airport            | Perm            |            9 |              920 |          968
+ NOZ  | Spichenkovo Airport                | Novokuznetsk    |            8 |              545 |          784
+ TOF  | Bogashevo Airport                  | Tomsk           |            8 |              376 |         1664
+ OVS  | Sovetskiy Airport                  | Sovetskiy       |            8 |              817 |         1220
+ HMA  | Khanty Mansiysk Airport            | Khanty-Mansiysk |            8 |              765 |         1148
+ ARH  | Talagi Airport                     | Arkhangelsk     |            8 |              480 |         1262
+ PES  | Petrozavodsk Airport               | Petrozavodsk    |            7 |              531 |          948
+(20 rows)
+
+
+=== REVENUE PER KILOMETER (top 20 routes, 50+ flights) ===
+                 departure                  |                  arrival                   | distance_km | flights | passengers | revenue_rub | revenue_per_km 
+--------------------------------------------+--------------------------------------------+-------------+---------+------------+-------------+----------------
+ Sheremetyevo International Airport         | Pulkovo Airport                            |         599 |     272 |      29627 |   237406800 |         396147
+ Domodedovo International Airport           | Tolmachevo Airport                         |        2790 |      91 |      30110 |  1039725300 |         372704
+ Sheremetyevo International Airport         | Koltsovo Airport                           |        1436 |      91 |      29445 |   523665400 |         364599
+ Pulkovo Airport                            | Sheremetyevo International Airport         |         599 |     270 |      26404 |   211805400 |         353428
+ Tolmachevo Airport                         | Domodedovo International Airport           |        2790 |      91 |      28488 |   982523100 |         352199
+ Sheremetyevo International Airport         | Sochi International Airport                |        1404 |      90 |      28521 |   493568100 |         351505
+ Koltsovo Airport                           | Sheremetyevo International Airport         |        1436 |      91 |      27977 |   498178400 |         346853
+ Sochi International Airport                | Sheremetyevo International Airport         |        1404 |      90 |      26335 |   456077200 |         324805
+ Vnukovo International Airport              | Bolshoye Savino Airport                    |        1168 |      91 |      24668 |   356226800 |         304899
+ Sheremetyevo International Airport         | Tolmachevo Airport                         |        2800 |      91 |      24566 |   850572800 |         303735
+ Tolmachevo Airport                         | Sheremetyevo International Airport         |        2800 |      91 |      23287 |   803644800 |         286978
+ Bolshoye Savino Airport                    | Vnukovo International Airport              |        1168 |      90 |      22156 |   321274500 |         274983
+ Vnukovo International Airport              | Pulkovo Airport                            |         625 |     179 |      18791 |   157581200 |         251949
+ Pulkovo Airport                            | Vnukovo International Airport              |         625 |     253 |      18627 |   156752100 |         250623
+ Domodedovo International Airport           | Khabarovsk-Novy Airport                    |        6150 |      90 |      17881 |  1399716700 |         227599
+ Domodedovo International Airport           | Pulkovo Airport                            |         667 |     181 |      16922 |   151373700 |         226987
+ Khabarovsk-Novy Airport                    | Domodedovo International Airport           |        6150 |      90 |      16889 |  1323252100 |         215166
+ Pulkovo Airport                            | Domodedovo International Airport           |         667 |     182 |      15650 |   139730400 |         209527
+ Domodedovo International Airport           | Krasnodar Pashkovsky International Airport |        1157 |      90 |      15735 |   232689300 |         201115
+ Krasnodar Pashkovsky International Airport | Domodedovo International Airport           |        1157 |      90 |      14893 |   220515300 |         190593
+(20 rows)
+
+
+=== GEOGRAPHIC EXTREMES ===
+        label        | airport_code |      name      |  city  |     longitude      |     latitude      
+---------------------+--------------+----------------+--------+--------------------+-------------------
+ Easternmost airport | DYR          | Ugolny Airport | Anadyr | 177.74099731445312 | 64.73490142822266
+(1 row)
+
+        label        | airport_code |       name        |    city     |     longitude      |     latitude      
+---------------------+--------------+-------------------+-------------+--------------------+-------------------
+ Westernmost airport | KGD          | Khrabrovo Airport | Kaliningrad | 20.592599868774414 | 54.88999938964844
+(1 row)
+
+        label         | airport_code |          name          |  city   |     longitude     |     latitude      
+----------------------+--------------+------------------------+---------+-------------------+-------------------
+ Northernmost airport | NSK          | Norilsk-Alykel Airport | Norilsk | 87.33219909667969 | 69.31109619140625
+(1 row)
+
+        label         | airport_code |      name      |    city     |     longitude     |     latitude      
+----------------------+--------------+----------------+-------------+-------------------+-------------------
+ Southernmost airport | MCX          | Uytash Airport | Makhachkala | 47.65230178833008 | 42.81679916381836
+(1 row)
+

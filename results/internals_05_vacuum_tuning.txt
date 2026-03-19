@@ -1,0 +1,145 @@
+SET
+NOTICE:  table "vacuum_demo" does not exist, skipping
+=== 1. SETUP: Create test table ===
+DROP TABLE
+SELECT 100000
+CREATE INDEX
+ANALYZE
+   relname   | n_live_tup | n_dead_tup | total_size 
+-------------+------------+------------+------------
+ vacuum_demo |     100000 |          0 | 9896 kB
+(1 row)
+
+
+=== 2. GENERATE DEAD TUPLES (bulk UPDATE) ===
+UPDATE 50000
+ANALYZE
+After updating 50,000 rows:
+   relname   | n_live_tup | n_dead_tup | dead_pct | total_size 
+-------------+------------+------------+----------+------------
+ vacuum_demo |     100000 |          0 |      0.0 | 14 MB
+(1 row)
+
+
+=== 3a. VACUUM (standard) ===
+INFO:  vacuuming "demo.bookings.vacuum_demo"
+INFO:  finished vacuuming "demo.bookings.vacuum_demo": index scans: 1
+pages: 0 removed, 1427 remain, 1427 scanned (100.00% of total)
+tuples: 50000 removed, 100000 remain, 0 are dead but not yet removable
+removable cutoff: 1016, which was 0 XIDs old when operation ended
+frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+index scan needed: 468 pages from table (32.80% of total) had 50000 dead item identifiers removed
+index "vacuum_demo_id_idx": pages: 415 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 19.835 MB/s, avg write rate: 0.438 MB/s
+buffer usage: 3642 hits, 136 misses, 3 dirtied
+WAL usage: 2614 records, 1 full page images, 590354 bytes
+system usage: CPU: user: 0.05 s, system: 0.00 s, elapsed: 0.05 s
+INFO:  vacuuming "demo.pg_toast.pg_toast_16781"
+INFO:  finished vacuuming "demo.pg_toast.pg_toast_16781": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total)
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1016, which was 0 XIDs old when operation ended
+new relfrozenxid: 1016, which is 5 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+avg read rate: 23.114 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 11 hits, 1 misses, 0 dirtied
+WAL usage: 1 records, 0 full page images, 188 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+
+After standard VACUUM:
+   relname   | n_live_tup | n_dead_tup | total_size |          last_vacuum          
+-------------+------------+------------+------------+-------------------------------
+ vacuum_demo |     100000 |          0 | 14 MB      | 2026-03-19 06:05:29.846163+00
+(1 row)
+
+
+=== 4. VACUUM FULL (rewrites table, reclaims disk space) ===
+Size before VACUUM FULL:
+ size  
+-------
+ 14 MB
+(1 row)
+
+UPDATE 50000
+ANALYZE
+Size after 50k more updates:
+ size  
+-------
+ 14 MB
+(1 row)
+
+VACUUM
+Size after VACUUM FULL:
+  size   
+---------
+ 9696 kB
+(1 row)
+
+
+=== 5. AUTOVACUUM SETTINGS ===
+                 name                  |  setting  |                                        short_desc                                         
+---------------------------------------+-----------+-------------------------------------------------------------------------------------------
+ autovacuum                            | on        | Starts the autovacuum subprocess.
+ autovacuum_analyze_scale_factor       | 0.1       | Number of tuple inserts, updates, or deletes prior to analyze as a fraction of reltuples.
+ autovacuum_analyze_threshold          | 50        | Minimum number of tuple inserts, updates, or deletes prior to analyze.
+ autovacuum_freeze_max_age             | 200000000 | Age at which to autovacuum a table to prevent transaction ID wraparound.
+ autovacuum_max_workers                | 3         | Sets the maximum number of simultaneously running autovacuum worker processes.
+ autovacuum_multixact_freeze_max_age   | 400000000 | Multixact age at which to autovacuum a table to prevent multixact wraparound.
+ autovacuum_naptime                    | 60        | Time to sleep between autovacuum runs.
+ autovacuum_vacuum_cost_delay          | 2         | Vacuum cost delay in milliseconds, for autovacuum.
+ autovacuum_vacuum_cost_limit          | -1        | Vacuum cost amount available before napping, for autovacuum.
+ autovacuum_vacuum_insert_scale_factor | 0.2       | Number of tuple inserts prior to vacuum as a fraction of reltuples.
+ autovacuum_vacuum_insert_threshold    | 1000      | Minimum number of tuple inserts prior to vacuum, or -1 to disable insert vacuums.
+ autovacuum_vacuum_scale_factor        | 0.2       | Number of tuple updates or deletes prior to vacuum as a fraction of reltuples.
+ autovacuum_vacuum_threshold           | 50        | Minimum number of tuple updates or deletes prior to vacuum.
+ autovacuum_work_mem                   | -1        | Sets the maximum memory to be used by each autovacuum worker process.
+(14 rows)
+
+
+=== AUTOVACUUM TRIGGER THRESHOLDS (per table) ===
+         relname         | n_live_tup | n_dead_tup | vacuum_trigger_at  | needs_vacuum 
+-------------------------+------------+------------+--------------------+--------------
+ vacuum_demo             |     100000 |      50000 |              20050 | YES
+ boarding_passes         |    1894295 |          0 |             378909 | no
+ ticket_flights          |    2360335 |          0 |             472117 | no
+ mv_aircraft_utilization |          8 |          0 |               51.6 | no
+ flights                 |      65664 |          0 | 13182.800000000001 | no
+ airports_data           |        104 |          0 |               70.8 | no
+ mv_route_delay_summary  |        618 |          0 | 173.60000000000002 | no
+ tickets                 |     829071 |          0 |           165864.2 | no
+ seats                   |       1339 |          0 |              317.8 | no
+ mv_daily_revenue        |        275 |          0 |                105 | no
+ aircrafts_data          |          9 |          0 |               51.8 | no
+ bookings                |     593433 |          0 |           118736.6 | no
+(12 rows)
+
+
+=== 6. TRANSACTION ID AGE (wraparound risk) ===
+   table_name    | xid_age | freeze_max_age | pct_to_freeze 
+-----------------+---------+----------------+---------------
+ aircrafts_data  |     246 |      200000000 |           0.0
+ airports_data   |     236 |      200000000 |           0.0
+ boarding_passes |     142 |      200000000 |           0.0
+ bookings        |     141 |      200000000 |           0.0
+ flights         |     140 |      200000000 |           0.0
+ seats           |     139 |      200000000 |           0.0
+ ticket_flights  |     138 |      200000000 |           0.0
+ tickets         |     137 |      200000000 |           0.0
+ vacuum_demo     |       1 |      200000000 |           0.0
+(9 rows)
+
+
+=== DATABASE XID AGE ===
+   datname   | xid_age | db_size 
+-------------+---------+---------
+ postgres    |     296 | 7519 kB
+ learning_db |     296 | 8055 kB
+ demo        |     296 | 747 MB
+(3 rows)
+
+
+=== CLEANUP ===
+DROP TABLE
+Demo table removed.

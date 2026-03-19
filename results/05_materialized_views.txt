@@ -1,0 +1,87 @@
+SET
+=== CREATING mv_route_delay_summary ===
+DROP MATERIALIZED VIEW
+SELECT 618
+CREATE INDEX
+CREATE INDEX
+mv_route_delay_summary created with indexes.
+
+=== CREATING mv_daily_revenue ===
+DROP MATERIALIZED VIEW
+SELECT 275
+CREATE INDEX
+CREATE INDEX
+mv_daily_revenue created with indexes.
+
+=== CREATING mv_aircraft_utilization ===
+DROP MATERIALIZED VIEW
+SELECT 8
+CREATE INDEX
+mv_aircraft_utilization created with indexes.
+
+=== PERFORMANCE: Raw query (scans flights + airports + aggregation) ===
+                                                                             QUERY PLAN                                                                             
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=55.89..8708.93 rows=49237 width=234) (actual time=0.583..147.235 rows=618 loops=1)
+   Group Key: f.departure_airport, dep.airport_name, f.arrival_airport, arr.airport_name
+   ->  Incremental Sort  (cost=55.89..6370.17 rows=49237 width=146) (actual time=0.496..103.959 rows=49235 loops=1)
+         Sort Key: f.departure_airport, dep.airport_name, f.arrival_airport, arr.airport_name
+         Presorted Key: f.departure_airport
+         Full-sort Groups: 102  Sort Method: quicksort  Average Memory: 36kB  Peak Memory: 36kB
+         Pre-sorted Groups: 97  Sort Method: quicksort  Average Memory: 932kB  Peak Memory: 1055kB
+         ->  Nested Loop  (cost=0.58..3564.78 rows=49237 width=146) (actual time=0.051..41.076 rows=49235 loops=1)
+               ->  Merge Join  (cost=0.43..2324.02 rows=49237 width=85) (actual time=0.037..20.858 rows=49235 loops=1)
+                     Merge Cond: (f.departure_airport = dep.airport_code)
+                     ->  Index Scan using idx_flights_arrived on flights f  (cost=0.29..1701.11 rows=49237 width=24) (actual time=0.025..10.297 rows=49235 loops=1)
+                     ->  Index Scan using airports_data_pkey on airports_data dep  (cost=0.14..7.19 rows=104 width=65) (actual time=0.008..0.095 rows=104 loops=1)
+               ->  Memoize  (cost=0.15..0.17 rows=1 width=65) (actual time=0.000..0.000 rows=1 loops=49235)
+                     Cache Key: f.arrival_airport
+                     Cache Mode: logical
+                     Hits: 49131  Misses: 104  Evictions: 0  Overflows: 0  Memory Usage: 17kB
+                     ->  Index Scan using airports_data_pkey on airports_data arr  (cost=0.14..0.16 rows=1 width=65) (actual time=0.004..0.004 rows=1 loops=104)
+                           Index Cond: (airport_code = f.arrival_airport)
+ Planning Time: 0.551 ms
+ Execution Time: 147.441 ms
+(20 rows)
+
+
+=== PERFORMANCE: Materialized view (pre-computed, indexed) ===
+                                                      QUERY PLAN                                                       
+-----------------------------------------------------------------------------------------------------------------------
+ Seq Scan on mv_route_delay_summary  (cost=0.00..22.18 rows=618 width=104) (actual time=0.014..0.111 rows=618 loops=1)
+ Planning Time: 27.686 ms
+ Execution Time: 0.142 ms
+(3 rows)
+
+
+=== DASHBOARD QUERY: Top 10 delayed routes (from mat view) ===
+                                                                               QUERY PLAN                                                                                
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=0.28..1.87 rows=10 width=112) (actual time=0.205..0.216 rows=10 loops=1)
+   ->  Index Scan using mv_route_delay_summary_delay_pct_idx on mv_route_delay_summary  (cost=0.28..33.09 rows=206 width=112) (actual time=0.203..0.213 rows=10 loops=1)
+         Filter: (total_flights >= 50)
+         Rows Removed by Filter: 28
+ Planning Time: 0.164 ms
+ Execution Time: 0.270 ms
+(6 rows)
+
+
+=== MATERIALIZED VIEW SIZES ===
+       view_name        | total_size | delay_rows | revenue_rows | utilization_rows 
+------------------------+------------+------------+--------------+------------------
+ mv_route_delay_summary | 200 kB     |        618 |          275 |                8
+(1 row)
+
+        view_name        | total_size 
+-------------------------+------------
+ mv_route_delay_summary  | 200 kB
+ mv_daily_revenue        | 88 kB
+ mv_aircraft_utilization | 32 kB
+(3 rows)
+
+
+=== REFRESH: CONCURRENTLY (non-blocking) ===
+REFRESH MATERIALIZED VIEW
+REFRESH MATERIALIZED VIEW
+REFRESH MATERIALIZED VIEW
+All materialized views refreshed.

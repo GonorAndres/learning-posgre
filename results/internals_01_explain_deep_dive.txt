@@ -1,0 +1,255 @@
+SET
+=== 1a. SEQUENTIAL SCAN (full table scan on flights) ===
+                                                   QUERY PLAN                                                   
+----------------------------------------------------------------------------------------------------------------
+ Seq Scan on flights  (cost=0.00..1652.80 rows=49237 width=63) (actual time=19.687..262.016 rows=49235 loops=1)
+   Filter: ((status)::text = 'Arrived'::text)
+   Rows Removed by Filter: 16429
+   Buffers: shared hit=36 read=796
+ Planning:
+   Buffers: shared hit=122 read=25
+ Planning Time: 198.677 ms
+ Execution Time: 263.914 ms
+(8 rows)
+
+
+=== 1b. INDEX SCAN (primary key lookup) ===
+                                                      QUERY PLAN                                                       
+-----------------------------------------------------------------------------------------------------------------------
+ Index Scan using flights_pkey on flights  (cost=0.29..2.51 rows=1 width=63) (actual time=0.744..0.745 rows=1 loops=1)
+   Index Cond: (flight_id = 1000)
+   Buffers: shared hit=1 read=2
+ Planning:
+   Buffers: shared hit=8
+ Planning Time: 0.126 ms
+ Execution Time: 0.773 ms
+(7 rows)
+
+
+=== 1c. INDEX ONLY SCAN (only need indexed columns) ===
+VACUUM
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Index Only Scan using flights_pkey on flights  (cost=0.29..22.21 rows=931 width=4) (actual time=0.054..0.265 rows=1001 loops=1)
+   Index Cond: ((flight_id >= 1000) AND (flight_id <= 2000))
+   Heap Fetches: 0
+   Buffers: shared hit=3 read=3
+ Planning:
+   Buffers: shared hit=15
+ Planning Time: 0.285 ms
+ Execution Time: 0.352 ms
+(8 rows)
+
+
+=== 1d. BITMAP SCAN (moderate selectivity) ===
+CREATE INDEX
+ANALYZE
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on flights  (cost=52.51..918.08 rows=5886 width=63) (actual time=0.215..0.725 rows=5912 loops=1)
+   Recheck Cond: (departure_airport = 'SVO'::bpchar)
+   Heap Blocks: exact=73
+   Buffers: shared hit=73 read=7
+   ->  Bitmap Index Scan on idx_flights_dep_tmp  (cost=0.00..51.04 rows=5886 width=0) (actual time=0.203..0.204 rows=5912 loops=1)
+         Index Cond: (departure_airport = 'SVO'::bpchar)
+         Buffers: shared read=7
+ Planning:
+   Buffers: shared hit=45 read=1
+ Planning Time: 0.512 ms
+ Execution Time: 0.981 ms
+(11 rows)
+
+DROP INDEX
+
+=== 2a. NESTED LOOP JOIN (small outer, indexed inner) ===
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Hash Join  (cost=1.50..3.97 rows=10 width=39) (actual time=0.654..0.662 rows=10 loops=1)
+   Hash Cond: (f.aircraft_code = a.aircraft_code)
+   Buffers: shared hit=3 read=1
+   ->  Index Scan using flights_pkey on flights f  (cost=0.29..2.70 rows=10 width=11) (actual time=0.014..0.018 rows=10 loops=1)
+         Index Cond: ((flight_id >= 1) AND (flight_id <= 10))
+         Buffers: shared hit=3
+   ->  Hash  (cost=1.09..1.09 rows=9 width=48) (actual time=0.608..0.608 rows=9 loops=1)
+         Buckets: 1024  Batches: 1  Memory Usage: 9kB
+         Buffers: shared read=1
+         ->  Seq Scan on aircrafts_data a  (cost=0.00..1.09 rows=9 width=48) (actual time=0.579..0.581 rows=9 loops=1)
+               Buffers: shared read=1
+ Planning:
+   Buffers: shared hit=72 read=2
+ Planning Time: 20.468 ms
+ Execution Time: 0.735 ms
+(15 rows)
+
+
+=== 2b. HASH JOIN (equi-join, no useful index) ===
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=40.44..36358.99 rows=158736 width=10) (actual time=1.275..4612.266 rows=288145 loops=1)
+   Buffers: shared hit=284713 read=16621
+   ->  Bitmap Heap Scan on flights f  (cost=40.01..898.25 rows=4416 width=4) (actual time=1.225..24.660 rows=4432 loops=1)
+         Recheck Cond: ((departure_airport = 'SVO'::bpchar) AND ((status)::text = 'Arrived'::text))
+         Heap Blocks: exact=72
+         Buffers: shared hit=17 read=60
+         ->  Bitmap Index Scan on idx_flights_arrived  (cost=0.00..38.91 rows=4416 width=0) (actual time=1.209..1.210 rows=4432 loops=1)
+               Index Cond: (departure_airport = 'SVO'::bpchar)
+               Buffers: shared read=5
+   ->  Index Scan using idx_tf_flight_id on ticket_flights tf  (cost=0.43..7.17 rows=86 width=10) (actual time=0.023..1.025 rows=65 loops=4432)
+         Index Cond: (flight_id = f.flight_id)
+         Buffers: shared hit=284696 read=16561
+ Planning:
+   Buffers: shared hit=83 read=11
+ Planning Time: 77.726 ms
+ Execution Time: 4625.708 ms
+(16 rows)
+
+
+=== 2c. MERGE JOIN (both sides sorted) ===
+SET
+SET
+                                                                        QUERY PLAN                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Merge Join  (cost=1.01..56433.87 rows=829071 width=22) (actual time=49.603..102867.486 rows=829071 loops=1)
+   Merge Cond: (t.book_ref = b.book_ref)
+   Buffers: shared hit=582206 read=24089
+   ->  Index Scan using idx_tickets_book_ref on tickets t  (cost=0.42..30068.39 rows=829071 width=23) (actual time=0.794..101594.058 rows=829071 loops=1)
+         Buffers: shared hit=582203 read=18688
+   ->  Index Scan using bookings_pkey on bookings b  (cost=0.42..14519.02 rows=593433 width=13) (actual time=48.795..712.075 rows=593433 loops=1)
+         Buffers: shared hit=3 read=5401
+ Planning:
+   Buffers: shared hit=70 read=41 dirtied=2
+ Planning Time: 232.166 ms
+ Execution Time: 102921.647 ms
+(11 rows)
+
+RESET
+RESET
+
+=== 3a. HASH AGGREGATE ===
+                                                                       QUERY PLAN                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=0.29..1381.71 rows=104 width=12) (actual time=49.326..61.693 rows=104 loops=1)
+   Group Key: departure_airport
+   Buffers: shared read=61
+   ->  Index Only Scan using idx_flights_dep_status on flights  (cost=0.29..1052.35 rows=65664 width=4) (actual time=49.250..56.227 rows=65664 loops=1)
+         Heap Fetches: 0
+         Buffers: shared read=61
+ Planning:
+   Buffers: shared hit=1 read=2
+ Planning Time: 21.098 ms
+ Execution Time: 61.758 ms
+(10 rows)
+
+
+=== 3b. GROUP AGGREGATE (many groups) ===
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Finalize HashAggregate  (cost=22348.99..22451.14 rows=10215 width=24) (actual time=530.805..535.051 rows=27909 loops=1)
+   Group Key: passenger_name
+   Batches: 1  Memory Usage: 3601kB
+   Buffers: shared hit=13890 read=30
+   ->  Gather  (cost=20101.69..22246.84 rows=20430 width=24) (actual time=491.996..505.044 rows=51062 loops=1)
+         Workers Planned: 2
+         Workers Launched: 2
+         Buffers: shared hit=13890 read=30
+         ->  Partial HashAggregate  (cost=19101.69..19203.84 rows=10215 width=24) (actual time=281.832..286.497 rows=17021 loops=3)
+               Group Key: passenger_name
+               Batches: 1  Memory Usage: 3601kB
+               Buffers: shared hit=13890 read=30
+               Worker 0:  Batches: 1  Memory Usage: 1425kB
+               Worker 1:  Batches: 1  Memory Usage: 1425kB
+               ->  Parallel Seq Scan on tickets  (cost=0.00..17374.46 rows=345446 width=16) (actual time=0.016..66.231 rows=276357 loops=3)
+                     Buffers: shared hit=13890 read=30
+ Planning:
+   Buffers: shared hit=1 read=2
+ Planning Time: 1.526 ms
+ Execution Time: 537.283 ms
+(20 rows)
+
+
+=== 4a. CTE (may be inlined in PG 12+) ===
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Gather  (cost=1000.42..11994.66 rows=4186 width=22) (actual time=1.423..277.172 rows=5976 loops=1)
+   Workers Planned: 2
+   Workers Launched: 2
+   Buffers: shared hit=7654 read=5225
+   ->  Nested Loop  (cost=0.42..10576.06 rows=1744 width=22) (actual time=2.521..250.092 rows=1992 loops=3)
+         Buffers: shared hit=7654 read=5225
+         ->  Parallel Seq Scan on bookings  (cost=0.00..6914.80 rows=1248 width=13) (actual time=1.908..204.089 rows=746 loops=3)
+               Filter: (total_amount > '500000'::numeric)
+               Rows Removed by Filter: 197065
+               Buffers: shared read=3824
+         ->  Index Scan using idx_tickets_book_ref on tickets t  (cost=0.42..2.91 rows=2 width=23) (actual time=0.059..0.060 rows=3 loops=2239)
+               Index Cond: (book_ref = bookings.book_ref)
+               Buffers: shared hit=7654 read=1401
+ Planning:
+   Buffers: shared hit=11 read=12
+ Planning Time: 53.132 ms
+ Execution Time: 277.719 ms
+(17 rows)
+
+
+=== 4b. EQUIVALENT SUBQUERY ===
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Gather  (cost=1000.42..11994.66 rows=4186 width=22) (actual time=1.923..288.734 rows=5976 loops=1)
+   Workers Planned: 2
+   Workers Launched: 2
+   Buffers: shared hit=10488 read=2391
+   ->  Nested Loop  (cost=0.42..10576.06 rows=1744 width=22) (actual time=15.607..255.897 rows=1992 loops=3)
+         Buffers: shared hit=10488 read=2391
+         ->  Parallel Seq Scan on bookings b  (cost=0.00..6914.80 rows=1248 width=13) (actual time=14.356..228.741 rows=746 loops=3)
+               Filter: (total_amount > '500000'::numeric)
+               Rows Removed by Filter: 197065
+               Buffers: shared hit=2003 read=1821
+         ->  Index Scan using idx_tickets_book_ref on tickets t  (cost=0.42..2.91 rows=2 width=23) (actual time=0.033..0.035 rows=3 loops=2239)
+               Index Cond: (book_ref = b.book_ref)
+               Buffers: shared hit=8485 read=570
+ Planning:
+   Buffers: shared hit=7 read=9
+ Planning Time: 10.523 ms
+ Execution Time: 289.251 ms
+(17 rows)
+
+
+=== 4c. LATERAL JOIN ===
+                                                                                  QUERY PLAN                                                                                  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=1422.25..1422.27 rows=10 width=48) (actual time=18.586..18.589 rows=10 loops=1)
+   Buffers: shared hit=203 read=48
+   ->  Sort  (cost=1422.25..1422.51 rows=104 width=48) (actual time=18.585..18.587 rows=10 loops=1)
+         Sort Key: (count(*)) DESC
+         Sort Method: top-N heapsort  Memory: 26kB
+         Buffers: shared hit=203 read=48
+         ->  Nested Loop  (cost=13.60..1420.00 rows=104 width=48) (actual time=3.075..18.473 rows=104 loops=1)
+               Buffers: shared hit=200 read=48
+               ->  Seq Scan on airports_data a  (cost=0.00..4.04 rows=104 width=65) (actual time=1.777..1.812 rows=104 loops=1)
+                     Buffers: shared read=3
+               ->  Limit  (cost=13.60..13.60 rows=1 width=12) (actual time=0.159..0.159 rows=1 loops=104)
+                     Buffers: shared hit=200 read=45
+                     ->  Sort  (cost=13.60..13.86 rows=103 width=12) (actual time=0.152..0.152 rows=1 loops=104)
+                           Sort Key: (count(*)) DESC
+                           Sort Method: top-N heapsort  Memory: 25kB
+                           Buffers: shared hit=200 read=45
+                           ->  GroupAggregate  (cost=0.29..13.08 rows=103 width=12) (actual time=0.070..0.141 rows=6 loops=104)
+                                 Group Key: f.arrival_airport
+                                 Buffers: shared hit=200 read=45
+                                 ->  Index Only Scan using idx_flights_arrived on flights f  (cost=0.29..9.68 rows=474 width=4) (actual time=0.057..0.099 rows=473 loops=104)
+                                       Index Cond: (departure_airport = a.airport_code)
+                                       Heap Fetches: 0
+                                       Buffers: shared hit=200 read=45
+ Planning:
+   Buffers: shared hit=23 read=13
+ Planning Time: 107.570 ms
+ Execution Time: 18.702 ms
+(27 rows)
+
+
+=== QUICK REFERENCE: What to look for in EXPLAIN ANALYZE ===
+  - "Seq Scan" with many "rows removed by filter" -> needs an index
+  - "Nested Loop" with high "loops" count -> consider hash/merge join
+  - "Sort Method: external merge" -> work_mem too small, spilling to disk
+  - "Buffers: shared read" >> "shared hit" -> cache is cold or too small
+  - "actual time" much higher than "cost" estimate -> stale statistics (run ANALYZE)
+  - "Hash Batches: N" where N > 1 -> hash spilled to disk (increase work_mem)

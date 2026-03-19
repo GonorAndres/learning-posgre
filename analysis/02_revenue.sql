@@ -105,7 +105,7 @@ SELECT
     END                         AS lead_time_bucket,
     COUNT(*)                    AS tickets,
     ROUND(AVG(amount), 2)       AS avg_price_rub,
-    ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY amount), 2) AS median_price_rub
+    ROUND((PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY amount))::numeric, 2) AS median_price_rub
 FROM booking_lead
 GROUP BY lead_time_bucket
 ORDER BY lead_time_bucket;

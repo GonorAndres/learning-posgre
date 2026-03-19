@@ -175,7 +175,14 @@ learning_posgre/
     03_utilization_bq.sql         # Utilization in BigQuery SQL
     04_geospatial_bq.sql          # Geospatial with ST_GEOGPOINT / ST_DISTANCE
     pg_vs_bq_comparison.md        # Performance, cost, and architecture comparison
+  results/                        # Pre-computed output from all scripts
 ```
+
+---
+
+## Pre-computed Results
+
+Don't want to spin up Docker? The `results/` directory contains the full output of every analysis and internals script, captured from a real run against the 5.74M-row dataset. 12 files, 1,800+ lines of actual query results, EXPLAIN ANALYZE plans, and pg_stat metrics.
 
 ---
 

@@ -1,0 +1,86 @@
+SET
+=== 1. WAL CONFIGURATION ===
+             name             | setting | unit |                                        short_desc                                        
+------------------------------+---------+------+------------------------------------------------------------------------------------------
+ archive_mode                 | off     |      | Allows archiving of WAL files using archive_command.
+ checkpoint_completion_target | 0.9     |      | Time spent flushing dirty buffers during checkpoint, as fraction of checkpoint interval.
+ checkpoint_timeout           | 300     | s    | Sets the maximum time between automatic WAL checkpoints.
+ full_page_writes             | on      |      | Writes full pages to WAL when first modified after a checkpoint.
+ max_wal_size                 | 1024    | MB   | Sets the WAL size that triggers a checkpoint.
+ min_wal_size                 | 80      | MB   | Sets the minimum size to shrink the WAL to.
+ synchronous_commit           | on      |      | Sets the current transaction's synchronization level.
+ wal_buffers                  | 512     | 8kB  | Sets the number of disk-page buffers in shared memory for WAL.
+ wal_compression              | off     |      | Compresses full-page writes written in WAL file with specified method.
+ wal_level                    | replica |      | Sets the level of information written to the WAL.
+(10 rows)
+
+
+=== 2. CHECKPOINT STATISTICS (pg_stat_bgwriter) ===
+ scheduled_checkpoints | requested_checkpoints | buffers_written_checkpoint | buffers_written_bgwriter | buffers_written_backends | bgwriter_maxwritten_stops | checkpoint_write_volume | backend_write_volume 
+-----------------------+-----------------------+----------------------------+--------------------------+--------------------------+---------------------------+-------------------------+----------------------
+                   293 |                     2 |                       4377 |                    15228 |                   135268 |                        60 | 34 MB                   | 1057 MB
+(1 row)
+
+
+=== 3. CURRENT WAL POSITION ===
+ current_lsn |     current_wal_file     | total_wal_generated 
+-------------+--------------------------+---------------------
+ 0/31F1D548  | 000000010000000000000031 | 799 MB
+(1 row)
+
+
+=== 4. WAL GENERATION: Before bulk operation ===
+SELECT 100000
+UPDATE 100000
+After 100K inserts + 100K updates:
+ wal_generated 
+---------------
+ 34 kB
+(1 row)
+
+DROP TABLE
+
+=== 5. SYNCHRONOUS COMMIT IMPACT ===
+CREATE TABLE
+synchronous_commit = on (safe, default):
+Timing is on.
+INSERT 0 10000
+Time: 18.277 ms
+Timing is off.
+TRUNCATE TABLE
+SET
+
+synchronous_commit = off (faster writes):
+Timing is on.
+INSERT 0 10000
+Time: 17.665 ms
+Timing is off.
+RESET
+DROP TABLE
+
+=== 6. REPLICATION SLOT STATUS ===
+ slot_name | slot_type | active | wal_retained 
+-----------+-----------+--------+--------------
+(0 rows)
+
+
+=== 7. CLOUD SQL: What you CAN and CANNOT tune ===
+
+CAN change (via Database Flags):
+  - max_connections, shared_buffers, work_mem
+  - log_min_duration_statement, log_statement
+  - autovacuum_* settings (per-table too)
+  - random_page_cost, effective_cache_size
+  - synchronous_commit (set to "off" for analytics workloads)
+
+CANNOT change:
+  - wal_level (always "replica" for HA)
+  - max_wal_size (managed by Cloud SQL)
+  - archive_mode/archive_command (managed for PITR)
+  - full_page_writes (always on)
+  - ssl configuration (always enforced)
+  - pg_hba.conf (managed via IAM and Authorized Networks)
+
+IMPORTANT: Cloud SQL handles checkpoints, WAL archival, and
+replication automatically. Focus tuning on query-level settings
+(work_mem, effective_cache_size) and autovacuum thresholds.
