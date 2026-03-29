@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import ClientShell from "@/components/layout/ClientShell";
+
+const GA_ID = "G-098V02NCB0";
 
 const jetbrainsMono = localFont({
   src: [
@@ -26,6 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={jetbrainsMono.variable}>
+      <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
+      </head>
       <body className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-mono), monospace" }}>
         <ClientShell>{children}</ClientShell>
       </body>
