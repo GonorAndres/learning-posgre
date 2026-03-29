@@ -45,6 +45,11 @@ subagents_outputs/
 .playwright-mcp/
 *.png
 
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-hosting-docs/
+
 # Claude ephemeral (config files ARE tracked)
 .claude/cache/
 .claude/debug/
