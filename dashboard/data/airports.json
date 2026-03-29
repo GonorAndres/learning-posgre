@@ -1,0 +1,1042 @@
+[
+  {
+    "code": "AAQ",
+    "name": "Anapa Vityazevo Airport",
+    "city": "Anapa",
+    "lon": 37.347301483154,
+    "lat": 45.002101898193,
+    "timezone": "Europe/Moscow",
+    "departures": 195.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "ABA",
+    "name": "Abakan Airport",
+    "city": "Abakan",
+    "lon": 91.38500213623047,
+    "lat": 53.7400016784668,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 351.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "AER",
+    "name": "Sochi International Airport",
+    "city": "Sochi",
+    "lon": 39.956600189209,
+    "lat": 43.449901580811,
+    "timezone": "Europe/Moscow",
+    "departures": 867.0,
+    "destinations": 12.0
+  },
+  {
+    "code": "ARH",
+    "name": "Talagi Airport",
+    "city": "Arkhangelsk",
+    "lon": 40.71670150756836,
+    "lat": 64.60030364990234,
+    "timezone": "Europe/Moscow",
+    "departures": 480.0,
+    "destinations": 8.0
+  },
+  {
+    "code": "ASF",
+    "name": "Astrakhan Airport",
+    "city": "Astrakhan",
+    "lon": 48.0063018799,
+    "lat": 46.2832984924,
+    "timezone": "Europe/Samara",
+    "departures": 221.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "BAX",
+    "name": "Barnaul Airport",
+    "city": "Barnaul",
+    "lon": 83.53849792480469,
+    "lat": 53.363800048828125,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 234.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "BQS",
+    "name": "Ignatyevo Airport",
+    "city": "Blagoveschensk",
+    "lon": 127.41200256347656,
+    "lat": 50.42539978027344,
+    "timezone": "Asia/Yakutsk",
+    "departures": 90.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "BTK",
+    "name": "Bratsk Airport",
+    "city": "Bratsk",
+    "lon": 101.697998046875,
+    "lat": 56.370601654052734,
+    "timezone": "Asia/Irkutsk",
+    "departures": 91.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "BZK",
+    "name": "Bryansk Airport",
+    "city": "Bryansk",
+    "lon": 34.176399231,
+    "lat": 53.214199066199996,
+    "timezone": "Europe/Moscow",
+    "departures": 906.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "CEE",
+    "name": "Cherepovets Airport",
+    "city": "Cherepovets",
+    "lon": 38.015800476100004,
+    "lat": 59.273601532,
+    "timezone": "Europe/Moscow",
+    "departures": 195.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "CEK",
+    "name": "Chelyabinsk Balandino Airport",
+    "city": "Chelyabinsk",
+    "lon": 61.5033,
+    "lat": 55.305801,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 608.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "CNN",
+    "name": "Chulman Airport",
+    "city": "Neryungri",
+    "lon": 124.91400146484,
+    "lat": 56.913898468018,
+    "timezone": "Asia/Yakutsk",
+    "departures": 234.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "CSY",
+    "name": "Cheboksary Airport",
+    "city": "Cheboksary",
+    "lon": 47.3473014831543,
+    "lat": 56.090301513671875,
+    "timezone": "Europe/Moscow",
+    "departures": 454.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "DME",
+    "name": "Domodedovo International Airport",
+    "city": "Moscow",
+    "lon": 37.90629959106445,
+    "lat": 55.40879821777344,
+    "timezone": "Europe/Moscow",
+    "departures": 4776.0,
+    "destinations": 53.0
+  },
+  {
+    "code": "DYR",
+    "name": "Ugolny Airport",
+    "city": "Anadyr",
+    "lon": 177.74099731445312,
+    "lat": 64.73490142822266,
+    "timezone": "Asia/Anadyr",
+    "departures": 52.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "EGO",
+    "name": "Belgorod International Airport",
+    "city": "Belgorod",
+    "lon": 36.5900993347168,
+    "lat": 50.643798828125,
+    "timezone": "Europe/Moscow",
+    "departures": 544.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "ESL",
+    "name": "Elista Airport",
+    "city": "Elista",
+    "lon": 44.33089828491211,
+    "lat": 46.3739013671875,
+    "timezone": "Europe/Moscow",
+    "departures": 439.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "EYK",
+    "name": "Beloyarskiy Airport",
+    "city": "Beloyarsky",
+    "lon": 66.698600769,
+    "lat": 63.686901092499994,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 78.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "GDX",
+    "name": "Sokol Airport",
+    "city": "Magadan",
+    "lon": 150.72000122070312,
+    "lat": 59.9109992980957,
+    "timezone": "Asia/Magadan",
+    "departures": 52.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "GDZ",
+    "name": "Gelendzhik Airport",
+    "city": "Gelendzhik",
+    "lon": 38.0124807358,
+    "lat": 44.5820926295,
+    "timezone": "Europe/Moscow",
+    "departures": 169.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "GOJ",
+    "name": "Nizhny Novgorod Strigino International Airport",
+    "city": "Nizhniy Novgorod",
+    "lon": 43.784000396729,
+    "lat": 56.230098724365,
+    "timezone": "Europe/Moscow",
+    "departures": 530.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "GRV",
+    "name": "Khankala Air Base",
+    "city": "Grozny",
+    "lon": 45.78409957885742,
+    "lat": 43.298099517822266,
+    "timezone": "Europe/Moscow",
+    "departures": 103.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "HMA",
+    "name": "Khanty Mansiysk Airport",
+    "city": "Khanty-Mansiysk",
+    "lon": 69.08609771728516,
+    "lat": 61.028499603271484,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 765.0,
+    "destinations": 8.0
+  },
+  {
+    "code": "HTA",
+    "name": "Chita-Kadala Airport",
+    "city": "Chita",
+    "lon": 113.306,
+    "lat": 52.026299,
+    "timezone": "Asia/Chita",
+    "departures": 143.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "IAR",
+    "name": "Tunoshna Airport",
+    "city": "Yaroslavl",
+    "lon": 40.15739822387695,
+    "lat": 57.560699462890625,
+    "timezone": "Europe/Moscow",
+    "departures": 116.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "IJK",
+    "name": "Izhevsk Airport",
+    "city": "Izhevsk",
+    "lon": 53.45750045776367,
+    "lat": 56.82809829711914,
+    "timezone": "Europe/Samara",
+    "departures": 90.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "IKT",
+    "name": "Irkutsk Airport",
+    "city": "Irkutsk",
+    "lon": 104.38899993896,
+    "lat": 52.268001556396,
+    "timezone": "Asia/Irkutsk",
+    "departures": 546.0,
+    "destinations": 9.0
+  },
+  {
+    "code": "IWA",
+    "name": "Ivanovo South Airport",
+    "city": "Ivanovo",
+    "lon": 40.940799713134766,
+    "lat": 56.93939971923828,
+    "timezone": "Europe/Moscow",
+    "departures": 52.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "JOK",
+    "name": "Yoshkar-Ola Airport",
+    "city": "Yoshkar-Ola",
+    "lon": 47.904701232910156,
+    "lat": 56.700599670410156,
+    "timezone": "Europe/Moscow",
+    "departures": 388.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "KEJ",
+    "name": "Kemerovo Airport",
+    "city": "Kemorovo",
+    "lon": 86.1072006225586,
+    "lat": 55.27009963989258,
+    "timezone": "Asia/Novokuznetsk",
+    "departures": 130.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "KGD",
+    "name": "Khrabrovo Airport",
+    "city": "Kaliningrad",
+    "lon": 20.592599868774414,
+    "lat": 54.88999938964844,
+    "timezone": "Europe/Kaliningrad",
+    "departures": 232.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "KGP",
+    "name": "Kogalym International Airport",
+    "city": "Kogalym",
+    "lon": 74.53379821777344,
+    "lat": 62.190399169921875,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 286.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "KHV",
+    "name": "Khabarovsk-Novy Airport",
+    "city": "Khabarovsk",
+    "lon": 135.18800354004,
+    "lat": 48.52799987793,
+    "timezone": "Asia/Vladivostok",
+    "departures": 597.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "KJA",
+    "name": "Yemelyanovo Airport",
+    "city": "Krasnoyarsk",
+    "lon": 92.493301391602,
+    "lat": 56.172901153564,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 1052.0,
+    "destinations": 10.0
+  },
+  {
+    "code": "KLF",
+    "name": "Grabtsevo Airport",
+    "city": "Kaluga",
+    "lon": 36.3666687012,
+    "lat": 54.5499992371,
+    "timezone": "Europe/Moscow",
+    "departures": 182.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "KRO",
+    "name": "Kurgan Airport",
+    "city": "Kurgan",
+    "lon": 65.41560363769531,
+    "lat": 55.47529983520508,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 312.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "KRR",
+    "name": "Krasnodar Pashkovsky International Airport",
+    "city": "Krasnodar",
+    "lon": 39.170501708984,
+    "lat": 45.034698486328,
+    "timezone": "Europe/Moscow",
+    "departures": 350.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "KUF",
+    "name": "Kurumoch International Airport",
+    "city": "Samara",
+    "lon": 50.16429901123,
+    "lat": 53.504901885986,
+    "timezone": "Europe/Samara",
+    "departures": 273.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "KVX",
+    "name": "Pobedilovo Airport",
+    "city": "Kirov",
+    "lon": 49.348300933838,
+    "lat": 58.503299713135,
+    "timezone": "Europe/Moscow",
+    "departures": 545.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "KXK",
+    "name": "Komsomolsk-on-Amur Airport",
+    "city": "Komsomolsk-on-Amur",
+    "lon": 136.9340057373047,
+    "lat": 50.409000396728516,
+    "timezone": "Asia/Vladivostok",
+    "departures": 26.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "KYZ",
+    "name": "Kyzyl Airport",
+    "city": "Kyzyl",
+    "lon": 94.40059661865234,
+    "lat": 51.66939926147461,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 65.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "KZN",
+    "name": "Kazan International Airport",
+    "city": "Kazan",
+    "lon": 49.278701782227,
+    "lat": 55.606201171875,
+    "timezone": "Europe/Moscow",
+    "departures": 701.0,
+    "destinations": 9.0
+  },
+  {
+    "code": "LED",
+    "name": "Pulkovo Airport",
+    "city": "St. Petersburg",
+    "lon": 30.262500762939453,
+    "lat": 59.80030059814453,
+    "timezone": "Europe/Moscow",
+    "departures": 2825.0,
+    "destinations": 24.0
+  },
+  {
+    "code": "LPK",
+    "name": "Lipetsk Airport",
+    "city": "Lipetsk",
+    "lon": 39.53779983520508,
+    "lat": 52.70280075073242,
+    "timezone": "Europe/Moscow",
+    "departures": 65.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "MCX",
+    "name": "Uytash Airport",
+    "city": "Makhachkala",
+    "lon": 47.65230178833008,
+    "lat": 42.81679916381836,
+    "timezone": "Europe/Moscow",
+    "departures": 299.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "MJZ",
+    "name": "Mirny Airport",
+    "city": "Mirnyj",
+    "lon": 114.03900146484375,
+    "lat": 62.534698486328125,
+    "timezone": "Asia/Yakutsk",
+    "departures": 572.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "MMK",
+    "name": "Murmansk Airport",
+    "city": "Murmansk",
+    "lon": 32.75080108642578,
+    "lat": 68.78170013427734,
+    "timezone": "Europe/Moscow",
+    "departures": 182.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "MQF",
+    "name": "Magnitogorsk International Airport",
+    "city": "Magnetiogorsk",
+    "lon": 58.755699157714844,
+    "lat": 53.39310073852539,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 364.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "MRV",
+    "name": "Mineralnyye Vody Airport",
+    "city": "Mineralnye Vody",
+    "lon": 43.08190155029297,
+    "lat": 44.225101470947266,
+    "timezone": "Europe/Moscow",
+    "departures": 312.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "NAL",
+    "name": "Nalchik Airport",
+    "city": "Nalchik",
+    "lon": 43.636600494384766,
+    "lat": 43.512901306152344,
+    "timezone": "Europe/Moscow",
+    "departures": 273.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "NBC",
+    "name": "Begishevo Airport",
+    "city": "Nizhnekamsk",
+    "lon": 52.092498779296875,
+    "lat": 55.564701080322266,
+    "timezone": "Europe/Moscow",
+    "departures": 335.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "NFG",
+    "name": "Nefteyugansk Airport",
+    "city": "Nefteyugansk",
+    "lon": 72.6500015258789,
+    "lat": 61.108299255371094,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 64.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "NJC",
+    "name": "Nizhnevartovsk Airport",
+    "city": "Nizhnevartovsk",
+    "lon": 76.48359680175781,
+    "lat": 60.94929885864258,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 285.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "NNM",
+    "name": "Naryan Mar Airport",
+    "city": "Naryan-Mar",
+    "lon": 53.12189865112305,
+    "lat": 67.63999938964844,
+    "timezone": "Europe/Moscow",
+    "departures": 233.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "NOJ",
+    "name": "Noyabrsk Airport",
+    "city": "Noyabrsk",
+    "lon": 75.2699966430664,
+    "lat": 63.18330001831055,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 272.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "NOZ",
+    "name": "Spichenkovo Airport",
+    "city": "Novokuznetsk",
+    "lon": 86.877197265625,
+    "lat": 53.8114013671875,
+    "timezone": "Asia/Novokuznetsk",
+    "departures": 545.0,
+    "destinations": 8.0
+  },
+  {
+    "code": "NSK",
+    "name": "Norilsk-Alykel Airport",
+    "city": "Norilsk",
+    "lon": 87.33219909667969,
+    "lat": 69.31109619140625,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 207.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "NUX",
+    "name": "Novy Urengoy Airport",
+    "city": "Novy Urengoy",
+    "lon": 76.52030181884766,
+    "lat": 66.06939697265625,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 752.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "NYA",
+    "name": "Nyagan Airport",
+    "city": "Nyagan",
+    "lon": 65.61499786376953,
+    "lat": 62.11000061035156,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 39.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "NYM",
+    "name": "Nadym Airport",
+    "city": "Nadym",
+    "lon": 72.69889831542969,
+    "lat": 65.48090362548828,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 207.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "OGZ",
+    "name": "Beslan Airport",
+    "city": "Beslan",
+    "lon": 44.6066017151,
+    "lat": 43.2051010132,
+    "timezone": "Europe/Moscow",
+    "departures": 181.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "OMS",
+    "name": "Omsk Central Airport",
+    "city": "Omsk",
+    "lon": 73.31050109863281,
+    "lat": 54.96699905395508,
+    "timezone": "Asia/Omsk",
+    "departures": 297.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "OSW",
+    "name": "Orsk Airport",
+    "city": "Orsk",
+    "lon": 58.59560012817383,
+    "lat": 51.0724983215332,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 104.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "OVB",
+    "name": "Tolmachevo Airport",
+    "city": "Novosibirsk",
+    "lon": 82.650703430176,
+    "lat": 55.012599945068,
+    "timezone": "Asia/Novosibirsk",
+    "departures": 1571.0,
+    "destinations": 15.0
+  },
+  {
+    "code": "OVS",
+    "name": "Sovetskiy Airport",
+    "city": "Sovetskiy",
+    "lon": 63.60191345214844,
+    "lat": 61.326622009277344,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 817.0,
+    "destinations": 8.0
+  },
+  {
+    "code": "PEE",
+    "name": "Bolshoye Savino Airport",
+    "city": "Perm",
+    "lon": 56.021198272705,
+    "lat": 57.914501190186,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 920.0,
+    "destinations": 9.0
+  },
+  {
+    "code": "PES",
+    "name": "Petrozavodsk Airport",
+    "city": "Petrozavodsk",
+    "lon": 34.154701232910156,
+    "lat": 61.88520050048828,
+    "timezone": "Europe/Moscow",
+    "departures": 531.0,
+    "destinations": 7.0
+  },
+  {
+    "code": "PEZ",
+    "name": "Penza Airport",
+    "city": "Penza",
+    "lon": 45.02109909057617,
+    "lat": 53.110599517822266,
+    "timezone": "Europe/Moscow",
+    "departures": 364.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "PKC",
+    "name": "Yelizovo Airport",
+    "city": "Petropavlovsk",
+    "lon": 158.45399475097656,
+    "lat": 53.16790008544922,
+    "timezone": "Asia/Kamchatka",
+    "departures": 39.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "PKV",
+    "name": "Pskov Airport",
+    "city": "Pskov",
+    "lon": 28.395599365234375,
+    "lat": 57.78390121459961,
+    "timezone": "Europe/Moscow",
+    "departures": 142.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "PYJ",
+    "name": "Polyarny Airport",
+    "city": "Yakutia",
+    "lon": 112.029998779,
+    "lat": 66.4003982544,
+    "timezone": "Asia/Yakutsk",
+    "departures": 39.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "REN",
+    "name": "Orenburg Central Airport",
+    "city": "Orenburg",
+    "lon": 55.45669937133789,
+    "lat": 51.795799255371094,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 455.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "RGK",
+    "name": "Gorno-Altaysk Airport",
+    "city": "Gorno-Altaysk",
+    "lon": 85.8332977295,
+    "lat": 51.9667015076,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 130.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "ROV",
+    "name": "Rostov-on-Don Airport",
+    "city": "Rostov",
+    "lon": 39.8180999756,
+    "lat": 47.2582015991,
+    "timezone": "Europe/Moscow",
+    "departures": 920.0,
+    "destinations": 11.0
+  },
+  {
+    "code": "RTW",
+    "name": "Saratov Central Airport",
+    "city": "Saratov",
+    "lon": 46.04669952392578,
+    "lat": 51.564998626708984,
+    "timezone": "Europe/Volgograd",
+    "departures": 364.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "SCW",
+    "name": "Syktyvkar Airport",
+    "city": "Syktyvkar",
+    "lon": 50.84510040283203,
+    "lat": 61.64699935913086,
+    "timezone": "Europe/Moscow",
+    "departures": 377.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "SGC",
+    "name": "Surgut Airport",
+    "city": "Surgut",
+    "lon": 73.40180206298828,
+    "lat": 61.34370040893555,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 789.0,
+    "destinations": 9.0
+  },
+  {
+    "code": "SKX",
+    "name": "Saransk Airport",
+    "city": "Saransk",
+    "lon": 45.212257385253906,
+    "lat": 54.12512969970703,
+    "timezone": "Europe/Moscow",
+    "departures": 181.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "SLY",
+    "name": "Salekhard Airport",
+    "city": "Salekhard",
+    "lon": 66.61100006103516,
+    "lat": 66.5907974243164,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 182.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "STW",
+    "name": "Stavropol Shpakovskoye Airport",
+    "city": "Stavropol",
+    "lon": 42.11280059814453,
+    "lat": 45.10919952392578,
+    "timezone": "Europe/Moscow",
+    "departures": 181.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "SVO",
+    "name": "Sheremetyevo International Airport",
+    "city": "Moscow",
+    "lon": 37.4146,
+    "lat": 55.972599,
+    "timezone": "Europe/Moscow",
+    "departures": 4432.0,
+    "destinations": 48.0
+  },
+  {
+    "code": "SVX",
+    "name": "Koltsovo Airport",
+    "city": "Yekaterinburg",
+    "lon": 60.802700042725,
+    "lat": 56.743099212646,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 1026.0,
+    "destinations": 13.0
+  },
+  {
+    "code": "SWT",
+    "name": "Strezhevoy Airport",
+    "city": "Strezhevoy",
+    "lon": 77.66000366210001,
+    "lat": 60.709400177,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 90.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "TBW",
+    "name": "Donskoye Airport",
+    "city": "Tambow",
+    "lon": 41.482799530029,
+    "lat": 52.806098937988,
+    "timezone": "Europe/Moscow",
+    "departures": 363.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "TJM",
+    "name": "Roshchino International Airport",
+    "city": "Tyumen",
+    "lon": 65.3243026733,
+    "lat": 57.189601898199996,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 636.0,
+    "destinations": 9.0
+  },
+  {
+    "code": "TOF",
+    "name": "Bogashevo Airport",
+    "city": "Tomsk",
+    "lon": 85.208297729492,
+    "lat": 56.380298614502,
+    "timezone": "Asia/Krasnoyarsk",
+    "departures": 376.0,
+    "destinations": 8.0
+  },
+  {
+    "code": "UCT",
+    "name": "Ukhta Airport",
+    "city": "Ukhta",
+    "lon": 53.8046989440918,
+    "lat": 63.566898345947266,
+    "timezone": "Europe/Moscow",
+    "departures": 273.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "UFA",
+    "name": "Ufa International Airport",
+    "city": "Ufa",
+    "lon": 55.874401092529,
+    "lat": 54.557498931885,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 572.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "UIK",
+    "name": "Ust-Ilimsk Airport",
+    "city": "Ust Ilimsk",
+    "lon": 102.56500244140625,
+    "lat": 58.13610076904297,
+    "timezone": "Asia/Irkutsk",
+    "departures": 260.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "UKX",
+    "name": "Ust-Kut Airport",
+    "city": "Ust-Kut",
+    "lon": 105.7300033569336,
+    "lat": 56.8567008972168,
+    "timezone": "Asia/Irkutsk",
+    "departures": 91.0,
+    "destinations": 1.0
+  },
+  {
+    "code": "ULV",
+    "name": "Ulyanovsk Baratayevka Airport",
+    "city": "Ulyanovsk",
+    "lon": 48.226699829100006,
+    "lat": 54.26829910279999,
+    "timezone": "Europe/Samara",
+    "departures": 584.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "ULY",
+    "name": "Ulyanovsk East Airport",
+    "city": "Ulyanovsk",
+    "lon": 48.80270004272461,
+    "lat": 54.4010009765625,
+    "timezone": "Europe/Samara",
+    "departures": 285.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "URJ",
+    "name": "Uray Airport",
+    "city": "Uraj",
+    "lon": 64.82669830322266,
+    "lat": 60.10329818725586,
+    "timezone": "Asia/Yekaterinburg",
+    "departures": 181.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "URS",
+    "name": "Kursk East Airport",
+    "city": "Kursk",
+    "lon": 36.29560089111328,
+    "lat": 51.7505989074707,
+    "timezone": "Europe/Moscow",
+    "departures": 208.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "USK",
+    "name": "Usinsk Airport",
+    "city": "Usinsk",
+    "lon": 57.3671989440918,
+    "lat": 66.00469970703125,
+    "timezone": "Europe/Moscow",
+    "departures": 26.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "UUA",
+    "name": "Bugulma Airport",
+    "city": "Bugulma",
+    "lon": 52.801700592041016,
+    "lat": 54.63999938964844,
+    "timezone": "Europe/Moscow",
+    "departures": 273.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "UUD",
+    "name": "Ulan-Ude Airport (Mukhino)",
+    "city": "Ulan-ude",
+    "lon": 107.43800354003906,
+    "lat": 51.80780029296875,
+    "timezone": "Asia/Irkutsk",
+    "departures": 104.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "UUS",
+    "name": "Yuzhno-Sakhalinsk Airport",
+    "city": "Yuzhno-Sakhalinsk",
+    "lon": 142.71800231933594,
+    "lat": 46.88869857788086,
+    "timezone": "Asia/Sakhalin",
+    "departures": 388.0,
+    "destinations": 4.0
+  },
+  {
+    "code": "VKO",
+    "name": "Vnukovo International Airport",
+    "city": "Moscow",
+    "lon": 37.2615013123,
+    "lat": 55.5914993286,
+    "timezone": "Europe/Moscow",
+    "departures": 2555.0,
+    "destinations": 30.0
+  },
+  {
+    "code": "VKT",
+    "name": "Vorkuta Airport",
+    "city": "Vorkuta",
+    "lon": 63.993099212646484,
+    "lat": 67.48860168457031,
+    "timezone": "Europe/Moscow",
+    "departures": 413.0,
+    "destinations": 5.0
+  },
+  {
+    "code": "VOG",
+    "name": "Volgograd International Airport",
+    "city": "Volgograd",
+    "lon": 44.34550094604492,
+    "lat": 48.782501220703125,
+    "timezone": "Europe/Volgograd",
+    "departures": 466.0,
+    "destinations": 6.0
+  },
+  {
+    "code": "VOZ",
+    "name": "Voronezh International Airport",
+    "city": "Voronezh",
+    "lon": 39.22959899902344,
+    "lat": 51.81420135498047,
+    "timezone": "Europe/Moscow",
+    "departures": 180.0,
+    "destinations": 2.0
+  },
+  {
+    "code": "VVO",
+    "name": "Vladivostok International Airport",
+    "city": "Vladivostok",
+    "lon": 132.1479949951172,
+    "lat": 43.39899826049805,
+    "timezone": "Asia/Vladivostok",
+    "departures": 271.0,
+    "destinations": 3.0
+  },
+  {
+    "code": "YKS",
+    "name": "Yakutsk Airport",
+    "city": "Yakutsk",
+    "lon": 129.77099609375,
+    "lat": 62.093299865722656,
+    "timezone": "Asia/Yakutsk",
+    "departures": 247.0,
+    "destinations": 5.0
+  }
+]

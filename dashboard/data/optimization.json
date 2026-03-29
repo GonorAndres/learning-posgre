@@ -1,0 +1,274 @@
+{
+  "indexes": [
+    {
+      "tablename": "aircrafts_data",
+      "indexname": "aircrafts_pkey",
+      "indexdef": "CREATE UNIQUE INDEX aircrafts_pkey ON bookings.aircrafts_data USING btree (aircraft_code)"
+    },
+    {
+      "tablename": "airports_data",
+      "indexname": "airports_data_pkey",
+      "indexdef": "CREATE UNIQUE INDEX airports_data_pkey ON bookings.airports_data USING btree (airport_code)"
+    },
+    {
+      "tablename": "boarding_passes",
+      "indexname": "boarding_passes_flight_id_boarding_no_key",
+      "indexdef": "CREATE UNIQUE INDEX boarding_passes_flight_id_boarding_no_key ON bookings.boarding_passes USING btree (flight_id, boarding_no)"
+    },
+    {
+      "tablename": "boarding_passes",
+      "indexname": "boarding_passes_flight_id_seat_no_key",
+      "indexdef": "CREATE UNIQUE INDEX boarding_passes_flight_id_seat_no_key ON bookings.boarding_passes USING btree (flight_id, seat_no)"
+    },
+    {
+      "tablename": "boarding_passes",
+      "indexname": "boarding_passes_pkey",
+      "indexdef": "CREATE UNIQUE INDEX boarding_passes_pkey ON bookings.boarding_passes USING btree (ticket_no, flight_id)"
+    },
+    {
+      "tablename": "bookings",
+      "indexname": "bookings_pkey",
+      "indexdef": "CREATE UNIQUE INDEX bookings_pkey ON bookings.bookings USING btree (book_ref)"
+    },
+    {
+      "tablename": "flights",
+      "indexname": "flights_flight_no_scheduled_departure_key",
+      "indexdef": "CREATE UNIQUE INDEX flights_flight_no_scheduled_departure_key ON bookings.flights USING btree (flight_no, scheduled_departure)"
+    },
+    {
+      "tablename": "flights",
+      "indexname": "flights_pkey",
+      "indexdef": "CREATE UNIQUE INDEX flights_pkey ON bookings.flights USING btree (flight_id)"
+    },
+    {
+      "tablename": "flights",
+      "indexname": "idx_flights_arrived",
+      "indexdef": "CREATE INDEX idx_flights_arrived ON bookings.flights USING btree (departure_airport, arrival_airport) WHERE ((status)::text = 'Arrived'::text)"
+    },
+    {
+      "tablename": "flights",
+      "indexname": "idx_flights_dep_status",
+      "indexdef": "CREATE INDEX idx_flights_dep_status ON bookings.flights USING btree (departure_airport, status)"
+    },
+    {
+      "tablename": "mv_aircraft_utilization",
+      "indexname": "mv_aircraft_utilization_aircraft_code_idx",
+      "indexdef": "CREATE UNIQUE INDEX mv_aircraft_utilization_aircraft_code_idx ON bookings.mv_aircraft_utilization USING btree (aircraft_code)"
+    },
+    {
+      "tablename": "mv_daily_revenue",
+      "indexname": "mv_daily_revenue_flight_date_fare_class_idx",
+      "indexdef": "CREATE UNIQUE INDEX mv_daily_revenue_flight_date_fare_class_idx ON bookings.mv_daily_revenue USING btree (flight_date, fare_class)"
+    },
+    {
+      "tablename": "mv_daily_revenue",
+      "indexname": "mv_daily_revenue_flight_date_idx",
+      "indexdef": "CREATE INDEX mv_daily_revenue_flight_date_idx ON bookings.mv_daily_revenue USING btree (flight_date)"
+    },
+    {
+      "tablename": "mv_route_delay_summary",
+      "indexname": "mv_route_delay_summary_delay_pct_idx",
+      "indexdef": "CREATE INDEX mv_route_delay_summary_delay_pct_idx ON bookings.mv_route_delay_summary USING btree (delay_pct DESC)"
+    },
+    {
+      "tablename": "mv_route_delay_summary",
+      "indexname": "mv_route_delay_summary_departure_airport_arrival_airport_idx",
+      "indexdef": "CREATE UNIQUE INDEX mv_route_delay_summary_departure_airport_arrival_airport_idx ON bookings.mv_route_delay_summary USING btree (departure_airport, arrival_airport)"
+    },
+    {
+      "tablename": "seats",
+      "indexname": "seats_pkey",
+      "indexdef": "CREATE UNIQUE INDEX seats_pkey ON bookings.seats USING btree (aircraft_code, seat_no)"
+    },
+    {
+      "tablename": "ticket_flights",
+      "indexname": "idx_tf_flight_id",
+      "indexdef": "CREATE INDEX idx_tf_flight_id ON bookings.ticket_flights USING btree (flight_id)"
+    },
+    {
+      "tablename": "ticket_flights",
+      "indexname": "ticket_flights_pkey",
+      "indexdef": "CREATE UNIQUE INDEX ticket_flights_pkey ON bookings.ticket_flights USING btree (ticket_no, flight_id)"
+    },
+    {
+      "tablename": "tickets",
+      "indexname": "idx_tickets_book_ref",
+      "indexdef": "CREATE INDEX idx_tickets_book_ref ON bookings.tickets USING btree (book_ref)"
+    },
+    {
+      "tablename": "tickets",
+      "indexname": "tickets_pkey",
+      "indexdef": "CREATE UNIQUE INDEX tickets_pkey ON bookings.tickets USING btree (ticket_no)"
+    }
+  ],
+  "indexSizes": [
+    {
+      "index_name": "ticket_flights_pkey",
+      "index_size": "91 MB",
+      "times_used": 1894298,
+      "tuples_read": 1894366,
+      "tuples_fetched": 1894364
+    },
+    {
+      "index_name": "boarding_passes_pkey",
+      "index_size": "73 MB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "boarding_passes_flight_id_boarding_no_key",
+      "index_size": "41 MB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "boarding_passes_flight_id_seat_no_key",
+      "index_size": "41 MB",
+      "times_used": 147731,
+      "tuples_read": 5668343,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "tickets_pkey",
+      "index_size": "25 MB",
+      "times_used": 3,
+      "tuples_read": 829073,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "idx_tickets_book_ref",
+      "index_size": "16 MB",
+      "times_used": 4493,
+      "tuples_read": 2499173,
+      "tuples_fetched": 841023
+    },
+    {
+      "index_name": "idx_tf_flight_id",
+      "index_size": "16 MB",
+      "times_used": 201440,
+      "tuples_read": 12566905,
+      "tuples_fetched": 7846177
+    },
+    {
+      "index_name": "bookings_pkey",
+      "index_size": "13 MB",
+      "times_used": 11,
+      "tuples_read": 593443,
+      "tuples_fetched": 593433
+    },
+    {
+      "index_name": "flights_flight_no_scheduled_departure_key",
+      "index_size": "2048 kB",
+      "times_used": 2,
+      "tuples_read": 82518,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "flights_pkey",
+      "index_size": "1456 kB",
+      "times_used": 106,
+      "tuples_read": 132439,
+      "tuples_fetched": 65676
+    },
+    {
+      "index_name": "idx_flights_sched_dep",
+      "index_size": "928 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "idx_flights_dep_status",
+      "index_size": "488 kB",
+      "times_used": 62,
+      "tuples_read": 262714,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "idx_flights_arrived",
+      "index_size": "360 kB",
+      "times_used": 129,
+      "tuples_read": 1011292,
+      "tuples_fetched": 492350
+    },
+    {
+      "index_name": "seats_pkey",
+      "index_size": "48 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "mv_route_delay_summary_delay_pct_idx",
+      "index_size": "32 kB",
+      "times_used": 1,
+      "tuples_read": 38,
+      "tuples_fetched": 38
+    },
+    {
+      "index_name": "mv_daily_revenue_flight_date_fare_class_idx",
+      "index_size": "32 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "mv_route_delay_summary_departure_airport_arrival_airport_idx",
+      "index_size": "32 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "mv_aircraft_utilization_aircraft_code_idx",
+      "index_size": "16 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "aircrafts_pkey",
+      "index_size": "16 kB",
+      "times_used": 4,
+      "tuples_read": 36,
+      "tuples_fetched": 36
+    },
+    {
+      "index_name": "mv_daily_revenue_flight_date_idx",
+      "index_size": "16 kB",
+      "times_used": 0,
+      "tuples_read": 0,
+      "tuples_fetched": 0
+    },
+    {
+      "index_name": "airports_data_pkey",
+      "index_size": "16 kB",
+      "times_used": 2512,
+      "tuples_read": 3954,
+      "tuples_fetched": 3954
+    }
+  ],
+  "tableSizes": [],
+  "speedups": [
+    {
+      "query": "Flights from SVO with status Arrived",
+      "before_ms": 31.512,
+      "after_ms": 0.709,
+      "speedup": "44x"
+    },
+    {
+      "query": "Route delay analysis",
+      "before_ms": 107.731,
+      "after_ms": 91.347,
+      "speedup": "1x"
+    },
+    {
+      "query": "Revenue for specific flight",
+      "before_ms": 381.07,
+      "after_ms": 0.126,
+      "speedup": "3024x"
+    }
+  ]
+}

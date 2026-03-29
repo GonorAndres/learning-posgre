@@ -1,0 +1,371 @@
+{
+  "fleet": [
+    {
+      "aircraft": "Cessna 208 Caravan",
+      "max_range_km": 1200,
+      "total_flights": 13789,
+      "total_flight_hours": 32274.3,
+      "avg_duration_min": 140.4,
+      "avg_hours_per_flight": 2.34
+    },
+    {
+      "aircraft": "Bombardier CRJ-200",
+      "max_range_km": 2700,
+      "total_flights": 13439,
+      "total_flight_hours": 26621.1,
+      "avg_duration_min": 118.9,
+      "avg_hours_per_flight": 1.98
+    },
+    {
+      "aircraft": "Sukhoi Superjet-100",
+      "max_range_km": 3000,
+      "total_flights": 12652,
+      "total_flight_hours": 18326.6,
+      "avg_duration_min": 86.9,
+      "avg_hours_per_flight": 1.45
+    },
+    {
+      "aircraft": "Airbus A321-200",
+      "max_range_km": 5600,
+      "total_flights": 2902,
+      "total_flight_hours": 3557.2,
+      "avg_duration_min": 73.5,
+      "avg_hours_per_flight": 1.23
+    },
+    {
+      "aircraft": "Boeing 737-300",
+      "max_range_km": 4200,
+      "total_flights": 1894,
+      "total_flight_hours": 4517.7,
+      "avg_duration_min": 143.1,
+      "avg_hours_per_flight": 2.39
+    },
+    {
+      "aircraft": "Airbus A319-100",
+      "max_range_km": 6700,
+      "total_flights": 1840,
+      "total_flight_hours": 10461.5,
+      "avg_duration_min": 341.1,
+      "avg_hours_per_flight": 5.69
+    },
+    {
+      "aircraft": "Boeing 767-300",
+      "max_range_km": 7900,
+      "total_flights": 1812,
+      "total_flight_hours": 7412.4,
+      "avg_duration_min": 245.4,
+      "avg_hours_per_flight": 4.09
+    },
+    {
+      "aircraft": "Boeing 777-300",
+      "max_range_km": 11100,
+      "total_flights": 907,
+      "total_flight_hours": 2133.7,
+      "avg_duration_min": 141.2,
+      "avg_hours_per_flight": 2.35
+    }
+  ],
+  "seatCapacity": [
+    {
+      "aircraft": "Boeing 777-300",
+      "economy_seats": 324,
+      "comfort_seats": 48,
+      "business_seats": 30,
+      "total_seats": 402
+    },
+    {
+      "aircraft": "Boeing 767-300",
+      "economy_seats": 192,
+      "comfort_seats": 0,
+      "business_seats": 30,
+      "total_seats": 222
+    },
+    {
+      "aircraft": "Airbus A321-200",
+      "economy_seats": 142,
+      "comfort_seats": 0,
+      "business_seats": 28,
+      "total_seats": 170
+    },
+    {
+      "aircraft": "Airbus A320-200",
+      "economy_seats": 120,
+      "comfort_seats": 0,
+      "business_seats": 20,
+      "total_seats": 140
+    },
+    {
+      "aircraft": "Boeing 737-300",
+      "economy_seats": 118,
+      "comfort_seats": 0,
+      "business_seats": 12,
+      "total_seats": 130
+    },
+    {
+      "aircraft": "Airbus A319-100",
+      "economy_seats": 96,
+      "comfort_seats": 0,
+      "business_seats": 20,
+      "total_seats": 116
+    },
+    {
+      "aircraft": "Sukhoi Superjet-100",
+      "economy_seats": 85,
+      "comfort_seats": 0,
+      "business_seats": 12,
+      "total_seats": 97
+    },
+    {
+      "aircraft": "Bombardier CRJ-200",
+      "economy_seats": 50,
+      "comfort_seats": 0,
+      "business_seats": 0,
+      "total_seats": 50
+    },
+    {
+      "aircraft": "Cessna 208 Caravan",
+      "economy_seats": 12,
+      "comfort_seats": 0,
+      "business_seats": 0,
+      "total_seats": 12
+    }
+  ],
+  "loadFactor": [
+    {
+      "aircraft": "Boeing 777-300",
+      "flights": 907,
+      "avg_passengers": 292.8,
+      "capacity": 402,
+      "avg_load_factor_pct": 72.8,
+      "min_load_factor_pct": 5.5,
+      "max_load_factor_pct": 94.8
+    },
+    {
+      "aircraft": "Boeing 737-300",
+      "flights": 1894,
+      "avg_passengers": 81.9,
+      "capacity": 130,
+      "avg_load_factor_pct": 63.0,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    },
+    {
+      "aircraft": "Boeing 767-300",
+      "flights": 1812,
+      "avg_passengers": 124.1,
+      "capacity": 222,
+      "avg_load_factor_pct": 55.9,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 98.6
+    },
+    {
+      "aircraft": "Sukhoi Superjet-100",
+      "flights": 12652,
+      "avg_passengers": 52.1,
+      "capacity": 97,
+      "avg_load_factor_pct": 53.7,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    },
+    {
+      "aircraft": "Airbus A319-100",
+      "flights": 1840,
+      "avg_passengers": 52.6,
+      "capacity": 116,
+      "avg_load_factor_pct": 45.4,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    },
+    {
+      "aircraft": "Bombardier CRJ-200",
+      "flights": 13439,
+      "avg_passengers": 20.5,
+      "capacity": 50,
+      "avg_load_factor_pct": 41.0,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    },
+    {
+      "aircraft": "Airbus A321-200",
+      "flights": 2902,
+      "avg_passengers": 64.1,
+      "capacity": 170,
+      "avg_load_factor_pct": 37.7,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    },
+    {
+      "aircraft": "Cessna 208 Caravan",
+      "flights": 13789,
+      "avg_passengers": 1.9,
+      "capacity": 12,
+      "avg_load_factor_pct": 16.0,
+      "min_load_factor_pct": 0.0,
+      "max_load_factor_pct": 100.0
+    }
+  ],
+  "worstRoutes": [
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Pskov Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Yoshkar-Ola Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Vorkuta Airport",
+      "arrival": "Surgut Airport",
+      "flights": 180,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Pskov Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 90,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Beloyarskiy Airport",
+      "arrival": "Roshchino International Airport",
+      "flights": 39,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Volgograd International Airport",
+      "arrival": "Cheboksary Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Nalchik Airport",
+      "arrival": "Krasnodar Pashkovsky International Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Petrozavodsk Airport",
+      "arrival": "Grabtsevo Airport",
+      "flights": 38,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Grabtsevo Airport",
+      "arrival": "Petrozavodsk Airport",
+      "flights": 39,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Vnukovo International Airport",
+      "arrival": "Yoshkar-Ola Airport",
+      "flights": 182,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Irkutsk Airport",
+      "arrival": "Mirny Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 50
+    },
+    {
+      "departure": "Yemelyanovo Airport",
+      "arrival": "Barnaul Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Pskov Airport",
+      "flights": 38,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Surgut Airport",
+      "arrival": "Vorkuta Airport",
+      "flights": 181,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Tunoshna Airport",
+      "arrival": "Pulkovo Airport",
+      "flights": 90,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Surgut Airport",
+      "arrival": "Chelyabinsk Balandino Airport",
+      "flights": 181,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Tolmachevo Airport",
+      "arrival": "Gorno-Altaysk Airport",
+      "flights": 90,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Penza Airport",
+      "arrival": "Sochi International Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Yemelyanovo Airport",
+      "arrival": "Ust-Ilimsk Airport",
+      "flights": 181,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    },
+    {
+      "departure": "Barnaul Airport",
+      "arrival": "Yemelyanovo Airport",
+      "flights": 91,
+      "avg_load_pct": 0.0,
+      "avg_passengers": 0.0,
+      "capacity": 12
+    }
+  ],
+  "turnaround": [],
+  "loadByDay": []
+}

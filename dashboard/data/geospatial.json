@@ -1,0 +1,555 @@
+{
+  "longestRoutes": [
+    {
+      "departure": "Domodedovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Yelizovo Airport",
+      "arr_city": "Petropavlovsk",
+      "distance_km": 6775,
+      "total_flights": 39
+    },
+    {
+      "departure": "Yelizovo Airport",
+      "dep_city": "Petropavlovsk",
+      "arrival": "Domodedovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6775,
+      "total_flights": 39
+    },
+    {
+      "departure": "Mineralnyye Vody Airport",
+      "dep_city": "Mineralnye Vody",
+      "arrival": "Sokol Airport",
+      "arr_city": "Magadan",
+      "distance_km": 6711,
+      "total_flights": 13
+    },
+    {
+      "departure": "Sokol Airport",
+      "dep_city": "Magadan",
+      "arrival": "Mineralnyye Vody Airport",
+      "arr_city": "Mineralnye Vody",
+      "distance_km": 6711,
+      "total_flights": 13
+    },
+    {
+      "departure": "Yuzhno-Sakhalinsk Airport",
+      "dep_city": "Yuzhno-Sakhalinsk",
+      "arrival": "Domodedovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6659,
+      "total_flights": 90
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Yuzhno-Sakhalinsk Airport",
+      "arr_city": "Yuzhno-Sakhalinsk",
+      "distance_km": 6659,
+      "total_flights": 90
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Yuzhno-Sakhalinsk Airport",
+      "arr_city": "Yuzhno-Sakhalinsk",
+      "distance_km": 6642,
+      "total_flights": 90
+    },
+    {
+      "departure": "Yuzhno-Sakhalinsk Airport",
+      "dep_city": "Yuzhno-Sakhalinsk",
+      "arrival": "Sheremetyevo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6642,
+      "total_flights": 90
+    },
+    {
+      "departure": "Vladivostok International Airport",
+      "dep_city": "Vladivostok",
+      "arrival": "Vnukovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6435,
+      "total_flights": 90
+    },
+    {
+      "departure": "Vnukovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Vladivostok International Airport",
+      "arr_city": "Vladivostok",
+      "distance_km": 6435,
+      "total_flights": 90
+    },
+    {
+      "departure": "Ugolny Airport",
+      "dep_city": "Anadyr",
+      "arrival": "Domodedovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6226,
+      "total_flights": 13
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Ugolny Airport",
+      "arr_city": "Anadyr",
+      "distance_km": 6226,
+      "total_flights": 13
+    },
+    {
+      "departure": "Vnukovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Ugolny Airport",
+      "arr_city": "Anadyr",
+      "distance_km": 6220,
+      "total_flights": 12
+    },
+    {
+      "departure": "Ugolny Airport",
+      "dep_city": "Anadyr",
+      "arrival": "Vnukovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6220,
+      "total_flights": 13
+    },
+    {
+      "departure": "Khabarovsk-Novy Airport",
+      "dep_city": "Khabarovsk",
+      "arrival": "Pulkovo Airport",
+      "arr_city": "St. Petersburg",
+      "distance_km": 6207,
+      "total_flights": 91
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "dep_city": "St. Petersburg",
+      "arrival": "Khabarovsk-Novy Airport",
+      "arr_city": "Khabarovsk",
+      "distance_km": 6207,
+      "total_flights": 90
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Ugolny Airport",
+      "arr_city": "Anadyr",
+      "distance_km": 6177,
+      "total_flights": 13
+    },
+    {
+      "departure": "Ugolny Airport",
+      "dep_city": "Anadyr",
+      "arrival": "Sheremetyevo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6177,
+      "total_flights": 13
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "dep_city": "Moscow",
+      "arrival": "Khabarovsk-Novy Airport",
+      "arr_city": "Khabarovsk",
+      "distance_km": 6150,
+      "total_flights": 90
+    },
+    {
+      "departure": "Khabarovsk-Novy Airport",
+      "dep_city": "Khabarovsk",
+      "arrival": "Domodedovo International Airport",
+      "arr_city": "Moscow",
+      "distance_km": 6150,
+      "total_flights": 90
+    }
+  ],
+  "delayByDistance": [
+    {
+      "distance_bucket": "1: <500 km",
+      "routes": 68,
+      "total_flights": 8528,
+      "delay_pct": 4.8,
+      "avg_distance_km": 374
+    },
+    {
+      "distance_bucket": "2: 500-1000 km",
+      "routes": 156,
+      "total_flights": 17549,
+      "delay_pct": 5.1,
+      "avg_distance_km": 730
+    },
+    {
+      "distance_bucket": "3: 1000-2000 km",
+      "routes": 222,
+      "total_flights": 15692,
+      "delay_pct": 4.8,
+      "avg_distance_km": 1457
+    },
+    {
+      "distance_bucket": "4: 2000-4000 km",
+      "routes": 134,
+      "total_flights": 5605,
+      "delay_pct": 4.3,
+      "avg_distance_km": 2826
+    },
+    {
+      "distance_bucket": "5: 4000+ km",
+      "routes": 38,
+      "total_flights": 1861,
+      "delay_pct": 4.5,
+      "avg_distance_km": 5630
+    }
+  ],
+  "hubs": [
+    {
+      "code": "DME",
+      "airport": "Domodedovo International Airport",
+      "city": "Moscow",
+      "destinations": 53,
+      "total_departures": 4776,
+      "avg_route_km": 1488
+    },
+    {
+      "code": "SVO",
+      "airport": "Sheremetyevo International Airport",
+      "city": "Moscow",
+      "destinations": 48,
+      "total_departures": 4432,
+      "avg_route_km": 1362
+    },
+    {
+      "code": "VKO",
+      "airport": "Vnukovo International Airport",
+      "city": "Moscow",
+      "destinations": 30,
+      "total_departures": 2555,
+      "avg_route_km": 1381
+    },
+    {
+      "code": "LED",
+      "airport": "Pulkovo Airport",
+      "city": "St. Petersburg",
+      "destinations": 24,
+      "total_departures": 2825,
+      "avg_route_km": 1402
+    },
+    {
+      "code": "OVB",
+      "airport": "Tolmachevo Airport",
+      "city": "Novosibirsk",
+      "destinations": 15,
+      "total_departures": 1571,
+      "avg_route_km": 1242
+    },
+    {
+      "code": "SVX",
+      "airport": "Koltsovo Airport",
+      "city": "Yekaterinburg",
+      "destinations": 13,
+      "total_departures": 1026,
+      "avg_route_km": 1087
+    },
+    {
+      "code": "AER",
+      "airport": "Sochi International Airport",
+      "city": "Sochi",
+      "destinations": 12,
+      "total_departures": 867,
+      "avg_route_km": 1215
+    },
+    {
+      "code": "ROV",
+      "airport": "Rostov-on-Don Airport",
+      "city": "Rostov",
+      "destinations": 11,
+      "total_departures": 920,
+      "avg_route_km": 828
+    },
+    {
+      "code": "KJA",
+      "airport": "Yemelyanovo Airport",
+      "city": "Krasnoyarsk",
+      "destinations": 10,
+      "total_departures": 1052,
+      "avg_route_km": 1139
+    },
+    {
+      "code": "IKT",
+      "airport": "Irkutsk Airport",
+      "city": "Irkutsk",
+      "destinations": 9,
+      "total_departures": 546,
+      "avg_route_km": 2742
+    },
+    {
+      "code": "TJM",
+      "airport": "Roshchino International Airport",
+      "city": "Tyumen",
+      "destinations": 9,
+      "total_departures": 636,
+      "avg_route_km": 1209
+    },
+    {
+      "code": "KZN",
+      "airport": "Kazan International Airport",
+      "city": "Kazan",
+      "destinations": 9,
+      "total_departures": 701,
+      "avg_route_km": 1257
+    },
+    {
+      "code": "SGC",
+      "airport": "Surgut Airport",
+      "city": "Surgut",
+      "destinations": 9,
+      "total_departures": 789,
+      "avg_route_km": 1109
+    },
+    {
+      "code": "PEE",
+      "airport": "Bolshoye Savino Airport",
+      "city": "Perm",
+      "destinations": 9,
+      "total_departures": 920,
+      "avg_route_km": 968
+    },
+    {
+      "code": "NOZ",
+      "airport": "Spichenkovo Airport",
+      "city": "Novokuznetsk",
+      "destinations": 8,
+      "total_departures": 545,
+      "avg_route_km": 784
+    },
+    {
+      "code": "TOF",
+      "airport": "Bogashevo Airport",
+      "city": "Tomsk",
+      "destinations": 8,
+      "total_departures": 376,
+      "avg_route_km": 1664
+    },
+    {
+      "code": "OVS",
+      "airport": "Sovetskiy Airport",
+      "city": "Sovetskiy",
+      "destinations": 8,
+      "total_departures": 817,
+      "avg_route_km": 1220
+    },
+    {
+      "code": "HMA",
+      "airport": "Khanty Mansiysk Airport",
+      "city": "Khanty-Mansiysk",
+      "destinations": 8,
+      "total_departures": 765,
+      "avg_route_km": 1148
+    },
+    {
+      "code": "ARH",
+      "airport": "Talagi Airport",
+      "city": "Arkhangelsk",
+      "destinations": 8,
+      "total_departures": 480,
+      "avg_route_km": 1262
+    },
+    {
+      "code": "PES",
+      "airport": "Petrozavodsk Airport",
+      "city": "Petrozavodsk",
+      "destinations": 7,
+      "total_departures": 531,
+      "avg_route_km": 948
+    }
+  ],
+  "revenuePerKm": [
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Pulkovo Airport",
+      "distance_km": 599,
+      "flights": 272,
+      "passengers": 29627,
+      "revenue_rub": 237406800,
+      "revenue_per_km": 396147
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Tolmachevo Airport",
+      "distance_km": 2790,
+      "flights": 91,
+      "passengers": 30110,
+      "revenue_rub": 1039725300,
+      "revenue_per_km": 372704
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Koltsovo Airport",
+      "distance_km": 1436,
+      "flights": 91,
+      "passengers": 29445,
+      "revenue_rub": 523665400,
+      "revenue_per_km": 364599
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "distance_km": 599,
+      "flights": 270,
+      "passengers": 26404,
+      "revenue_rub": 211805400,
+      "revenue_per_km": 353428
+    },
+    {
+      "departure": "Tolmachevo Airport",
+      "arrival": "Domodedovo International Airport",
+      "distance_km": 2790,
+      "flights": 91,
+      "passengers": 28488,
+      "revenue_rub": 982523100,
+      "revenue_per_km": 352199
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Sochi International Airport",
+      "distance_km": 1404,
+      "flights": 90,
+      "passengers": 28521,
+      "revenue_rub": 493568100,
+      "revenue_per_km": 351505
+    },
+    {
+      "departure": "Koltsovo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "distance_km": 1436,
+      "flights": 91,
+      "passengers": 27977,
+      "revenue_rub": 498178400,
+      "revenue_per_km": 346853
+    },
+    {
+      "departure": "Sochi International Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "distance_km": 1404,
+      "flights": 90,
+      "passengers": 26335,
+      "revenue_rub": 456077200,
+      "revenue_per_km": 324805
+    },
+    {
+      "departure": "Vnukovo International Airport",
+      "arrival": "Bolshoye Savino Airport",
+      "distance_km": 1168,
+      "flights": 91,
+      "passengers": 24668,
+      "revenue_rub": 356226800,
+      "revenue_per_km": 304899
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Tolmachevo Airport",
+      "distance_km": 2800,
+      "flights": 91,
+      "passengers": 24566,
+      "revenue_rub": 850572800,
+      "revenue_per_km": 303735
+    },
+    {
+      "departure": "Tolmachevo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "distance_km": 2800,
+      "flights": 91,
+      "passengers": 23287,
+      "revenue_rub": 803644800,
+      "revenue_per_km": 286978
+    },
+    {
+      "departure": "Bolshoye Savino Airport",
+      "arrival": "Vnukovo International Airport",
+      "distance_km": 1168,
+      "flights": 90,
+      "passengers": 22156,
+      "revenue_rub": 321274500,
+      "revenue_per_km": 274983
+    },
+    {
+      "departure": "Vnukovo International Airport",
+      "arrival": "Pulkovo Airport",
+      "distance_km": 625,
+      "flights": 179,
+      "passengers": 18791,
+      "revenue_rub": 157581200,
+      "revenue_per_km": 251949
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "arrival": "Vnukovo International Airport",
+      "distance_km": 625,
+      "flights": 253,
+      "passengers": 18627,
+      "revenue_rub": 156752100,
+      "revenue_per_km": 250623
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Khabarovsk-Novy Airport",
+      "distance_km": 6150,
+      "flights": 90,
+      "passengers": 17881,
+      "revenue_rub": 1399716700,
+      "revenue_per_km": 227599
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Pulkovo Airport",
+      "distance_km": 667,
+      "flights": 181,
+      "passengers": 16922,
+      "revenue_rub": 151373700,
+      "revenue_per_km": 226987
+    },
+    {
+      "departure": "Khabarovsk-Novy Airport",
+      "arrival": "Domodedovo International Airport",
+      "distance_km": 6150,
+      "flights": 90,
+      "passengers": 16889,
+      "revenue_rub": 1323252100,
+      "revenue_per_km": 215166
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "arrival": "Domodedovo International Airport",
+      "distance_km": 667,
+      "flights": 182,
+      "passengers": 15650,
+      "revenue_rub": 139730400,
+      "revenue_per_km": 209527
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Krasnodar Pashkovsky International Airport",
+      "distance_km": 1157,
+      "flights": 90,
+      "passengers": 15735,
+      "revenue_rub": 232689300,
+      "revenue_per_km": 201115
+    },
+    {
+      "departure": "Krasnodar Pashkovsky International Airport",
+      "arrival": "Domodedovo International Airport",
+      "distance_km": 1157,
+      "flights": 90,
+      "passengers": 14893,
+      "revenue_rub": 220515300,
+      "revenue_per_km": 190593
+    }
+  ],
+  "extremes": [
+    {
+      "label": "Easternmost airport",
+      "airport_code": "DYR",
+      "name": "Ugolny Airport",
+      "city": "Anadyr",
+      "longitude": 177.74099731445312,
+      "latitude": 64.73490142822266
+    }
+  ]
+}

@@ -1,0 +1,5322 @@
+[
+  {
+    "dep": "LED",
+    "arr": "SVO",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 454,
+    "delay_pct": 4.6
+  },
+  {
+    "dep": "SVO",
+    "arr": "LED",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 453,
+    "delay_pct": 5.7
+  },
+  {
+    "dep": "LED",
+    "arr": "DME",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 363,
+    "delay_pct": 5.0
+  },
+  {
+    "dep": "DME",
+    "arr": "LED",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 363,
+    "delay_pct": 5.8
+  },
+  {
+    "dep": "BZK",
+    "arr": "VKO",
+    "dep_lon": 34.176399231,
+    "dep_lat": 53.214199066199996,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 273,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "LED",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 273,
+    "delay_pct": 5.9
+  },
+  {
+    "dep": "DME",
+    "arr": "BZK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 34.176399231,
+    "arr_lat": 53.214199066199996,
+    "flights": 273,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "SVO",
+    "arr": "BZK",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 34.176399231,
+    "arr_lat": 53.214199066199996,
+    "flights": 272,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "BZK",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 34.176399231,
+    "arr_lat": 53.214199066199996,
+    "flights": 272,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "LED",
+    "arr": "VKO",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 272,
+    "delay_pct": 6.3
+  },
+  {
+    "dep": "BZK",
+    "arr": "DME",
+    "dep_lon": 34.176399231,
+    "dep_lat": 53.214199066199996,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 271,
+    "delay_pct": 5.9
+  },
+  {
+    "dep": "BZK",
+    "arr": "SVO",
+    "dep_lon": 34.176399231,
+    "dep_lat": 53.214199066199996,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 271,
+    "delay_pct": 4.8
+  },
+  {
+    "dep": "MJZ",
+    "arr": "CNN",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 124.91400146484,
+    "arr_lat": 56.913898468018,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "KJA",
+    "arr": "NOZ",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 86.877197265625,
+    "arr_lat": 53.8114013671875,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "OVS",
+    "arr": "DME",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 182,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KJA",
+    "arr": "OVB",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "ULV",
+    "arr": "SVO",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 182,
+    "delay_pct": 4.9
+  },
+  {
+    "dep": "LED",
+    "arr": "TBW",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 41.482799530029,
+    "arr_lat": 52.806098937988,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OVB",
+    "arr": "KJA",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 182,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NOJ",
+    "arr": "NUX",
+    "dep_lon": 75.2699966430664,
+    "dep_lat": 63.18330001831055,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "PEZ",
+    "arr": "DME",
+    "dep_lon": 45.02109909057617,
+    "dep_lat": 53.110599517822266,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "UUS",
+    "arr": "KHV",
+    "dep_lon": 142.71800231933594,
+    "dep_lat": 46.88869857788086,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KHV",
+    "arr": "UUS",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 142.71800231933594,
+    "arr_lat": 46.88869857788086,
+    "flights": 182,
+    "delay_pct": 2.7
+  },
+  {
+    "dep": "JOK",
+    "arr": "VKO",
+    "dep_lon": 47.904701232910156,
+    "dep_lat": 56.700599670410156,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 182,
+    "delay_pct": 4.9
+  },
+  {
+    "dep": "RTW",
+    "arr": "ULY",
+    "dep_lon": 46.04669952392578,
+    "dep_lat": 51.564998626708984,
+    "arr_lon": 48.80270004272461,
+    "arr_lat": 54.4010009765625,
+    "flights": 182,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "SVX",
+    "arr": "KGP",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 74.53379821777344,
+    "arr_lat": 62.190399169921875,
+    "flights": 182,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "DME",
+    "arr": "PEZ",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 45.02109909057617,
+    "arr_lat": 53.110599517822266,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "EGO",
+    "arr": "AER",
+    "dep_lon": 36.5900993347168,
+    "dep_lat": 50.643798828125,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 182,
+    "delay_pct": 7.1
+  },
+  {
+    "dep": "OVB",
+    "arr": "NOZ",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 86.877197265625,
+    "arr_lat": 53.8114013671875,
+    "flights": 182,
+    "delay_pct": 1.6
+  },
+  {
+    "dep": "KZN",
+    "arr": "ROV",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "PES",
+    "arr": "SVO",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 182,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "VKO",
+    "arr": "JOK",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 47.904701232910156,
+    "arr_lat": 56.700599670410156,
+    "flights": 182,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "ROV",
+    "arr": "AER",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 182,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "HMA",
+    "arr": "NUX",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "UIK",
+    "arr": "KJA",
+    "dep_lon": 102.56500244140625,
+    "dep_lat": 58.13610076904297,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 182,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "ABA",
+    "arr": "OVB",
+    "dep_lon": 91.38500213623047,
+    "dep_lat": 53.7400016784668,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 182,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "ULV",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 182,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "CNN",
+    "arr": "MJZ",
+    "dep_lon": 124.91400146484,
+    "dep_lat": 56.913898468018,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "UFA",
+    "arr": "UCT",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 53.8046989440918,
+    "arr_lat": 63.566898345947266,
+    "flights": 182,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "SCW",
+    "arr": "NBC",
+    "dep_lon": 50.84510040283203,
+    "dep_lat": 61.64699935913086,
+    "arr_lon": 52.092498779296875,
+    "arr_lat": 55.564701080322266,
+    "flights": 182,
+    "delay_pct": 7.1
+  },
+  {
+    "dep": "DME",
+    "arr": "OVS",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 182,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NOZ",
+    "arr": "OVB",
+    "dep_lon": 86.877197265625,
+    "dep_lat": 53.8114013671875,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 182,
+    "delay_pct": 2.7
+  },
+  {
+    "dep": "UCT",
+    "arr": "UFA",
+    "dep_lon": 53.8046989440918,
+    "dep_lat": 63.566898345947266,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "NOZ",
+    "arr": "KJA",
+    "dep_lon": 86.877197265625,
+    "dep_lat": 53.8114013671875,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 182,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "CEE",
+    "arr": "LED",
+    "dep_lon": 38.015800476100004,
+    "dep_lat": 59.273601532,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 182,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "ULY",
+    "arr": "RTW",
+    "dep_lon": 48.80270004272461,
+    "dep_lat": 54.4010009765625,
+    "arr_lon": 46.04669952392578,
+    "arr_lat": 51.564998626708984,
+    "flights": 182,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "OVB",
+    "arr": "ABA",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 91.38500213623047,
+    "arr_lat": 53.7400016784668,
+    "flights": 182,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "KGP",
+    "arr": "SVX",
+    "dep_lon": 74.53379821777344,
+    "dep_lat": 62.190399169921875,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 182,
+    "delay_pct": 6.0
+  },
+  {
+    "dep": "TBW",
+    "arr": "LED",
+    "dep_lon": 41.482799530029,
+    "dep_lat": 52.806098937988,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 182,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "PEE",
+    "arr": "SVX",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 181,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "TBW",
+    "arr": "DME",
+    "dep_lon": 41.482799530029,
+    "dep_lat": 52.806098937988,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 181,
+    "delay_pct": 6.1
+  },
+  {
+    "dep": "KJA",
+    "arr": "UIK",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 102.56500244140625,
+    "arr_lat": 58.13610076904297,
+    "flights": 181,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "PEE",
+    "arr": "ARH",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 181,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "CEK",
+    "arr": "SGC",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 181,
+    "delay_pct": 5.0
+  },
+  {
+    "dep": "NUX",
+    "arr": "HMA",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 181,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "SVX",
+    "arr": "PEE",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 181,
+    "delay_pct": 7.2
+  },
+  {
+    "dep": "GOJ",
+    "arr": "SVO",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 181,
+    "delay_pct": 5.0
+  },
+  {
+    "dep": "AER",
+    "arr": "EGO",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 36.5900993347168,
+    "arr_lat": 50.643798828125,
+    "flights": 181,
+    "delay_pct": 8.3
+  },
+  {
+    "dep": "ARH",
+    "arr": "PEE",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 181,
+    "delay_pct": 3.9
+  },
+  {
+    "dep": "HMA",
+    "arr": "OVB",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 181,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "SVO",
+    "arr": "PES",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 181,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NUX",
+    "arr": "NOJ",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 75.2699966430664,
+    "arr_lat": 63.18330001831055,
+    "flights": 181,
+    "delay_pct": 6.1
+  },
+  {
+    "dep": "SVO",
+    "arr": "GOJ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 181,
+    "delay_pct": 5.0
+  },
+  {
+    "dep": "SGC",
+    "arr": "CEK",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 181,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SGC",
+    "arr": "VKT",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 63.993099212646484,
+    "arr_lat": 67.48860168457031,
+    "flights": 181,
+    "delay_pct": 3.9
+  },
+  {
+    "dep": "OVB",
+    "arr": "HMA",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 181,
+    "delay_pct": 3.9
+  },
+  {
+    "dep": "AER",
+    "arr": "ROV",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 181,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "ROV",
+    "arr": "DME",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 181,
+    "delay_pct": 8.3
+  },
+  {
+    "dep": "DME",
+    "arr": "TBW",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 41.482799530029,
+    "arr_lat": 52.806098937988,
+    "flights": 180,
+    "delay_pct": 6.1
+  },
+  {
+    "dep": "NBC",
+    "arr": "SCW",
+    "dep_lon": 52.092498779296875,
+    "dep_lat": 55.564701080322266,
+    "arr_lon": 50.84510040283203,
+    "arr_lat": 61.64699935913086,
+    "flights": 180,
+    "delay_pct": 2.8
+  },
+  {
+    "dep": "DME",
+    "arr": "ROV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 180,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "LED",
+    "arr": "CEE",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 38.015800476100004,
+    "arr_lat": 59.273601532,
+    "flights": 180,
+    "delay_pct": 2.8
+  },
+  {
+    "dep": "VKT",
+    "arr": "SGC",
+    "dep_lon": 63.993099212646484,
+    "dep_lat": 67.48860168457031,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 180,
+    "delay_pct": 6.1
+  },
+  {
+    "dep": "ROV",
+    "arr": "KZN",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 180,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "KGD",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 20.592599868774414,
+    "arr_lat": 54.88999938964844,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "OGZ",
+    "arr": "SVO",
+    "dep_lon": 44.6066017151,
+    "dep_lat": 43.2051010132,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "OVS",
+    "arr": "SVO",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "MJZ",
+    "arr": "SVO",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "TJM",
+    "arr": "SVO",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "EGO",
+    "arr": "BZK",
+    "dep_lon": 36.5900993347168,
+    "dep_lat": 50.643798828125,
+    "arr_lon": 34.176399231,
+    "arr_lat": 53.214199066199996,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "DME",
+    "arr": "JOK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 47.904701232910156,
+    "arr_lat": 56.700599670410156,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "NAL",
+    "arr": "DME",
+    "dep_lon": 43.636600494384766,
+    "dep_lat": 43.512901306152344,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "ASF",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 48.0063018799,
+    "arr_lat": 46.2832984924,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "LED",
+    "arr": "VOZ",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 39.22959899902344,
+    "arr_lat": 51.81420135498047,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "MMK",
+    "arr": "VKO",
+    "dep_lon": 32.75080108642578,
+    "dep_lat": 68.78170013427734,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "HMA",
+    "arr": "DME",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "SVO",
+    "arr": "UUA",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 52.801700592041016,
+    "arr_lat": 54.63999938964844,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "IKT",
+    "arr": "KZN",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "TOF",
+    "arr": "SVO",
+    "dep_lon": 85.208297729492,
+    "dep_lat": 56.380298614502,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "VOG",
+    "arr": "CSY",
+    "dep_lon": 44.34550094604492,
+    "dep_lat": 48.782501220703125,
+    "arr_lon": 47.3473014831543,
+    "arr_lat": 56.090301513671875,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "BAX",
+    "arr": "KJA",
+    "dep_lon": 83.53849792480469,
+    "dep_lat": 53.363800048828125,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "ULY",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 48.80270004272461,
+    "arr_lat": 54.4010009765625,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "REN",
+    "arr": "UFA",
+    "dep_lon": 55.45669937133789,
+    "dep_lat": 51.795799255371094,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "NAL",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 43.636600494384766,
+    "arr_lat": 43.512901306152344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "STW",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 42.11280059814453,
+    "arr_lat": 45.10919952392578,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "VOG",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 44.34550094604492,
+    "arr_lat": 48.782501220703125,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "UUA",
+    "arr": "SVO",
+    "dep_lon": 52.801700592041016,
+    "dep_lat": 54.63999938964844,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "SVO",
+    "arr": "OVB",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "ULV",
+    "arr": "KRR",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 39.170501708984,
+    "arr_lat": 45.034698486328,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "TOF",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 85.208297729492,
+    "arr_lat": 56.380298614502,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "PEE",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KHV",
+    "arr": "BQS",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 127.41200256347656,
+    "arr_lat": 50.42539978027344,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "UFA",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "MCX",
+    "arr": "SVO",
+    "dep_lon": 47.65230178833008,
+    "dep_lat": 42.81679916381836,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "TOF",
+    "arr": "NOZ",
+    "dep_lon": 85.208297729492,
+    "dep_lat": 56.380298614502,
+    "arr_lon": 86.877197265625,
+    "arr_lat": 53.8114013671875,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "RTW",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 46.04669952392578,
+    "arr_lat": 51.564998626708984,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KGP",
+    "arr": "NUX",
+    "dep_lon": 74.53379821777344,
+    "dep_lat": 62.190399169921875,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "CSY",
+    "arr": "LED",
+    "dep_lon": 47.3473014831543,
+    "dep_lat": 56.090301513671875,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "PKV",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 28.395599365234375,
+    "arr_lat": 57.78390121459961,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "ESL",
+    "arr": "UFA",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "MQF",
+    "arr": "OVB",
+    "dep_lon": 58.755699157714844,
+    "dep_lat": 53.39310073852539,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "BTK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 101.697998046875,
+    "arr_lat": 56.370601654052734,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "NJC",
+    "arr": "DME",
+    "dep_lon": 76.48359680175781,
+    "dep_lat": 60.94929885864258,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "LED",
+    "arr": "IAR",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 40.15739822387695,
+    "arr_lat": 57.560699462890625,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "VVO",
+    "arr": "IKT",
+    "dep_lon": 132.1479949951172,
+    "dep_lat": 43.39899826049805,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "UKX",
+    "arr": "KJA",
+    "dep_lon": 105.7300033569336,
+    "dep_lat": 56.8567008972168,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "SVO",
+    "arr": "KVX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "KJA",
+    "arr": "OVS",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "ARH",
+    "arr": "DME",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "NAL",
+    "arr": "KRR",
+    "dep_lon": 43.636600494384766,
+    "dep_lat": 43.512901306152344,
+    "arr_lon": 39.170501708984,
+    "arr_lat": 45.034698486328,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "UFA",
+    "arr": "OVS",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KRO",
+    "arr": "KJA",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "OVB",
+    "arr": "DME",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "MQF",
+    "arr": "VKO",
+    "dep_lon": 58.755699157714844,
+    "dep_lat": 53.39310073852539,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "CEK",
+    "arr": "SWT",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 77.66000366210001,
+    "arr_lat": 60.709400177,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "HMA",
+    "arr": "SVX",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KRR",
+    "arr": "ULV",
+    "dep_lon": 39.170501708984,
+    "dep_lat": 45.034698486328,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KVX",
+    "arr": "DME",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "VKO",
+    "arr": "SKX",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 45.212257385253906,
+    "arr_lat": 54.12512969970703,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "PEE",
+    "arr": "OVB",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "TJM",
+    "arr": "PES",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "VKO",
+    "arr": "HMA",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "KHV",
+    "arr": "LED",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KUF",
+    "arr": "URS",
+    "dep_lon": 50.16429901123,
+    "dep_lat": 53.504901885986,
+    "arr_lon": 36.29560089111328,
+    "arr_lat": 51.7505989074707,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "SGC",
+    "arr": "OVB",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "LED",
+    "arr": "CSY",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 47.3473014831543,
+    "arr_lat": 56.090301513671875,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KGD",
+    "arr": "SVO",
+    "dep_lon": 20.592599868774414,
+    "dep_lat": 54.88999938964844,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "SCW",
+    "arr": "SVX",
+    "dep_lon": 50.84510040283203,
+    "dep_lat": 61.64699935913086,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NUX",
+    "arr": "HTA",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 113.306,
+    "arr_lat": 52.026299,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "DME",
+    "arr": "ARH",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "DME",
+    "arr": "URJ",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 64.82669830322266,
+    "arr_lat": 60.10329818725586,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "PEE",
+    "arr": "CEK",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "JOK",
+    "arr": "SVO",
+    "dep_lon": 47.904701232910156,
+    "dep_lat": 56.700599670410156,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KZN",
+    "arr": "LED",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "PEZ",
+    "arr": "SVO",
+    "dep_lon": 45.02109909057617,
+    "dep_lat": 53.110599517822266,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "SVX",
+    "arr": "SGC",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "REN",
+    "arr": "LED",
+    "dep_lon": 55.45669937133789,
+    "dep_lat": 51.795799255371094,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "CEK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "TJM",
+    "arr": "UCT",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 53.8046989440918,
+    "arr_lat": 63.566898345947266,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "MRV",
+    "arr": "DME",
+    "dep_lon": 43.08190155029297,
+    "dep_lat": 44.225101470947266,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "ESL",
+    "arr": "SVO",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VOG",
+    "arr": "CEK",
+    "dep_lon": 44.34550094604492,
+    "dep_lat": 48.782501220703125,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "KZN",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "KVX",
+    "arr": "LED",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "OVB",
+    "arr": "SVO",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVX",
+    "arr": "SCW",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 50.84510040283203,
+    "arr_lat": 61.64699935913086,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "NJC",
+    "arr": "OVS",
+    "dep_lon": 76.48359680175781,
+    "dep_lat": 60.94929885864258,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "AAQ",
+    "arr": "SVO",
+    "dep_lon": 37.347301483154,
+    "dep_lat": 45.002101898193,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "IKT",
+    "arr": "SGC",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KVX",
+    "arr": "HMA",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "KJA",
+    "arr": "BAX",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 83.53849792480469,
+    "arr_lat": 53.363800048828125,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "KUF",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 50.16429901123,
+    "arr_lat": 53.504901885986,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "SKX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 45.212257385253906,
+    "arr_lat": 54.12512969970703,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "NNM",
+    "arr": "SVO",
+    "dep_lon": 53.12189865112305,
+    "dep_lat": 67.63999938964844,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "OVS",
+    "arr": "NJC",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 76.48359680175781,
+    "arr_lat": 60.94929885864258,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "KZN",
+    "arr": "KVX",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KJA",
+    "arr": "KRO",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KJA",
+    "arr": "UKX",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 105.7300033569336,
+    "arr_lat": 56.8567008972168,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "NAL",
+    "arr": "GOJ",
+    "dep_lon": 43.636600494384766,
+    "dep_lat": 43.512901306152344,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "OVS",
+    "arr": "UFA",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "ROV",
+    "arr": "EGO",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 36.5900993347168,
+    "arr_lat": 50.643798828125,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "VKO",
+    "arr": "AER",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "VKO",
+    "arr": "OMS",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 73.31050109863281,
+    "arr_lat": 54.96699905395508,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "HMA",
+    "arr": "VKO",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "DME",
+    "arr": "PES",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "YKS",
+    "arr": "LED",
+    "dep_lon": 129.77099609375,
+    "dep_lat": 62.093299865722656,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "OGZ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 44.6066017151,
+    "arr_lat": 43.2051010132,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVX",
+    "arr": "MQF",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 58.755699157714844,
+    "arr_lat": 53.39310073852539,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "VKT",
+    "arr": "OMS",
+    "dep_lon": 63.993099212646484,
+    "dep_lat": 67.48860168457031,
+    "arr_lon": 73.31050109863281,
+    "arr_lat": 54.96699905395508,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "VKO",
+    "arr": "VOG",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 44.34550094604492,
+    "arr_lat": 48.782501220703125,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "REN",
+    "arr": "VKO",
+    "dep_lon": 55.45669937133789,
+    "dep_lat": 51.795799255371094,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "MRV",
+    "arr": "MCX",
+    "dep_lon": 43.08190155029297,
+    "dep_lat": 44.225101470947266,
+    "arr_lon": 47.65230178833008,
+    "arr_lat": 42.81679916381836,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "SVX",
+    "arr": "SVO",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "URS",
+    "arr": "DME",
+    "dep_lon": 36.29560089111328,
+    "dep_lat": 51.7505989074707,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "PES",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "UFA",
+    "arr": "ESL",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OVB",
+    "arr": "MJZ",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "TJM",
+    "arr": "URJ",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 64.82669830322266,
+    "arr_lat": 60.10329818725586,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "VKO",
+    "arr": "CSY",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 47.3473014831543,
+    "arr_lat": 56.090301513671875,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "HTA",
+    "arr": "NUX",
+    "dep_lon": 113.306,
+    "dep_lat": 52.026299,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "KJA",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KRO",
+    "arr": "VKO",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "CSY",
+    "arr": "NBC",
+    "dep_lon": 47.3473014831543,
+    "dep_lat": 56.090301513671875,
+    "arr_lon": 52.092498779296875,
+    "arr_lat": 55.564701080322266,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "AAQ",
+    "arr": "EGO",
+    "dep_lon": 37.347301483154,
+    "dep_lat": 45.002101898193,
+    "arr_lon": 36.5900993347168,
+    "arr_lat": 50.643798828125,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "REN",
+    "arr": "ESL",
+    "dep_lon": 55.45669937133789,
+    "dep_lat": 51.795799255371094,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "RGK",
+    "arr": "OVB",
+    "dep_lon": 85.8332977295,
+    "dep_lat": 51.9667015076,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "GOJ",
+    "arr": "NAL",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 43.636600494384766,
+    "arr_lat": 43.512901306152344,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "SGC",
+    "arr": "IKT",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "AER",
+    "arr": "PEZ",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 45.02109909057617,
+    "arr_lat": 53.110599517822266,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "LED",
+    "arr": "GOJ",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "CSY",
+    "arr": "SVO",
+    "dep_lon": 47.3473014831543,
+    "dep_lat": 56.090301513671875,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "CSY",
+    "arr": "VKO",
+    "dep_lon": 47.3473014831543,
+    "dep_lat": 56.090301513671875,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "MQF",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 58.755699157714844,
+    "arr_lat": 53.39310073852539,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "URS",
+    "arr": "KUF",
+    "dep_lon": 36.29560089111328,
+    "dep_lat": 51.7505989074707,
+    "arr_lon": 50.16429901123,
+    "arr_lat": 53.504901885986,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "UFA",
+    "arr": "SVO",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KVX",
+    "arr": "OVB",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "IKT",
+    "arr": "MJZ",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OVS",
+    "arr": "KJA",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "SVO",
+    "arr": "NUX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "UFA",
+    "arr": "REN",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 55.45669937133789,
+    "arr_lat": 51.795799255371094,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "CSY",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 47.3473014831543,
+    "arr_lat": 56.090301513671875,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "ROV",
+    "arr": "VOG",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 44.34550094604492,
+    "arr_lat": 48.782501220703125,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "PES",
+    "arr": "TJM",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "PEZ",
+    "arr": "AER",
+    "dep_lon": 45.02109909057617,
+    "dep_lat": 53.110599517822266,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "UCT",
+    "arr": "TJM",
+    "dep_lon": 53.8046989440918,
+    "dep_lat": 63.566898345947266,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "MJZ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "IKT",
+    "arr": "VVO",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 132.1479949951172,
+    "arr_lat": 43.39899826049805,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "SVO",
+    "arr": "IJK",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 53.45750045776367,
+    "arr_lat": 56.82809829711914,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "LED",
+    "arr": "REN",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 55.45669937133789,
+    "arr_lat": 51.795799255371094,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVX",
+    "arr": "NSK",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 87.33219909667969,
+    "arr_lat": 69.31109619140625,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "LED",
+    "arr": "IKT",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KUF",
+    "arr": "DME",
+    "dep_lon": 50.16429901123,
+    "dep_lat": 53.504901885986,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "VOG",
+    "arr": "ROV",
+    "dep_lon": 44.34550094604492,
+    "dep_lat": 48.782501220703125,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "SLY",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 66.61100006103516,
+    "arr_lat": 66.5907974243164,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "RTW",
+    "arr": "DME",
+    "dep_lon": 46.04669952392578,
+    "dep_lat": 51.564998626708984,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SLY",
+    "arr": "OVB",
+    "dep_lon": 66.61100006103516,
+    "dep_lat": 66.5907974243164,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "UUA",
+    "arr": "DME",
+    "dep_lon": 52.801700592041016,
+    "dep_lat": 54.63999938964844,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "YKS",
+    "arr": "MJZ",
+    "dep_lon": 129.77099609375,
+    "dep_lat": 62.093299865722656,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "SVO",
+    "arr": "SVX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "ESL",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OVB",
+    "arr": "SLY",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 66.61100006103516,
+    "arr_lat": 66.5907974243164,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "ULV",
+    "arr": "PEE",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "AER",
+    "arr": "KUF",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 50.16429901123,
+    "arr_lat": 53.504901885986,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "ASF",
+    "arr": "SVO",
+    "dep_lon": 48.0063018799,
+    "dep_lat": 46.2832984924,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVX",
+    "arr": "HMA",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "UUA",
+    "arr": "REN",
+    "dep_lon": 52.801700592041016,
+    "dep_lat": 54.63999938964844,
+    "arr_lon": 55.45669937133789,
+    "arr_lat": 51.795799255371094,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "NUX",
+    "arr": "SVO",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "MCX",
+    "arr": "MRV",
+    "dep_lon": 47.65230178833008,
+    "dep_lat": 42.81679916381836,
+    "arr_lon": 43.08190155029297,
+    "arr_lat": 44.225101470947266,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "ESL",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "ROV",
+    "arr": "SVO",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "RTW",
+    "arr": "VKO",
+    "dep_lon": 46.04669952392578,
+    "dep_lat": 51.564998626708984,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "KGD",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 20.592599868774414,
+    "arr_lat": 54.88999938964844,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "MQF",
+    "arr": "SVX",
+    "dep_lon": 58.755699157714844,
+    "dep_lat": 53.39310073852539,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "PEE",
+    "arr": "GOJ",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "MJZ",
+    "arr": "YKS",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 129.77099609375,
+    "arr_lat": 62.093299865722656,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "NNM",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 53.12189865112305,
+    "arr_lat": 67.63999938964844,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "ULV",
+    "arr": "DME",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "OGZ",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 44.6066017151,
+    "arr_lat": 43.2051010132,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "KLF",
+    "arr": "LED",
+    "dep_lon": 36.3666687012,
+    "dep_lat": 54.5499992371,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "SVO",
+    "arr": "TJM",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SLY",
+    "arr": "VKO",
+    "dep_lon": 66.61100006103516,
+    "dep_lat": 66.5907974243164,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "VKO",
+    "arr": "REN",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 55.45669937133789,
+    "arr_lat": 51.795799255371094,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "GOJ",
+    "arr": "PEE",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KUF",
+    "arr": "AER",
+    "dep_lon": 50.16429901123,
+    "dep_lat": 53.504901885986,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "VKO",
+    "arr": "MMK",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 32.75080108642578,
+    "arr_lat": 68.78170013427734,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "PEE",
+    "arr": "ULV",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "GRV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 45.78409957885742,
+    "arr_lat": 43.298099517822266,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NNM",
+    "arr": "ARH",
+    "dep_lon": 53.12189865112305,
+    "dep_lat": 67.63999938964844,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KHV",
+    "arr": "VVO",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 132.1479949951172,
+    "arr_lat": 43.39899826049805,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "CEK",
+    "arr": "DME",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "BTK",
+    "arr": "DME",
+    "dep_lon": 101.697998046875,
+    "dep_lat": 56.370601654052734,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "NSK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 87.33219909667969,
+    "arr_lat": 69.31109619140625,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "REN",
+    "arr": "UUA",
+    "dep_lon": 55.45669937133789,
+    "dep_lat": 51.795799255371094,
+    "arr_lon": 52.801700592041016,
+    "arr_lat": 54.63999938964844,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "EGO",
+    "arr": "AAQ",
+    "dep_lon": 36.5900993347168,
+    "dep_lat": 50.643798828125,
+    "arr_lon": 37.347301483154,
+    "arr_lat": 45.002101898193,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "TOF",
+    "arr": "ABA",
+    "dep_lon": 85.208297729492,
+    "dep_lat": 56.380298614502,
+    "arr_lon": 91.38500213623047,
+    "arr_lat": 53.7400016784668,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "NUX",
+    "arr": "KGP",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 74.53379821777344,
+    "arr_lat": 62.190399169921875,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "MRV",
+    "arr": "PEE",
+    "dep_lon": 43.08190155029297,
+    "dep_lat": 44.225101470947266,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "ARH",
+    "arr": "NNM",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 53.12189865112305,
+    "arr_lat": 67.63999938964844,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "MCX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 47.65230178833008,
+    "arr_lat": 42.81679916381836,
+    "flights": 91,
+    "delay_pct": 11.0
+  },
+  {
+    "dep": "BZK",
+    "arr": "EGO",
+    "dep_lon": 34.176399231,
+    "dep_lat": 53.214199066199996,
+    "arr_lon": 36.5900993347168,
+    "arr_lat": 50.643798828125,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "LED",
+    "arr": "KVX",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "OMS",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 73.31050109863281,
+    "arr_lat": 54.96699905395508,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SKX",
+    "arr": "VKO",
+    "dep_lon": 45.212257385253906,
+    "dep_lat": 54.12512969970703,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "LED",
+    "arr": "KLF",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 36.3666687012,
+    "arr_lat": 54.5499992371,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "URS",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 36.29560089111328,
+    "arr_lat": 51.7505989074707,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KRR",
+    "arr": "NAL",
+    "dep_lon": 39.170501708984,
+    "dep_lat": 45.034698486328,
+    "arr_lon": 43.636600494384766,
+    "arr_lat": 43.512901306152344,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "MCX",
+    "arr": "DME",
+    "dep_lon": 47.65230178833008,
+    "dep_lat": 42.81679916381836,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "HMA",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "DME",
+    "arr": "OVB",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 6.6
+  },
+  {
+    "dep": "OMS",
+    "arr": "VKO",
+    "dep_lon": 73.31050109863281,
+    "dep_lat": 54.96699905395508,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "PES",
+    "arr": "VKO",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "MQF",
+    "arr": "KZN",
+    "dep_lon": 58.755699157714844,
+    "dep_lat": 53.39310073852539,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "OVB",
+    "arr": "MQF",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 58.755699157714844,
+    "arr_lat": 53.39310073852539,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OVS",
+    "arr": "SGC",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "DME",
+    "arr": "RTW",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 46.04669952392578,
+    "arr_lat": 51.564998626708984,
+    "flights": 91,
+    "delay_pct": 8.8
+  },
+  {
+    "dep": "DME",
+    "arr": "SCW",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 50.84510040283203,
+    "arr_lat": 61.64699935913086,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NSK",
+    "arr": "SVX",
+    "dep_lon": 87.33219909667969,
+    "dep_lat": 69.31109619140625,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "OVB",
+    "arr": "SGC",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "LED",
+    "arr": "OVS",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "MMK",
+    "arr": "SVO",
+    "dep_lon": 32.75080108642578,
+    "dep_lat": 68.78170013427734,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "TJM",
+    "arr": "LED",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "SCW",
+    "arr": "DME",
+    "dep_lon": 50.84510040283203,
+    "dep_lat": 61.64699935913086,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 9.9
+  },
+  {
+    "dep": "MJZ",
+    "arr": "IKT",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "NUX",
+    "arr": "DME",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "URJ",
+    "arr": "TJM",
+    "dep_lon": 64.82669830322266,
+    "dep_lat": 60.10329818725586,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "ASF",
+    "arr": "DME",
+    "dep_lon": 48.0063018799,
+    "dep_lat": 46.2832984924,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "LED",
+    "arr": "TJM",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "OVB",
+    "arr": "PEE",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KVX",
+    "arr": "KZN",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 91,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "ABA",
+    "arr": "TOF",
+    "dep_lon": 91.38500213623047,
+    "dep_lat": 53.7400016784668,
+    "arr_lon": 85.208297729492,
+    "arr_lat": 56.380298614502,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "IKT",
+    "arr": "LED",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 91,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KJA",
+    "arr": "SVO",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "KZN",
+    "arr": "MQF",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 58.755699157714844,
+    "arr_lat": 53.39310073852539,
+    "flights": 91,
+    "delay_pct": 5.5
+  },
+  {
+    "dep": "PEE",
+    "arr": "MRV",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 43.08190155029297,
+    "arr_lat": 44.225101470947266,
+    "flights": 91,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "MJZ",
+    "arr": "OVB",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 82.650703430176,
+    "arr_lat": 55.012599945068,
+    "flights": 91,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "KZN",
+    "arr": "IKT",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 91,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "OVB",
+    "arr": "KVX",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 91,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "SVO",
+    "arr": "AAQ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 37.347301483154,
+    "arr_lat": 45.002101898193,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "DME",
+    "arr": "ULV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 90,
+    "delay_pct": 8.9
+  },
+  {
+    "dep": "VOZ",
+    "arr": "DME",
+    "dep_lon": 39.22959899902344,
+    "dep_lat": 51.81420135498047,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "SVO",
+    "arr": "MMK",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 32.75080108642578,
+    "arr_lat": 68.78170013427734,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "PEE",
+    "arr": "VKO",
+    "dep_lon": 56.021198272705,
+    "dep_lat": 57.914501190186,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "MCX",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 47.65230178833008,
+    "arr_lat": 42.81679916381836,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OMS",
+    "arr": "SVO",
+    "dep_lon": 73.31050109863281,
+    "dep_lat": 54.96699905395508,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "KRR",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 39.170501708984,
+    "arr_lat": 45.034698486328,
+    "flights": 90,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "OVB",
+    "arr": "RGK",
+    "dep_lon": 82.650703430176,
+    "dep_lat": 55.012599945068,
+    "arr_lon": 85.8332977295,
+    "arr_lat": 51.9667015076,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "ESL",
+    "arr": "REN",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 55.45669937133789,
+    "arr_lat": 51.795799255371094,
+    "flights": 90,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "KGD",
+    "arr": "DME",
+    "dep_lon": 20.592599868774414,
+    "dep_lat": 54.88999938964844,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 10.0
+  },
+  {
+    "dep": "LED",
+    "arr": "YKS",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 129.77099609375,
+    "arr_lat": 62.093299865722656,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "KZN",
+    "arr": "DME",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "PKV",
+    "arr": "SVO",
+    "dep_lon": 28.395599365234375,
+    "dep_lat": 57.78390121459961,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "VVO",
+    "arr": "VKO",
+    "dep_lon": 132.1479949951172,
+    "dep_lat": 43.39899826049805,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SGC",
+    "arr": "SVX",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "ULV",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "DME",
+    "arr": "KHV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 90,
+    "delay_pct": 8.9
+  },
+  {
+    "dep": "DME",
+    "arr": "KVX",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OMS",
+    "arr": "VKT",
+    "dep_lon": 73.31050109863281,
+    "dep_lat": 54.96699905395508,
+    "arr_lon": 63.993099212646484,
+    "arr_lat": 67.48860168457031,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "NSK",
+    "arr": "DME",
+    "dep_lon": 87.33219909667969,
+    "dep_lat": 69.31109619140625,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "VOG",
+    "arr": "VKO",
+    "dep_lon": 44.34550094604492,
+    "dep_lat": 48.782501220703125,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "KRO",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NJC",
+    "arr": "LED",
+    "dep_lon": 76.48359680175781,
+    "dep_lat": 60.94929885864258,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "DME",
+    "arr": "EGO",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 36.5900993347168,
+    "arr_lat": 50.643798828125,
+    "flights": 90,
+    "delay_pct": 10.0
+  },
+  {
+    "dep": "VOG",
+    "arr": "SVO",
+    "dep_lon": 44.34550094604492,
+    "dep_lat": 48.782501220703125,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "CEK",
+    "arr": "PEE",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 56.021198272705,
+    "arr_lat": 57.914501190186,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "IJK",
+    "arr": "SVO",
+    "dep_lon": 53.45750045776367,
+    "dep_lat": 56.82809829711914,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "SVO",
+    "arr": "ROV",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "OVS",
+    "arr": "LED",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "ULV",
+    "arr": "VKO",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "PES",
+    "arr": "DME",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 10.0
+  },
+  {
+    "dep": "SGC",
+    "arr": "OVS",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "UUS",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 142.71800231933594,
+    "arr_lat": 46.88869857788086,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "VVO",
+    "arr": "KHV",
+    "dep_lon": 132.1479949951172,
+    "dep_lat": 43.39899826049805,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "DME",
+    "arr": "NJC",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 76.48359680175781,
+    "arr_lat": 60.94929885864258,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "DME",
+    "arr": "NYM",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 72.69889831542969,
+    "arr_lat": 65.48090362548828,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KVX",
+    "arr": "SVO",
+    "dep_lon": 49.348300933838,
+    "dep_lat": 58.503299713135,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "VOZ",
+    "arr": "LED",
+    "dep_lon": 39.22959899902344,
+    "dep_lat": 51.81420135498047,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 90,
+    "delay_pct": 11.1
+  },
+  {
+    "dep": "LED",
+    "arr": "KZN",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "NBC",
+    "arr": "CSY",
+    "dep_lon": 52.092498779296875,
+    "dep_lat": 55.564701080322266,
+    "arr_lon": 47.3473014831543,
+    "arr_lat": 56.090301513671875,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SVO",
+    "arr": "AER",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "ULY",
+    "arr": "SVO",
+    "dep_lon": 48.80270004272461,
+    "dep_lat": 54.4010009765625,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "VKT",
+    "arr": "DME",
+    "dep_lon": 63.993099212646484,
+    "dep_lat": 67.48860168457031,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "CEK",
+    "arr": "VOG",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 44.34550094604492,
+    "arr_lat": 48.782501220703125,
+    "flights": 90,
+    "delay_pct": 10.0
+  },
+  {
+    "dep": "SVO",
+    "arr": "OVS",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "URJ",
+    "arr": "DME",
+    "dep_lon": 64.82669830322266,
+    "dep_lat": 60.10329818725586,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 10.0
+  },
+  {
+    "dep": "NOZ",
+    "arr": "TOF",
+    "dep_lon": 86.877197265625,
+    "dep_lat": 53.8114013671875,
+    "arr_lon": 85.208297729492,
+    "arr_lat": 56.380298614502,
+    "flights": 90,
+    "delay_pct": 7.8
+  },
+  {
+    "dep": "OVS",
+    "arr": "TJM",
+    "dep_lon": 63.60191345214844,
+    "dep_lat": 61.326622009277344,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "NUX",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "KHV",
+    "arr": "DME",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "UUS",
+    "arr": "SVO",
+    "dep_lon": 142.71800231933594,
+    "dep_lat": 46.88869857788086,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "LED",
+    "arr": "KHV",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "KRR",
+    "arr": "DME",
+    "dep_lon": 39.170501708984,
+    "dep_lat": 45.034698486328,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "HMA",
+    "arr": "KVX",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 49.348300933838,
+    "arr_lat": 58.503299713135,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "CSY",
+    "arr": "VOG",
+    "dep_lon": 47.3473014831543,
+    "dep_lat": 56.090301513671875,
+    "arr_lon": 44.34550094604492,
+    "arr_lat": 48.782501220703125,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "DME",
+    "arr": "VKT",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 63.993099212646484,
+    "arr_lat": 67.48860168457031,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "SVO",
+    "arr": "JOK",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 47.904701232910156,
+    "arr_lat": 56.700599670410156,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "ASF",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 48.0063018799,
+    "arr_lat": 46.2832984924,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "VOZ",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 39.22959899902344,
+    "arr_lat": 51.81420135498047,
+    "flights": 90,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "IAR",
+    "arr": "LED",
+    "dep_lon": 40.15739822387695,
+    "dep_lat": 57.560699462890625,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "VKO",
+    "arr": "VVO",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 132.1479949951172,
+    "arr_lat": 43.39899826049805,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "OGZ",
+    "arr": "VKO",
+    "dep_lon": 44.6066017151,
+    "dep_lat": 43.2051010132,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "GRV",
+    "arr": "DME",
+    "dep_lon": 45.78409957885742,
+    "dep_lat": 43.298099517822266,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "ESL",
+    "arr": "DME",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "STW",
+    "arr": "SVO",
+    "dep_lon": 42.11280059814453,
+    "dep_lat": 45.10919952392578,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "DME",
+    "arr": "UUS",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 142.71800231933594,
+    "arr_lat": 46.88869857788086,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "DME",
+    "arr": "UUA",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 52.801700592041016,
+    "arr_lat": 54.63999938964844,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "EGO",
+    "arr": "DME",
+    "dep_lon": 36.5900993347168,
+    "dep_lat": 50.643798828125,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "BQS",
+    "arr": "KHV",
+    "dep_lon": 127.41200256347656,
+    "dep_lat": 50.42539978027344,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "AER",
+    "arr": "VKO",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "TJM",
+    "arr": "OVS",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 63.60191345214844,
+    "arr_lat": 61.326622009277344,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "AER",
+    "arr": "SVO",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 1.1
+  },
+  {
+    "dep": "EGO",
+    "arr": "ROV",
+    "dep_lon": 36.5900993347168,
+    "dep_lat": 50.643798828125,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 90,
+    "delay_pct": 4.4
+  },
+  {
+    "dep": "SKX",
+    "arr": "SVO",
+    "dep_lon": 45.212257385253906,
+    "dep_lat": 54.12512969970703,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "UUS",
+    "arr": "DME",
+    "dep_lon": 142.71800231933594,
+    "dep_lat": 46.88869857788086,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "DME",
+    "arr": "MRV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 43.08190155029297,
+    "arr_lat": 44.225101470947266,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "LED",
+    "arr": "NJC",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 76.48359680175781,
+    "arr_lat": 60.94929885864258,
+    "flights": 90,
+    "delay_pct": 3.3
+  },
+  {
+    "dep": "SWT",
+    "arr": "CEK",
+    "dep_lon": 77.66000366210001,
+    "dep_lat": 60.709400177,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 90,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "NYM",
+    "arr": "DME",
+    "dep_lon": 72.69889831542969,
+    "dep_lat": 65.48090362548828,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 90,
+    "delay_pct": 5.6
+  },
+  {
+    "dep": "GOJ",
+    "arr": "LED",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 89,
+    "delay_pct": 4.5
+  },
+  {
+    "dep": "JOK",
+    "arr": "DME",
+    "dep_lon": 47.904701232910156,
+    "dep_lat": 56.700599670410156,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 89,
+    "delay_pct": 6.7
+  },
+  {
+    "dep": "SVO",
+    "arr": "PEZ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 45.02109909057617,
+    "arr_lat": 53.110599517822266,
+    "flights": 89,
+    "delay_pct": 2.2
+  },
+  {
+    "dep": "OSW",
+    "arr": "KRO",
+    "dep_lon": 58.59560012817383,
+    "dep_lat": 51.0724983215332,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "PKC",
+    "arr": "DME",
+    "dep_lon": 158.45399475097656,
+    "dep_lat": 53.16790008544922,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 10.3
+  },
+  {
+    "dep": "SVO",
+    "arr": "GDZ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 38.0124807358,
+    "arr_lat": 44.5820926295,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "TJM",
+    "arr": "EYK",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 66.698600769,
+    "arr_lat": 63.686901092499994,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "DME",
+    "arr": "KEJ",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 86.1072006225586,
+    "arr_lat": 55.27009963989258,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "GDZ",
+    "arr": "DME",
+    "dep_lon": 38.0124807358,
+    "dep_lat": 44.5820926295,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "GDZ",
+    "arr": "SVO",
+    "dep_lon": 38.0124807358,
+    "dep_lat": 44.5820926295,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 39,
+    "delay_pct": 10.3
+  },
+  {
+    "dep": "TOF",
+    "arr": "DME",
+    "dep_lon": 85.208297729492,
+    "dep_lat": 56.380298614502,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "AER",
+    "arr": "GOJ",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "DME",
+    "arr": "TOF",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 85.208297729492,
+    "arr_lat": 56.380298614502,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "UUD",
+    "arr": "VKO",
+    "dep_lon": 107.43800354003906,
+    "dep_lat": 51.80780029296875,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "DME",
+    "arr": "PKC",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 158.45399475097656,
+    "arr_lat": 53.16790008544922,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "VKO",
+    "arr": "BAX",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 83.53849792480469,
+    "arr_lat": 53.363800048828125,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "GDZ",
+    "arr": "VKO",
+    "dep_lon": 38.0124807358,
+    "dep_lat": 44.5820926295,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "GOJ",
+    "arr": "KLF",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 36.3666687012,
+    "arr_lat": 54.5499992371,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "BAX",
+    "arr": "VKO",
+    "dep_lon": 83.53849792480469,
+    "dep_lat": 53.363800048828125,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "STW",
+    "arr": "VKO",
+    "dep_lon": 42.11280059814453,
+    "dep_lat": 45.10919952392578,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "ULV",
+    "arr": "OSW",
+    "dep_lon": 48.226699829100006,
+    "dep_lat": 54.26829910279999,
+    "arr_lon": 58.59560012817383,
+    "arr_lat": 51.0724983215332,
+    "flights": 39,
+    "delay_pct": 10.3
+  },
+  {
+    "dep": "KRO",
+    "arr": "DME",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "DME",
+    "arr": "NNM",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 53.12189865112305,
+    "arr_lat": 67.63999938964844,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "LPK",
+    "arr": "DME",
+    "dep_lon": 39.53779983520508,
+    "dep_lat": 52.70280075073242,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "NYM",
+    "arr": "UUD",
+    "dep_lon": 72.69889831542969,
+    "dep_lat": 65.48090362548828,
+    "arr_lon": 107.43800354003906,
+    "arr_lat": 51.80780029296875,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "ARH",
+    "arr": "TJM",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "DME",
+    "arr": "LPK",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 39.53779983520508,
+    "arr_lat": 52.70280075073242,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "ROV",
+    "arr": "NBC",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 52.092498779296875,
+    "arr_lat": 55.564701080322266,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "UUD",
+    "arr": "NYM",
+    "dep_lon": 107.43800354003906,
+    "dep_lat": 51.80780029296875,
+    "arr_lon": 72.69889831542969,
+    "arr_lat": 65.48090362548828,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "KHV",
+    "arr": "UIK",
+    "dep_lon": 135.18800354004,
+    "dep_lat": 48.52799987793,
+    "arr_lon": 102.56500244140625,
+    "arr_lat": 58.13610076904297,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "PKV",
+    "arr": "DME",
+    "dep_lon": 28.395599365234375,
+    "dep_lat": 57.78390121459961,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "DME",
+    "arr": "KRO",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "STW",
+    "arr": "CEK",
+    "dep_lon": 42.11280059814453,
+    "dep_lat": 45.10919952392578,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "KRO",
+    "arr": "OSW",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 58.59560012817383,
+    "arr_lat": 51.0724983215332,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "UIK",
+    "arr": "KHV",
+    "dep_lon": 102.56500244140625,
+    "dep_lat": 58.13610076904297,
+    "arr_lon": 135.18800354004,
+    "arr_lat": 48.52799987793,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "DME",
+    "arr": "GDZ",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 38.0124807358,
+    "arr_lat": 44.5820926295,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "VKO",
+    "arr": "GDZ",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 38.0124807358,
+    "arr_lat": 44.5820926295,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "VKO",
+    "arr": "NOJ",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 75.2699966430664,
+    "arr_lat": 63.18330001831055,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "TJM",
+    "arr": "ARH",
+    "dep_lon": 65.3243026733,
+    "dep_lat": 57.189601898199996,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 39,
+    "delay_pct": 10.3
+  },
+  {
+    "dep": "KLF",
+    "arr": "GOJ",
+    "dep_lon": 36.3666687012,
+    "dep_lat": 54.5499992371,
+    "arr_lon": 43.784000396729,
+    "arr_lat": 56.230098724365,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "NBC",
+    "arr": "ROV",
+    "dep_lon": 52.092498779296875,
+    "dep_lat": 55.564701080322266,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "KLF",
+    "arr": "PES",
+    "dep_lon": 36.3666687012,
+    "dep_lat": 54.5499992371,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "VKO",
+    "arr": "UUD",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 107.43800354003906,
+    "arr_lat": 51.80780029296875,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "BAX",
+    "arr": "DME",
+    "dep_lon": 83.53849792480469,
+    "dep_lat": 53.363800048828125,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "CEK",
+    "arr": "STW",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 42.11280059814453,
+    "arr_lat": 45.10919952392578,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "SVO",
+    "arr": "NFG",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 72.6500015258789,
+    "arr_lat": 61.108299255371094,
+    "flights": 39,
+    "delay_pct": 5.1
+  },
+  {
+    "dep": "KEJ",
+    "arr": "DME",
+    "dep_lon": 86.1072006225586,
+    "dep_lat": 55.27009963989258,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 39,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "EYK",
+    "arr": "TJM",
+    "dep_lon": 66.698600769,
+    "dep_lat": 63.686901092499994,
+    "arr_lon": 65.3243026733,
+    "arr_lat": 57.189601898199996,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "OSW",
+    "arr": "ULV",
+    "dep_lon": 58.59560012817383,
+    "dep_lat": 51.0724983215332,
+    "arr_lon": 48.226699829100006,
+    "arr_lat": 54.26829910279999,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "GOJ",
+    "arr": "AER",
+    "dep_lon": 43.784000396729,
+    "dep_lat": 56.230098724365,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 39,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "DME",
+    "arr": "BAX",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 83.53849792480469,
+    "arr_lat": 53.363800048828125,
+    "flights": 39,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "PES",
+    "arr": "KLF",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 36.3666687012,
+    "arr_lat": 54.5499992371,
+    "flights": 38,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "VKO",
+    "arr": "STW",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 42.11280059814453,
+    "arr_lat": 45.10919952392578,
+    "flights": 38,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "DME",
+    "arr": "PKV",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 28.395599365234375,
+    "arr_lat": 57.78390121459961,
+    "flights": 38,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "NFG",
+    "arr": "SVO",
+    "dep_lon": 72.6500015258789,
+    "dep_lat": 61.108299255371094,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 38,
+    "delay_pct": 5.3
+  },
+  {
+    "dep": "NOJ",
+    "arr": "VKO",
+    "dep_lon": 75.2699966430664,
+    "dep_lat": 63.18330001831055,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 38,
+    "delay_pct": 2.6
+  },
+  {
+    "dep": "NNM",
+    "arr": "DME",
+    "dep_lon": 53.12189865112305,
+    "dep_lat": 67.63999938964844,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 38,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "KZN",
+    "arr": "MCX",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 47.65230178833008,
+    "arr_lat": 42.81679916381836,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "NOJ",
+    "arr": "LED",
+    "dep_lon": 75.2699966430664,
+    "dep_lat": 63.18330001831055,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "GDZ",
+    "arr": "ROV",
+    "dep_lon": 38.0124807358,
+    "dep_lat": 44.5820926295,
+    "arr_lon": 39.8180999756,
+    "arr_lat": 47.2582015991,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KEJ",
+    "arr": "SVO",
+    "dep_lon": 86.1072006225586,
+    "dep_lat": 55.27009963989258,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "UFA",
+    "arr": "HTA",
+    "dep_lon": 55.874401092529,
+    "dep_lat": 54.557498931885,
+    "arr_lon": 113.306,
+    "arr_lat": 52.026299,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KYZ",
+    "arr": "ABA",
+    "dep_lon": 94.40059661865234,
+    "dep_lat": 51.66939926147461,
+    "arr_lon": 91.38500213623047,
+    "arr_lat": 53.7400016784668,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "AER",
+    "arr": "NOZ",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 86.877197265625,
+    "arr_lat": 53.8114013671875,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "VKO",
+    "arr": "KEJ",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 86.1072006225586,
+    "arr_lat": 55.27009963989258,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "ABA",
+    "arr": "DME",
+    "dep_lon": 91.38500213623047,
+    "dep_lat": 53.7400016784668,
+    "arr_lon": 37.90629959106445,
+    "arr_lat": 55.40879821777344,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "EYK",
+    "arr": "KRO",
+    "dep_lon": 66.698600769,
+    "dep_lat": 63.686901092499994,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "BAX",
+    "arr": "SVO",
+    "dep_lon": 83.53849792480469,
+    "dep_lat": 53.363800048828125,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "KYZ",
+    "arr": "KEJ",
+    "dep_lon": 94.40059661865234,
+    "dep_lat": 51.66939926147461,
+    "arr_lon": 86.1072006225586,
+    "arr_lat": 55.27009963989258,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "ARH",
+    "arr": "HMA",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 69.08609771728516,
+    "arr_lat": 61.028499603271484,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "SVO",
+    "arr": "KEJ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 86.1072006225586,
+    "arr_lat": 55.27009963989258,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "AER",
+    "arr": "KJA",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "GDZ",
+    "arr": "ESL",
+    "dep_lon": 38.0124807358,
+    "dep_lat": 44.5820926295,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "CEK",
+    "arr": "IKT",
+    "dep_lon": 61.5033,
+    "dep_lat": 55.305801,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 26,
+    "delay_pct": 15.4
+  },
+  {
+    "dep": "NSK",
+    "arr": "NYM",
+    "dep_lon": 87.33219909667969,
+    "dep_lat": 69.31109619140625,
+    "arr_lon": 72.69889831542969,
+    "arr_lat": 65.48090362548828,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "SVX",
+    "arr": "KXK",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 136.9340057373047,
+    "arr_lat": 50.409000396728516,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "BAX",
+    "arr": "ASF",
+    "dep_lon": 83.53849792480469,
+    "dep_lat": 53.363800048828125,
+    "arr_lon": 48.0063018799,
+    "arr_lat": 46.2832984924,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "AER",
+    "arr": "IWA",
+    "dep_lon": 39.956600189209,
+    "dep_lat": 43.449901580811,
+    "arr_lon": 40.940799713134766,
+    "arr_lat": 56.93939971923828,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "YKS",
+    "arr": "UUD",
+    "dep_lon": 129.77099609375,
+    "dep_lat": 62.093299865722656,
+    "arr_lon": 107.43800354003906,
+    "arr_lat": 51.80780029296875,
+    "flights": 26,
+    "delay_pct": 19.2
+  },
+  {
+    "dep": "SVO",
+    "arr": "VKT",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 63.993099212646484,
+    "arr_lat": 67.48860168457031,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "DME",
+    "arr": "ABA",
+    "dep_lon": 37.90629959106445,
+    "dep_lat": 55.40879821777344,
+    "arr_lon": 91.38500213623047,
+    "arr_lat": 53.7400016784668,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "UUS",
+    "arr": "YKS",
+    "dep_lon": 142.71800231933594,
+    "dep_lat": 46.88869857788086,
+    "arr_lon": 129.77099609375,
+    "arr_lat": 62.093299865722656,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KXK",
+    "arr": "SVX",
+    "dep_lon": 136.9340057373047,
+    "dep_lat": 50.409000396728516,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KJA",
+    "arr": "NUX",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 76.52030181884766,
+    "arr_lat": 66.06939697265625,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "YKS",
+    "arr": "UUS",
+    "dep_lon": 129.77099609375,
+    "dep_lat": 62.093299865722656,
+    "arr_lon": 142.71800231933594,
+    "arr_lat": 46.88869857788086,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "MCX",
+    "arr": "KZN",
+    "dep_lon": 47.65230178833008,
+    "dep_lat": 42.81679916381836,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "VKT",
+    "arr": "LED",
+    "dep_lon": 63.993099212646484,
+    "dep_lat": 67.48860168457031,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "UUD",
+    "arr": "YKS",
+    "dep_lon": 107.43800354003906,
+    "dep_lat": 51.80780029296875,
+    "arr_lon": 129.77099609375,
+    "arr_lat": 62.093299865722656,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KGD",
+    "arr": "KRR",
+    "dep_lon": 20.592599868774414,
+    "dep_lat": 54.88999938964844,
+    "arr_lon": 39.170501708984,
+    "arr_lat": 45.034698486328,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "MRV",
+    "arr": "KZN",
+    "dep_lon": 43.08190155029297,
+    "dep_lat": 44.225101470947266,
+    "arr_lon": 49.278701782227,
+    "arr_lat": 55.606201171875,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "ABA",
+    "arr": "KYZ",
+    "dep_lon": 91.38500213623047,
+    "dep_lat": 53.7400016784668,
+    "arr_lon": 94.40059661865234,
+    "arr_lat": 51.66939926147461,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "IKT",
+    "arr": "CEK",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 61.5033,
+    "arr_lat": 55.305801,
+    "flights": 26,
+    "delay_pct": 15.4
+  },
+  {
+    "dep": "SGC",
+    "arr": "HTA",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 113.306,
+    "arr_lat": 52.026299,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "VKO",
+    "arr": "NFG",
+    "dep_lon": 37.2615013123,
+    "dep_lat": 55.5914993286,
+    "arr_lon": 72.6500015258789,
+    "arr_lat": 61.108299255371094,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "ROV",
+    "arr": "GDZ",
+    "dep_lon": 39.8180999756,
+    "dep_lat": 47.2582015991,
+    "arr_lon": 38.0124807358,
+    "arr_lat": 44.5820926295,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "KEJ",
+    "arr": "KYZ",
+    "dep_lon": 86.1072006225586,
+    "dep_lat": 55.27009963989258,
+    "arr_lon": 94.40059661865234,
+    "arr_lat": 51.66939926147461,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "TOF",
+    "arr": "ARH",
+    "dep_lon": 85.208297729492,
+    "dep_lat": 56.380298614502,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "GDX",
+    "arr": "IKT",
+    "dep_lon": 150.72000122070312,
+    "dep_lat": 59.9109992980957,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "IKT",
+    "arr": "GDX",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 150.72000122070312,
+    "arr_lat": 59.9109992980957,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "IWA",
+    "arr": "AER",
+    "dep_lon": 40.940799713134766,
+    "dep_lat": 56.93939971923828,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KJA",
+    "arr": "AER",
+    "dep_lon": 92.493301391602,
+    "dep_lat": 56.172901153564,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "SVO",
+    "arr": "BAX",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 83.53849792480469,
+    "arr_lat": 53.363800048828125,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "ESL",
+    "arr": "LED",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 30.262500762939453,
+    "arr_lat": 59.80030059814453,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "NFG",
+    "arr": "VKO",
+    "dep_lon": 72.6500015258789,
+    "dep_lat": 61.108299255371094,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NOZ",
+    "arr": "NYM",
+    "dep_lon": 86.877197265625,
+    "dep_lat": 53.8114013671875,
+    "arr_lon": 72.69889831542969,
+    "arr_lat": 65.48090362548828,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "IWA",
+    "arr": "SVX",
+    "dep_lon": 40.940799713134766,
+    "dep_lat": 56.93939971923828,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "NYM",
+    "arr": "NOZ",
+    "dep_lon": 72.69889831542969,
+    "dep_lat": 65.48090362548828,
+    "arr_lon": 86.877197265625,
+    "arr_lat": 53.8114013671875,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "URS",
+    "arr": "SGC",
+    "dep_lon": 36.29560089111328,
+    "dep_lat": 51.7505989074707,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "ARH",
+    "arr": "TOF",
+    "dep_lon": 40.71670150756836,
+    "dep_lat": 64.60030364990234,
+    "arr_lon": 85.208297729492,
+    "arr_lat": 56.380298614502,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "SGC",
+    "arr": "URS",
+    "dep_lon": 73.40180206298828,
+    "dep_lat": 61.34370040893555,
+    "arr_lon": 36.29560089111328,
+    "arr_lat": 51.7505989074707,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "PES",
+    "arr": "LPK",
+    "dep_lon": 34.154701232910156,
+    "dep_lat": 61.88520050048828,
+    "arr_lon": 39.53779983520508,
+    "arr_lat": 52.70280075073242,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "ASF",
+    "arr": "BAX",
+    "dep_lon": 48.0063018799,
+    "dep_lat": 46.2832984924,
+    "arr_lon": 83.53849792480469,
+    "arr_lat": 53.363800048828125,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "LED",
+    "arr": "VKT",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 63.993099212646484,
+    "arr_lat": 67.48860168457031,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "ESL",
+    "arr": "KGD",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 20.592599868774414,
+    "arr_lat": 54.88999938964844,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "SVO",
+    "arr": "NOJ",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 75.2699966430664,
+    "arr_lat": 63.18330001831055,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "JOK",
+    "arr": "KRR",
+    "dep_lon": 47.904701232910156,
+    "dep_lat": 56.700599670410156,
+    "arr_lon": 39.170501708984,
+    "arr_lat": 45.034698486328,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "UIK",
+    "arr": "SVX",
+    "dep_lon": 102.56500244140625,
+    "dep_lat": 58.13610076904297,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KRO",
+    "arr": "SVO",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "LED",
+    "arr": "ESL",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "NOJ",
+    "arr": "SVO",
+    "dep_lon": 75.2699966430664,
+    "dep_lat": 63.18330001831055,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "SVX",
+    "arr": "MJZ",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 114.03900146484375,
+    "arr_lat": 62.534698486328125,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NBC",
+    "arr": "OMS",
+    "dep_lon": 52.092498779296875,
+    "dep_lat": 55.564701080322266,
+    "arr_lon": 73.31050109863281,
+    "arr_lat": 54.96699905395508,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "VKT",
+    "arr": "SVO",
+    "dep_lon": 63.993099212646484,
+    "dep_lat": 67.48860168457031,
+    "arr_lon": 37.4146,
+    "arr_lat": 55.972599,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "KZN",
+    "arr": "MRV",
+    "dep_lon": 49.278701782227,
+    "dep_lat": 55.606201171875,
+    "arr_lon": 43.08190155029297,
+    "arr_lat": 44.225101470947266,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "IKT",
+    "arr": "NYM",
+    "dep_lon": 104.38899993896,
+    "dep_lat": 52.268001556396,
+    "arr_lon": 72.69889831542969,
+    "arr_lat": 65.48090362548828,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "HTA",
+    "arr": "SGC",
+    "dep_lon": 113.306,
+    "dep_lat": 52.026299,
+    "arr_lon": 73.40180206298828,
+    "arr_lat": 61.34370040893555,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "NUX",
+    "arr": "KJA",
+    "dep_lon": 76.52030181884766,
+    "dep_lat": 66.06939697265625,
+    "arr_lon": 92.493301391602,
+    "arr_lat": 56.172901153564,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "SVX",
+    "arr": "UIK",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 102.56500244140625,
+    "arr_lat": 58.13610076904297,
+    "flights": 26,
+    "delay_pct": 11.5
+  },
+  {
+    "dep": "HTA",
+    "arr": "UFA",
+    "dep_lon": 113.306,
+    "dep_lat": 52.026299,
+    "arr_lon": 55.874401092529,
+    "arr_lat": 54.557498931885,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "LED",
+    "arr": "NOJ",
+    "dep_lon": 30.262500762939453,
+    "dep_lat": 59.80030059814453,
+    "arr_lon": 75.2699966430664,
+    "arr_lat": 63.18330001831055,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KEJ",
+    "arr": "VKO",
+    "dep_lon": 86.1072006225586,
+    "dep_lat": 55.27009963989258,
+    "arr_lon": 37.2615013123,
+    "arr_lat": 55.5914993286,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "SVO",
+    "arr": "KRO",
+    "dep_lon": 37.4146,
+    "dep_lat": 55.972599,
+    "arr_lon": 65.41560363769531,
+    "arr_lat": 55.47529983520508,
+    "flights": 26,
+    "delay_pct": 15.4
+  },
+  {
+    "dep": "KRO",
+    "arr": "EYK",
+    "dep_lon": 65.41560363769531,
+    "dep_lat": 55.47529983520508,
+    "arr_lon": 66.698600769,
+    "arr_lat": 63.686901092499994,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "OMS",
+    "arr": "NBC",
+    "dep_lon": 73.31050109863281,
+    "dep_lat": 54.96699905395508,
+    "arr_lon": 52.092498779296875,
+    "arr_lat": 55.564701080322266,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "MJZ",
+    "arr": "SVX",
+    "dep_lon": 114.03900146484375,
+    "dep_lat": 62.534698486328125,
+    "arr_lon": 60.802700042725,
+    "arr_lat": 56.743099212646,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NYM",
+    "arr": "IKT",
+    "dep_lon": 72.69889831542969,
+    "dep_lat": 65.48090362548828,
+    "arr_lon": 104.38899993896,
+    "arr_lat": 52.268001556396,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "HMA",
+    "arr": "ARH",
+    "dep_lon": 69.08609771728516,
+    "dep_lat": 61.028499603271484,
+    "arr_lon": 40.71670150756836,
+    "arr_lat": 64.60030364990234,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "KRR",
+    "arr": "JOK",
+    "dep_lon": 39.170501708984,
+    "dep_lat": 45.034698486328,
+    "arr_lon": 47.904701232910156,
+    "arr_lat": 56.700599670410156,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "NOZ",
+    "arr": "AER",
+    "dep_lon": 86.877197265625,
+    "dep_lat": 53.8114013671875,
+    "arr_lon": 39.956600189209,
+    "arr_lat": 43.449901580811,
+    "flights": 26,
+    "delay_pct": 7.7
+  },
+  {
+    "dep": "KRR",
+    "arr": "KGD",
+    "dep_lon": 39.170501708984,
+    "dep_lat": 45.034698486328,
+    "arr_lon": 20.592599868774414,
+    "arr_lat": 54.88999938964844,
+    "flights": 26,
+    "delay_pct": 15.4
+  },
+  {
+    "dep": "SVX",
+    "arr": "IWA",
+    "dep_lon": 60.802700042725,
+    "dep_lat": 56.743099212646,
+    "arr_lon": 40.940799713134766,
+    "arr_lat": 56.93939971923828,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "LPK",
+    "arr": "PES",
+    "dep_lon": 39.53779983520508,
+    "dep_lat": 52.70280075073242,
+    "arr_lon": 34.154701232910156,
+    "arr_lat": 61.88520050048828,
+    "flights": 26,
+    "delay_pct": 3.8
+  },
+  {
+    "dep": "NYM",
+    "arr": "NSK",
+    "dep_lon": 72.69889831542969,
+    "dep_lat": 65.48090362548828,
+    "arr_lon": 87.33219909667969,
+    "arr_lat": 69.31109619140625,
+    "flights": 26,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "KGD",
+    "arr": "ESL",
+    "dep_lon": 20.592599868774414,
+    "dep_lat": 54.88999938964844,
+    "arr_lon": 44.33089828491211,
+    "arr_lat": 46.3739013671875,
+    "flights": 25,
+    "delay_pct": 0.0
+  },
+  {
+    "dep": "ESL",
+    "arr": "GDZ",
+    "dep_lon": 44.33089828491211,
+    "dep_lat": 46.3739013671875,
+    "arr_lon": 38.0124807358,
+    "arr_lat": 44.5820926295,
+    "flights": 25,
+    "delay_pct": 4.0
+  }
+]

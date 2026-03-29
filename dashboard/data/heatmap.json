@@ -1,0 +1,590 @@
+[
+  {
+    "dow": 3,
+    "hour_local": 14,
+    "flights": 753,
+    "delay_pct": 4.6,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 12,
+    "flights": 663,
+    "delay_pct": 5.4,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 12,
+    "flights": 598,
+    "delay_pct": 6.4,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 19,
+    "flights": 377,
+    "delay_pct": 3.7,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 9,
+    "flights": 650,
+    "delay_pct": 4.2,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 16,
+    "flights": 610,
+    "delay_pct": 4.9,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 11,
+    "flights": 896,
+    "delay_pct": 6.0,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 20,
+    "flights": 195,
+    "delay_pct": 7.2,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 17,
+    "flights": 507,
+    "delay_pct": 4.5,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 16,
+    "flights": 631,
+    "delay_pct": 3.3,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 19,
+    "flights": 363,
+    "delay_pct": 4.7,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 13,
+    "flights": 715,
+    "delay_pct": 4.6,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 11,
+    "flights": 871,
+    "delay_pct": 4.9,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 10,
+    "flights": 637,
+    "delay_pct": 4.7,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 18,
+    "flights": 494,
+    "delay_pct": 4.9,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 19,
+    "flights": 403,
+    "delay_pct": 5.2,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 9,
+    "flights": 598,
+    "delay_pct": 6.2,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 14,
+    "flights": 646,
+    "delay_pct": 4.3,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 13,
+    "flights": 676,
+    "delay_pct": 5.8,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 15,
+    "flights": 532,
+    "delay_pct": 4.3,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 16,
+    "flights": 702,
+    "delay_pct": 4.7,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 9,
+    "flights": 662,
+    "delay_pct": 3.6,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 19,
+    "flights": 377,
+    "delay_pct": 3.2,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 14,
+    "flights": 598,
+    "delay_pct": 5.9,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 20,
+    "flights": 156,
+    "delay_pct": 5.1,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 14,
+    "flights": 728,
+    "delay_pct": 5.9,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 20,
+    "flights": 156,
+    "delay_pct": 4.5,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 13,
+    "flights": 741,
+    "delay_pct": 4.9,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 16,
+    "flights": 674,
+    "delay_pct": 6.1,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 15,
+    "flights": 597,
+    "delay_pct": 5.4,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 11,
+    "flights": 910,
+    "delay_pct": 4.8,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 20,
+    "flights": 143,
+    "delay_pct": 4.2,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 18,
+    "flights": 559,
+    "delay_pct": 4.3,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 15,
+    "flights": 572,
+    "delay_pct": 4.4,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 13,
+    "flights": 714,
+    "delay_pct": 4.5,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 18,
+    "flights": 546,
+    "delay_pct": 4.0,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 20,
+    "flights": 156,
+    "delay_pct": 6.4,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 20,
+    "flights": 143,
+    "delay_pct": 2.8,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 9,
+    "flights": 544,
+    "delay_pct": 4.4,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 12,
+    "flights": 689,
+    "delay_pct": 5.4,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 16,
+    "flights": 663,
+    "delay_pct": 5.3,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 18,
+    "flights": 494,
+    "delay_pct": 6.9,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 19,
+    "flights": 339,
+    "delay_pct": 5.0,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 9,
+    "flights": 702,
+    "delay_pct": 5.6,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 12,
+    "flights": 650,
+    "delay_pct": 6.0,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 17,
+    "flights": 468,
+    "delay_pct": 4.5,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 17,
+    "flights": 558,
+    "delay_pct": 4.7,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 19,
+    "flights": 376,
+    "delay_pct": 4.5,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 13,
+    "flights": 714,
+    "delay_pct": 5.2,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 18,
+    "flights": 511,
+    "delay_pct": 4.3,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 9,
+    "flights": 702,
+    "delay_pct": 5.1,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 17,
+    "flights": 468,
+    "delay_pct": 4.9,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 15,
+    "flights": 572,
+    "delay_pct": 4.7,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 14,
+    "flights": 702,
+    "delay_pct": 5.1,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 10,
+    "flights": 637,
+    "delay_pct": 6.4,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 15,
+    "flights": 571,
+    "delay_pct": 3.9,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 19,
+    "flights": 364,
+    "delay_pct": 5.8,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 17,
+    "flights": 533,
+    "delay_pct": 3.8,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 10,
+    "flights": 572,
+    "delay_pct": 5.4,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 15,
+    "flights": 565,
+    "delay_pct": 3.9,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 13,
+    "flights": 663,
+    "delay_pct": 6.3,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 10,
+    "flights": 675,
+    "delay_pct": 4.7,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 18,
+    "flights": 532,
+    "delay_pct": 3.6,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 11,
+    "flights": 923,
+    "delay_pct": 5.3,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 17,
+    "flights": 468,
+    "delay_pct": 3.6,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 15,
+    "flights": 624,
+    "delay_pct": 4.8,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 10,
+    "flights": 676,
+    "delay_pct": 5.2,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 14,
+    "flights": 663,
+    "delay_pct": 5.0,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 9,
+    "flights": 702,
+    "delay_pct": 3.8,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 14,
+    "flights": 637,
+    "delay_pct": 4.1,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 16,
+    "flights": 676,
+    "delay_pct": 5.3,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 1,
+    "hour_local": 12,
+    "flights": 611,
+    "delay_pct": 4.1,
+    "day_name": "Monday"
+  },
+  {
+    "dow": 5,
+    "hour_local": 11,
+    "flights": 818,
+    "delay_pct": 4.5,
+    "day_name": "Friday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 20,
+    "flights": 134,
+    "delay_pct": 5.2,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 12,
+    "flights": 702,
+    "delay_pct": 4.3,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 17,
+    "flights": 477,
+    "delay_pct": 2.3,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 11,
+    "flights": 987,
+    "delay_pct": 4.3,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 7,
+    "hour_local": 16,
+    "flights": 688,
+    "delay_pct": 6.4,
+    "day_name": "Sunday"
+  },
+  {
+    "dow": 4,
+    "hour_local": 10,
+    "flights": 611,
+    "delay_pct": 4.3,
+    "day_name": "Thursday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 11,
+    "flights": 988,
+    "delay_pct": 4.4,
+    "day_name": "Saturday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 10,
+    "flights": 623,
+    "delay_pct": 4.7,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 3,
+    "hour_local": 18,
+    "flights": 572,
+    "delay_pct": 7.2,
+    "day_name": "Wednesday"
+  },
+  {
+    "dow": 2,
+    "hour_local": 12,
+    "flights": 688,
+    "delay_pct": 4.4,
+    "day_name": "Tuesday"
+  },
+  {
+    "dow": 6,
+    "hour_local": 13,
+    "flights": 754,
+    "delay_pct": 4.1,
+    "day_name": "Saturday"
+  }
+]

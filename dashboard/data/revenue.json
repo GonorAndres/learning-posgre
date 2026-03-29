@@ -1,0 +1,1243 @@
+{
+  "byFareClass": [
+    {
+      "fare_class": "Economy",
+      "tickets_sold": 1664254,
+      "total_revenue_rub": 26663985500,
+      "avg_ticket_rub": 16021.58,
+      "min_ticket_rub": 3000.0,
+      "max_ticket_rub": 74500.0,
+      "revenue_pct": 70.8,
+      "ticket_pct": 88.1
+    },
+    {
+      "fare_class": "Business",
+      "tickets_sold": 193525,
+      "total_revenue_rub": 9963561300,
+      "avg_ticket_rub": 51484.62,
+      "min_ticket_rub": 9100.0,
+      "max_ticket_rub": 203300.0,
+      "revenue_pct": 26.5,
+      "ticket_pct": 10.2
+    },
+    {
+      "fare_class": "Comfort",
+      "tickets_sold": 31660,
+      "total_revenue_rub": 1037723500,
+      "avg_ticket_rub": 32777.12,
+      "min_ticket_rub": 19900.0,
+      "max_ticket_rub": 47600.0,
+      "revenue_pct": 2.8,
+      "ticket_pct": 1.7
+    }
+  ],
+  "topRoutes": [
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Khabarovsk-Novy Airport",
+      "flights": 90,
+      "passengers": 17881,
+      "total_revenue_rub": 1399716700,
+      "avg_ticket_rub": 78279.55,
+      "revenue_per_flight": 15552407.78
+    },
+    {
+      "departure": "Khabarovsk-Novy Airport",
+      "arrival": "Domodedovo International Airport",
+      "flights": 90,
+      "passengers": 16889,
+      "total_revenue_rub": 1323252100,
+      "avg_ticket_rub": 78349.94,
+      "revenue_per_flight": 14702801.11
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Tolmachevo Airport",
+      "flights": 91,
+      "passengers": 30110,
+      "total_revenue_rub": 1039725300,
+      "avg_ticket_rub": 34530.9,
+      "revenue_per_flight": 11425552.75
+    },
+    {
+      "departure": "Tolmachevo Airport",
+      "arrival": "Domodedovo International Airport",
+      "flights": 91,
+      "passengers": 28488,
+      "total_revenue_rub": 982523100,
+      "avg_ticket_rub": 34489.02,
+      "revenue_per_flight": 10796957.14
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "arrival": "Khabarovsk-Novy Airport",
+      "flights": 90,
+      "passengers": 11006,
+      "total_revenue_rub": 871004400,
+      "avg_ticket_rub": 79139.05,
+      "revenue_per_flight": 9677826.67
+    },
+    {
+      "departure": "Khabarovsk-Novy Airport",
+      "arrival": "Pulkovo Airport",
+      "flights": 91,
+      "passengers": 10762,
+      "total_revenue_rub": 852402000,
+      "avg_ticket_rub": 79204.79,
+      "revenue_per_flight": 9367054.95
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Tolmachevo Airport",
+      "flights": 91,
+      "passengers": 24566,
+      "total_revenue_rub": 850572800,
+      "avg_ticket_rub": 34623.98,
+      "revenue_per_flight": 9346953.85
+    },
+    {
+      "departure": "Tolmachevo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 91,
+      "passengers": 23287,
+      "total_revenue_rub": 803644800,
+      "avg_ticket_rub": 34510.45,
+      "revenue_per_flight": 8831261.54
+    },
+    {
+      "departure": "Pulkovo Airport",
+      "arrival": "Irkutsk Airport",
+      "flights": 91,
+      "passengers": 13285,
+      "total_revenue_rub": 787546300,
+      "avg_ticket_rub": 59280.87,
+      "revenue_per_flight": 8654354.95
+    },
+    {
+      "departure": "Irkutsk Airport",
+      "arrival": "Pulkovo Airport",
+      "flights": 91,
+      "passengers": 12006,
+      "total_revenue_rub": 712540000,
+      "avg_ticket_rub": 59348.66,
+      "revenue_per_flight": 7830109.89
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Koltsovo Airport",
+      "flights": 91,
+      "passengers": 29445,
+      "total_revenue_rub": 523665400,
+      "avg_ticket_rub": 17784.53,
+      "revenue_per_flight": 5754564.84
+    },
+    {
+      "departure": "Koltsovo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 91,
+      "passengers": 27977,
+      "total_revenue_rub": 498178400,
+      "avg_ticket_rub": 17806.71,
+      "revenue_per_flight": 5474487.91
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Sochi International Airport",
+      "flights": 90,
+      "passengers": 28521,
+      "total_revenue_rub": 493568100,
+      "avg_ticket_rub": 17305.43,
+      "revenue_per_flight": 5484090.0
+    },
+    {
+      "departure": "Sochi International Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 90,
+      "passengers": 26335,
+      "total_revenue_rub": 456077200,
+      "avg_ticket_rub": 17318.29,
+      "revenue_per_flight": 5067524.44
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Yuzhno-Sakhalinsk Airport",
+      "flights": 90,
+      "passengers": 5012,
+      "total_revenue_rub": 445492500,
+      "avg_ticket_rub": 88885.18,
+      "revenue_per_flight": 4949916.67
+    },
+    {
+      "departure": "Kazan International Airport",
+      "arrival": "Irkutsk Airport",
+      "flights": 90,
+      "passengers": 8886,
+      "total_revenue_rub": 421847000,
+      "avg_ticket_rub": 47473.22,
+      "revenue_per_flight": 4687188.89
+    },
+    {
+      "departure": "Irkutsk Airport",
+      "arrival": "Kazan International Airport",
+      "flights": 91,
+      "passengers": 8778,
+      "total_revenue_rub": 417741700,
+      "avg_ticket_rub": 47589.62,
+      "revenue_per_flight": 4590568.13
+    },
+    {
+      "departure": "Yuzhno-Sakhalinsk Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 90,
+      "passengers": 4551,
+      "total_revenue_rub": 409132800,
+      "avg_ticket_rub": 89899.54,
+      "revenue_per_flight": 4545920.0
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Yemelyanovo Airport",
+      "flights": 91,
+      "passengers": 8896,
+      "total_revenue_rub": 398865200,
+      "avg_ticket_rub": 44836.47,
+      "revenue_per_flight": 4383134.07
+    },
+    {
+      "departure": "Yemelyanovo Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "flights": 91,
+      "passengers": 8298,
+      "total_revenue_rub": 372136300,
+      "avg_ticket_rub": 44846.51,
+      "revenue_per_flight": 4089409.89
+    }
+  ],
+  "byAircraft": [
+    {
+      "aircraft": "Sukhoi Superjet-100",
+      "flights": 10576,
+      "total_passengers": 658868,
+      "total_revenue_rub": 9261842900,
+      "revenue_per_flight": 875741.58,
+      "avg_ticket_rub": 14057.21
+    },
+    {
+      "aircraft": "Boeing 767-300",
+      "flights": 1800,
+      "total_passengers": 224870,
+      "total_revenue_rub": 7805017100,
+      "revenue_per_flight": 4336120.61,
+      "avg_ticket_rub": 34709.02
+    },
+    {
+      "aircraft": "Boeing 777-300",
+      "flights": 907,
+      "total_passengers": 265553,
+      "total_revenue_rub": 6325456400,
+      "revenue_per_flight": 6974042.34,
+      "avg_ticket_rub": 23819.94
+    },
+    {
+      "aircraft": "Airbus A319-100",
+      "flights": 1625,
+      "total_passengers": 96868,
+      "total_revenue_rub": 4981694600,
+      "revenue_per_flight": 3065658.22,
+      "avg_ticket_rub": 51427.66
+    },
+    {
+      "aircraft": "Bombardier CRJ-200",
+      "flights": 11627,
+      "total_passengers": 275476,
+      "total_revenue_rub": 3639294600,
+      "revenue_per_flight": 313003.75,
+      "avg_ticket_rub": 13210.93
+    },
+    {
+      "aircraft": "Airbus A321-200",
+      "flights": 1962,
+      "total_passengers": 186120,
+      "total_revenue_rub": 2914439100,
+      "revenue_per_flight": 1485442.97,
+      "avg_ticket_rub": 15658.92
+    },
+    {
+      "aircraft": "Boeing 737-300",
+      "flights": 1759,
+      "total_passengers": 155143,
+      "total_revenue_rub": 2562663300,
+      "revenue_per_flight": 1456886.47,
+      "avg_ticket_rub": 16518.07
+    },
+    {
+      "aircraft": "Cessna 208 Caravan",
+      "flights": 4130,
+      "total_passengers": 26541,
+      "total_revenue_rub": 174862300,
+      "revenue_per_flight": 42339.54,
+      "avg_ticket_rub": 6588.38
+    }
+  ],
+  "leadTime": [
+    {
+      "lead_time_bucket": "1: 1-6 days",
+      "tickets": 549,
+      "avg_price_rub": 18580.51,
+      "median_price_rub": 12700.0
+    },
+    {
+      "lead_time_bucket": "2: 1-2 weeks",
+      "tickets": 268891,
+      "avg_price_rub": 19701.56,
+      "median_price_rub": 13400.0
+    },
+    {
+      "lead_time_bucket": "3: 2-4 weeks",
+      "tickets": 1552550,
+      "avg_price_rub": 19940.51,
+      "median_price_rub": 13400.0
+    },
+    {
+      "lead_time_bucket": "4: 1-2 months",
+      "tickets": 67449,
+      "avg_price_rub": 20739.51,
+      "median_price_rub": 13700.0
+    }
+  ],
+  "pareto": [
+    {
+      "rank": 1,
+      "route": "DME-KHV",
+      "revenue_rub": 1399716700,
+      "cumul_pct": 3.7,
+      "route_pct": 0.2
+    },
+    {
+      "rank": 2,
+      "route": "KHV-DME",
+      "revenue_rub": 1323252100,
+      "cumul_pct": 7.2,
+      "route_pct": 0.4
+    },
+    {
+      "rank": 3,
+      "route": "DME-OVB",
+      "revenue_rub": 1039725300,
+      "cumul_pct": 10.0,
+      "route_pct": 0.7
+    },
+    {
+      "rank": 4,
+      "route": "OVB-DME",
+      "revenue_rub": 982523100,
+      "cumul_pct": 12.6,
+      "route_pct": 0.9
+    },
+    {
+      "rank": 5,
+      "route": "LED-KHV",
+      "revenue_rub": 871004400,
+      "cumul_pct": 14.9,
+      "route_pct": 1.1
+    },
+    {
+      "rank": 6,
+      "route": "KHV-LED",
+      "revenue_rub": 852402000,
+      "cumul_pct": 17.2,
+      "route_pct": 1.3
+    },
+    {
+      "rank": 7,
+      "route": "SVO-OVB",
+      "revenue_rub": 850572800,
+      "cumul_pct": 19.4,
+      "route_pct": 1.6
+    },
+    {
+      "rank": 8,
+      "route": "OVB-SVO",
+      "revenue_rub": 803644800,
+      "cumul_pct": 21.6,
+      "route_pct": 1.8
+    },
+    {
+      "rank": 9,
+      "route": "LED-IKT",
+      "revenue_rub": 787546300,
+      "cumul_pct": 23.7,
+      "route_pct": 2.0
+    },
+    {
+      "rank": 10,
+      "route": "IKT-LED",
+      "revenue_rub": 712540000,
+      "cumul_pct": 25.5,
+      "route_pct": 2.2
+    },
+    {
+      "rank": 11,
+      "route": "SVO-SVX",
+      "revenue_rub": 523665400,
+      "cumul_pct": 26.9,
+      "route_pct": 2.4
+    },
+    {
+      "rank": 12,
+      "route": "SVX-SVO",
+      "revenue_rub": 498178400,
+      "cumul_pct": 28.3,
+      "route_pct": 2.7
+    },
+    {
+      "rank": 13,
+      "route": "SVO-AER",
+      "revenue_rub": 493568100,
+      "cumul_pct": 29.6,
+      "route_pct": 2.9
+    },
+    {
+      "rank": 14,
+      "route": "AER-SVO",
+      "revenue_rub": 456077200,
+      "cumul_pct": 30.8,
+      "route_pct": 3.1
+    },
+    {
+      "rank": 15,
+      "route": "SVO-UUS",
+      "revenue_rub": 445492500,
+      "cumul_pct": 32.0,
+      "route_pct": 3.3
+    },
+    {
+      "rank": 16,
+      "route": "KZN-IKT",
+      "revenue_rub": 421847000,
+      "cumul_pct": 33.1,
+      "route_pct": 3.5
+    },
+    {
+      "rank": 17,
+      "route": "IKT-KZN",
+      "revenue_rub": 417741700,
+      "cumul_pct": 34.2,
+      "route_pct": 3.8
+    },
+    {
+      "rank": 18,
+      "route": "UUS-SVO",
+      "revenue_rub": 409132800,
+      "cumul_pct": 35.3,
+      "route_pct": 4.0
+    },
+    {
+      "rank": 19,
+      "route": "SVO-KJA",
+      "revenue_rub": 398865200,
+      "cumul_pct": 36.3,
+      "route_pct": 4.2
+    },
+    {
+      "rank": 20,
+      "route": "KJA-SVO",
+      "revenue_rub": 372136300,
+      "cumul_pct": 37.3,
+      "route_pct": 4.4
+    },
+    {
+      "rank": 21,
+      "route": "DME-UUS",
+      "revenue_rub": 367956600,
+      "cumul_pct": 38.3,
+      "route_pct": 4.7
+    },
+    {
+      "rank": 22,
+      "route": "VKO-PEE",
+      "revenue_rub": 356226800,
+      "cumul_pct": 39.3,
+      "route_pct": 4.9
+    },
+    {
+      "rank": 23,
+      "route": "UUS-DME",
+      "revenue_rub": 329682000,
+      "cumul_pct": 40.1,
+      "route_pct": 5.1
+    },
+    {
+      "rank": 24,
+      "route": "PEE-VKO",
+      "revenue_rub": 321274500,
+      "cumul_pct": 41.0,
+      "route_pct": 5.3
+    },
+    {
+      "rank": 25,
+      "route": "DME-BTK",
+      "revenue_rub": 269783900,
+      "cumul_pct": 41.7,
+      "route_pct": 5.5
+    },
+    {
+      "rank": 26,
+      "route": "SVO-MJZ",
+      "revenue_rub": 268385000,
+      "cumul_pct": 42.4,
+      "route_pct": 5.8
+    },
+    {
+      "rank": 27,
+      "route": "VKO-AER",
+      "revenue_rub": 256672300,
+      "cumul_pct": 43.1,
+      "route_pct": 6.0
+    },
+    {
+      "rank": 28,
+      "route": "VKO-VVO",
+      "revenue_rub": 253356500,
+      "cumul_pct": 43.8,
+      "route_pct": 6.2
+    },
+    {
+      "rank": 29,
+      "route": "MJZ-SVO",
+      "revenue_rub": 251786100,
+      "cumul_pct": 44.4,
+      "route_pct": 6.4
+    },
+    {
+      "rank": 30,
+      "route": "BTK-DME",
+      "revenue_rub": 251490500,
+      "cumul_pct": 45.1,
+      "route_pct": 6.7
+    },
+    {
+      "rank": 31,
+      "route": "DME-NSK",
+      "revenue_rub": 248333700,
+      "cumul_pct": 45.8,
+      "route_pct": 6.9
+    },
+    {
+      "rank": 32,
+      "route": "DME-PKC",
+      "revenue_rub": 241294600,
+      "cumul_pct": 46.4,
+      "route_pct": 7.1
+    },
+    {
+      "rank": 33,
+      "route": "SVO-LED",
+      "revenue_rub": 237406800,
+      "cumul_pct": 47.0,
+      "route_pct": 7.3
+    },
+    {
+      "rank": 34,
+      "route": "DME-KRR",
+      "revenue_rub": 232689300,
+      "cumul_pct": 47.6,
+      "route_pct": 7.5
+    },
+    {
+      "rank": 35,
+      "route": "VVO-VKO",
+      "revenue_rub": 227297400,
+      "cumul_pct": 48.2,
+      "route_pct": 7.8
+    },
+    {
+      "rank": 36,
+      "route": "AER-VKO",
+      "revenue_rub": 224507600,
+      "cumul_pct": 48.8,
+      "route_pct": 8.0
+    },
+    {
+      "rank": 37,
+      "route": "SVO-UFA",
+      "revenue_rub": 222488400,
+      "cumul_pct": 49.4,
+      "route_pct": 8.2
+    },
+    {
+      "rank": 38,
+      "route": "NSK-DME",
+      "revenue_rub": 222041700,
+      "cumul_pct": 50.0,
+      "route_pct": 8.4
+    },
+    {
+      "rank": 39,
+      "route": "KRR-DME",
+      "revenue_rub": 220515300,
+      "cumul_pct": 50.6,
+      "route_pct": 8.6
+    },
+    {
+      "rank": 40,
+      "route": "PKC-DME",
+      "revenue_rub": 220374400,
+      "cumul_pct": 51.2,
+      "route_pct": 8.9
+    },
+    {
+      "rank": 41,
+      "route": "UFA-SVO",
+      "revenue_rub": 214964100,
+      "cumul_pct": 51.8,
+      "route_pct": 9.1
+    },
+    {
+      "rank": 42,
+      "route": "SVO-MCX",
+      "revenue_rub": 213636300,
+      "cumul_pct": 52.3,
+      "route_pct": 9.3
+    },
+    {
+      "rank": 43,
+      "route": "PEE-OVB",
+      "revenue_rub": 212351600,
+      "cumul_pct": 52.9,
+      "route_pct": 9.5
+    },
+    {
+      "rank": 44,
+      "route": "LED-SVO",
+      "revenue_rub": 211805400,
+      "cumul_pct": 53.5,
+      "route_pct": 9.8
+    },
+    {
+      "rank": 45,
+      "route": "OVB-KVX",
+      "revenue_rub": 196738100,
+      "cumul_pct": 54.0,
+      "route_pct": 10.0
+    },
+    {
+      "rank": 46,
+      "route": "OVB-PEE",
+      "revenue_rub": 195220600,
+      "cumul_pct": 54.5,
+      "route_pct": 10.2
+    },
+    {
+      "rank": 47,
+      "route": "KVX-OVB",
+      "revenue_rub": 193964100,
+      "cumul_pct": 55.0,
+      "route_pct": 10.4
+    },
+    {
+      "rank": 48,
+      "route": "MCX-SVO",
+      "revenue_rub": 192468300,
+      "cumul_pct": 55.5,
+      "route_pct": 10.6
+    },
+    {
+      "rank": 49,
+      "route": "DME-NUX",
+      "revenue_rub": 186765300,
+      "cumul_pct": 56.0,
+      "route_pct": 10.9
+    },
+    {
+      "rank": 50,
+      "route": "AER-KUF",
+      "revenue_rub": 177641500,
+      "cumul_pct": 56.5,
+      "route_pct": 11.1
+    },
+    {
+      "rank": 51,
+      "route": "NUX-DME",
+      "revenue_rub": 166916000,
+      "cumul_pct": 56.9,
+      "route_pct": 11.3
+    },
+    {
+      "rank": 52,
+      "route": "NSK-SVX",
+      "revenue_rub": 165827200,
+      "cumul_pct": 57.4,
+      "route_pct": 11.5
+    },
+    {
+      "rank": 53,
+      "route": "SVO-TJM",
+      "revenue_rub": 164183600,
+      "cumul_pct": 57.8,
+      "route_pct": 11.8
+    },
+    {
+      "rank": 54,
+      "route": "SCW-DME",
+      "revenue_rub": 157697400,
+      "cumul_pct": 58.2,
+      "route_pct": 12.0
+    },
+    {
+      "rank": 55,
+      "route": "VKO-LED",
+      "revenue_rub": 157581200,
+      "cumul_pct": 58.7,
+      "route_pct": 12.2
+    },
+    {
+      "rank": 56,
+      "route": "KUF-AER",
+      "revenue_rub": 157302400,
+      "cumul_pct": 59.1,
+      "route_pct": 12.4
+    },
+    {
+      "rank": 57,
+      "route": "LED-VKO",
+      "revenue_rub": 156752100,
+      "cumul_pct": 59.5,
+      "route_pct": 12.6
+    },
+    {
+      "rank": 58,
+      "route": "TJM-SVO",
+      "revenue_rub": 154964400,
+      "cumul_pct": 59.9,
+      "route_pct": 12.9
+    },
+    {
+      "rank": 59,
+      "route": "DME-SCW",
+      "revenue_rub": 154521200,
+      "cumul_pct": 60.3,
+      "route_pct": 13.1
+    },
+    {
+      "rank": 60,
+      "route": "SVX-NSK",
+      "revenue_rub": 152296700,
+      "cumul_pct": 60.7,
+      "route_pct": 13.3
+    },
+    {
+      "rank": 61,
+      "route": "DME-LED",
+      "revenue_rub": 151373700,
+      "cumul_pct": 61.1,
+      "route_pct": 13.5
+    },
+    {
+      "rank": 62,
+      "route": "DME-URJ",
+      "revenue_rub": 150468200,
+      "cumul_pct": 61.5,
+      "route_pct": 13.7
+    },
+    {
+      "rank": 63,
+      "route": "OVS-DME",
+      "revenue_rub": 147638400,
+      "cumul_pct": 61.9,
+      "route_pct": 14.0
+    },
+    {
+      "rank": 64,
+      "route": "ULV-KRR",
+      "revenue_rub": 147138400,
+      "cumul_pct": 62.3,
+      "route_pct": 14.2
+    },
+    {
+      "rank": 65,
+      "route": "URJ-DME",
+      "revenue_rub": 146846600,
+      "cumul_pct": 62.7,
+      "route_pct": 14.4
+    },
+    {
+      "rank": 66,
+      "route": "SVO-AAQ",
+      "revenue_rub": 145536600,
+      "cumul_pct": 63.1,
+      "route_pct": 14.6
+    },
+    {
+      "rank": 67,
+      "route": "DME-OVS",
+      "revenue_rub": 142067900,
+      "cumul_pct": 63.4,
+      "route_pct": 14.9
+    },
+    {
+      "rank": 68,
+      "route": "AAQ-SVO",
+      "revenue_rub": 142063400,
+      "cumul_pct": 63.8,
+      "route_pct": 15.1
+    },
+    {
+      "rank": 69,
+      "route": "LED-DME",
+      "revenue_rub": 139730400,
+      "cumul_pct": 64.2,
+      "route_pct": 15.3
+    },
+    {
+      "rank": 70,
+      "route": "SVO-NUX",
+      "revenue_rub": 136677500,
+      "cumul_pct": 64.6,
+      "route_pct": 15.5
+    },
+    {
+      "rank": 71,
+      "route": "DME-CEK",
+      "revenue_rub": 135333800,
+      "cumul_pct": 64.9,
+      "route_pct": 15.7
+    },
+    {
+      "rank": 72,
+      "route": "SVO-TOF",
+      "revenue_rub": 134662500,
+      "cumul_pct": 65.3,
+      "route_pct": 16.0
+    },
+    {
+      "rank": 73,
+      "route": "DME-MRV",
+      "revenue_rub": 134348600,
+      "cumul_pct": 65.6,
+      "route_pct": 16.2
+    },
+    {
+      "rank": 74,
+      "route": "KRR-ULV",
+      "revenue_rub": 133856600,
+      "cumul_pct": 66.0,
+      "route_pct": 16.4
+    },
+    {
+      "rank": 75,
+      "route": "DME-HMA",
+      "revenue_rub": 132795600,
+      "cumul_pct": 66.3,
+      "route_pct": 16.6
+    },
+    {
+      "rank": 76,
+      "route": "TOF-SVO",
+      "revenue_rub": 131885300,
+      "cumul_pct": 66.7,
+      "route_pct": 16.9
+    },
+    {
+      "rank": 77,
+      "route": "SVO-OMS",
+      "revenue_rub": 131653200,
+      "cumul_pct": 67.0,
+      "route_pct": 17.1
+    },
+    {
+      "rank": 78,
+      "route": "DME-KUF",
+      "revenue_rub": 130439400,
+      "cumul_pct": 67.4,
+      "route_pct": 17.3
+    },
+    {
+      "rank": 79,
+      "route": "CEK-DME",
+      "revenue_rub": 130151600,
+      "cumul_pct": 67.7,
+      "route_pct": 17.5
+    },
+    {
+      "rank": 80,
+      "route": "MRV-DME",
+      "revenue_rub": 129770500,
+      "cumul_pct": 68.1,
+      "route_pct": 17.7
+    },
+    {
+      "rank": 81,
+      "route": "SVO-ROV",
+      "revenue_rub": 127349800,
+      "cumul_pct": 68.4,
+      "route_pct": 18.0
+    },
+    {
+      "rank": 82,
+      "route": "KUF-DME",
+      "revenue_rub": 124921200,
+      "cumul_pct": 68.7,
+      "route_pct": 18.2
+    },
+    {
+      "rank": 83,
+      "route": "NUX-SVO",
+      "revenue_rub": 122622600,
+      "cumul_pct": 69.1,
+      "route_pct": 18.4
+    },
+    {
+      "rank": 84,
+      "route": "DME-KZN",
+      "revenue_rub": 122363300,
+      "cumul_pct": 69.4,
+      "route_pct": 18.6
+    },
+    {
+      "rank": 85,
+      "route": "VOG-CEK",
+      "revenue_rub": 121259400,
+      "cumul_pct": 69.7,
+      "route_pct": 18.8
+    },
+    {
+      "rank": 86,
+      "route": "ROV-SVO",
+      "revenue_rub": 118496400,
+      "cumul_pct": 70.0,
+      "route_pct": 19.1
+    },
+    {
+      "rank": 87,
+      "route": "CEK-VOG",
+      "revenue_rub": 118346300,
+      "cumul_pct": 70.3,
+      "route_pct": 19.3
+    },
+    {
+      "rank": 88,
+      "route": "KZN-DME",
+      "revenue_rub": 118320700,
+      "cumul_pct": 70.7,
+      "route_pct": 19.5
+    },
+    {
+      "rank": 89,
+      "route": "OMS-SVO",
+      "revenue_rub": 117902600,
+      "cumul_pct": 71.0,
+      "route_pct": 19.7
+    },
+    {
+      "rank": 90,
+      "route": "PEE-MRV",
+      "revenue_rub": 117166400,
+      "cumul_pct": 71.3,
+      "route_pct": 20.0
+    },
+    {
+      "rank": 91,
+      "route": "MRV-PEE",
+      "revenue_rub": 113165400,
+      "cumul_pct": 71.6,
+      "route_pct": 20.2
+    },
+    {
+      "rank": 92,
+      "route": "HMA-DME",
+      "revenue_rub": 109107500,
+      "cumul_pct": 71.9,
+      "route_pct": 20.4
+    },
+    {
+      "rank": 93,
+      "route": "SVX-SCW",
+      "revenue_rub": 106831100,
+      "cumul_pct": 72.2,
+      "route_pct": 20.6
+    },
+    {
+      "rank": 94,
+      "route": "LED-KVX",
+      "revenue_rub": 105158500,
+      "cumul_pct": 72.4,
+      "route_pct": 20.8
+    },
+    {
+      "rank": 95,
+      "route": "KVX-LED",
+      "revenue_rub": 103878000,
+      "cumul_pct": 72.7,
+      "route_pct": 21.1
+    },
+    {
+      "rank": 96,
+      "route": "DME-KGD",
+      "revenue_rub": 100763300,
+      "cumul_pct": 73.0,
+      "route_pct": 21.3
+    },
+    {
+      "rank": 97,
+      "route": "KJA-OVS",
+      "revenue_rub": 98530300,
+      "cumul_pct": 73.2,
+      "route_pct": 21.5
+    },
+    {
+      "rank": 98,
+      "route": "KGD-DME",
+      "revenue_rub": 98060600,
+      "cumul_pct": 73.5,
+      "route_pct": 21.7
+    },
+    {
+      "rank": 99,
+      "route": "SCW-SVX",
+      "revenue_rub": 97975000,
+      "cumul_pct": 73.8,
+      "route_pct": 22.0
+    },
+    {
+      "rank": 100,
+      "route": "SVO-KGD",
+      "revenue_rub": 96064900,
+      "cumul_pct": 74.0,
+      "route_pct": 22.2
+    },
+    {
+      "rank": 101,
+      "route": "SVO-VOG",
+      "revenue_rub": 93186600,
+      "cumul_pct": 74.3,
+      "route_pct": 22.4
+    },
+    {
+      "rank": 102,
+      "route": "OVS-KJA",
+      "revenue_rub": 89637200,
+      "cumul_pct": 74.5,
+      "route_pct": 22.6
+    },
+    {
+      "rank": 103,
+      "route": "LED-CSY",
+      "revenue_rub": 88788300,
+      "cumul_pct": 74.7,
+      "route_pct": 22.8
+    },
+    {
+      "rank": 104,
+      "route": "VOG-SVO",
+      "revenue_rub": 87191000,
+      "cumul_pct": 75.0,
+      "route_pct": 23.1
+    },
+    {
+      "rank": 105,
+      "route": "SVO-OVS",
+      "revenue_rub": 86713400,
+      "cumul_pct": 75.2,
+      "route_pct": 23.3
+    },
+    {
+      "rank": 106,
+      "route": "VKO-REN",
+      "revenue_rub": 86392400,
+      "cumul_pct": 75.4,
+      "route_pct": 23.5
+    },
+    {
+      "rank": 107,
+      "route": "DME-NJC",
+      "revenue_rub": 85746600,
+      "cumul_pct": 75.7,
+      "route_pct": 23.7
+    },
+    {
+      "rank": 108,
+      "route": "UFA-ESL",
+      "revenue_rub": 85595400,
+      "cumul_pct": 75.9,
+      "route_pct": 23.9
+    },
+    {
+      "rank": 109,
+      "route": "ESL-UFA",
+      "revenue_rub": 85274000,
+      "cumul_pct": 76.1,
+      "route_pct": 24.2
+    },
+    {
+      "rank": 110,
+      "route": "DME-ABA",
+      "revenue_rub": 85216400,
+      "cumul_pct": 76.3,
+      "route_pct": 24.4
+    },
+    {
+      "rank": 111,
+      "route": "CSY-LED",
+      "revenue_rub": 84769200,
+      "cumul_pct": 76.6,
+      "route_pct": 24.6
+    },
+    {
+      "rank": 112,
+      "route": "ESL-DME",
+      "revenue_rub": 84461300,
+      "cumul_pct": 76.8,
+      "route_pct": 24.8
+    },
+    {
+      "rank": 113,
+      "route": "KGD-SVO",
+      "revenue_rub": 84363700,
+      "cumul_pct": 77.0,
+      "route_pct": 25.1
+    },
+    {
+      "rank": 114,
+      "route": "DME-ESL",
+      "revenue_rub": 84155500,
+      "cumul_pct": 77.2,
+      "route_pct": 25.3
+    },
+    {
+      "rank": 115,
+      "route": "DME-TOF",
+      "revenue_rub": 82815900,
+      "cumul_pct": 77.5,
+      "route_pct": 25.5
+    },
+    {
+      "rank": 116,
+      "route": "SVO-KEJ",
+      "revenue_rub": 80369300,
+      "cumul_pct": 77.7,
+      "route_pct": 25.7
+    },
+    {
+      "rank": 117,
+      "route": "TOF-DME",
+      "revenue_rub": 79612200,
+      "cumul_pct": 77.9,
+      "route_pct": 25.9
+    },
+    {
+      "rank": 118,
+      "route": "ABA-DME",
+      "revenue_rub": 79375400,
+      "cumul_pct": 78.1,
+      "route_pct": 26.2
+    },
+    {
+      "rank": 119,
+      "route": "SVO-KVX",
+      "revenue_rub": 78363000,
+      "cumul_pct": 78.3,
+      "route_pct": 26.4
+    },
+    {
+      "rank": 120,
+      "route": "KEJ-DME",
+      "revenue_rub": 77787800,
+      "cumul_pct": 78.5,
+      "route_pct": 26.6
+    },
+    {
+      "rank": 121,
+      "route": "DME-KEJ",
+      "revenue_rub": 77763300,
+      "cumul_pct": 78.7,
+      "route_pct": 26.8
+    },
+    {
+      "rank": 122,
+      "route": "DME-VKT",
+      "revenue_rub": 77607400,
+      "cumul_pct": 78.9,
+      "route_pct": 27.1
+    },
+    {
+      "rank": 123,
+      "route": "NJC-DME",
+      "revenue_rub": 77574100,
+      "cumul_pct": 79.1,
+      "route_pct": 27.3
+    },
+    {
+      "rank": 124,
+      "route": "REN-VKO",
+      "revenue_rub": 77405700,
+      "cumul_pct": 79.3,
+      "route_pct": 27.5
+    },
+    {
+      "rank": 125,
+      "route": "OVS-SVO",
+      "revenue_rub": 77121300,
+      "cumul_pct": 79.5,
+      "route_pct": 27.7
+    },
+    {
+      "rank": 126,
+      "route": "KEJ-SVO",
+      "revenue_rub": 76917700,
+      "cumul_pct": 79.7,
+      "route_pct": 27.9
+    },
+    {
+      "rank": 127,
+      "route": "LED-YKS",
+      "revenue_rub": 74562900,
+      "cumul_pct": 79.9,
+      "route_pct": 28.2
+    }
+  ],
+  "paretoSummary": {
+    "total_routes": 451,
+    "routes_for_50pct": 38,
+    "routes_for_80pct": 128,
+    "total_revenue_rub": 37665270300
+  },
+  "monthlyTrend": [
+    {
+      "month": "2017-05",
+      "flights": 5360,
+      "passengers": 228522,
+      "revenue_rub": 4531534800,
+      "avg_ticket_rub": 19829.75,
+      "prev_month_revenue": null,
+      "mom_change_pct": null
+    },
+    {
+      "month": "2017-06",
+      "flights": 11456,
+      "passengers": 656628,
+      "revenue_rub": 13095070300,
+      "avg_ticket_rub": 19942.91,
+      "prev_month_revenue": 4531534800.0,
+      "mom_change_pct": 189.0
+    },
+    {
+      "month": "2017-07",
+      "flights": 11898,
+      "passengers": 680201,
+      "revenue_rub": 13585808100,
+      "avg_ticket_rub": 19973.23,
+      "prev_month_revenue": 13095070300.0,
+      "mom_change_pct": 3.7
+    },
+    {
+      "month": "2017-08",
+      "flights": 5672,
+      "passengers": 324088,
+      "revenue_rub": 6452857100,
+      "avg_ticket_rub": 19910.82,
+      "prev_month_revenue": 13585808100.0,
+      "mom_change_pct": -52.5
+    }
+  ]
+}

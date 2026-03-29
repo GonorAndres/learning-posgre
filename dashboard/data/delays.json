@@ -1,0 +1,517 @@
+{
+  "overview": {
+    "total_flights": 65664,
+    "arrived": 49235,
+    "cancelled": 429,
+    "scheduled": 15383,
+    "in_progress": 617
+  },
+  "topRoutes": [
+    {
+      "departure": "Voronezh International Airport",
+      "arrival": "Pulkovo Airport",
+      "total_flights": 90,
+      "delayed_flights": 10,
+      "delay_pct": 11.1,
+      "avg_delay_min": 191.3
+    },
+    {
+      "departure": "Koltsovo Airport",
+      "arrival": "Surgut Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 197.8
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Kazan International Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 193.1
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Uytash Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 202.3
+    },
+    {
+      "departure": "Cheboksary Airport",
+      "arrival": "Sheremetyevo International Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 192.3
+    },
+    {
+      "departure": "Kurumoch International Airport",
+      "arrival": "Sochi International Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 191.2
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Pobedilovo Airport",
+      "total_flights": 91,
+      "delayed_flights": 10,
+      "delay_pct": 11.0,
+      "avg_delay_min": 192.0
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Belgorod International Airport",
+      "total_flights": 90,
+      "delayed_flights": 9,
+      "delay_pct": 10.0,
+      "avg_delay_min": 189.4
+    },
+    {
+      "departure": "Petrozavodsk Airport",
+      "arrival": "Domodedovo International Airport",
+      "total_flights": 90,
+      "delayed_flights": 9,
+      "delay_pct": 10.0,
+      "avg_delay_min": 184.7
+    },
+    {
+      "departure": "Uray Airport",
+      "arrival": "Domodedovo International Airport",
+      "total_flights": 90,
+      "delayed_flights": 9,
+      "delay_pct": 10.0,
+      "avg_delay_min": 197.2
+    },
+    {
+      "departure": "Chelyabinsk Balandino Airport",
+      "arrival": "Volgograd International Airport",
+      "total_flights": 90,
+      "delayed_flights": 9,
+      "delay_pct": 10.0,
+      "avg_delay_min": 176.0
+    },
+    {
+      "departure": "Khrabrovo Airport",
+      "arrival": "Domodedovo International Airport",
+      "total_flights": 90,
+      "delayed_flights": 9,
+      "delay_pct": 10.0,
+      "avg_delay_min": 189.2
+    },
+    {
+      "departure": "Syktyvkar Airport",
+      "arrival": "Domodedovo International Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 196.3
+    },
+    {
+      "departure": "Kurumoch International Airport",
+      "arrival": "Kursk East Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 198.0
+    },
+    {
+      "departure": "Bolshoye Savino Airport",
+      "arrival": "Chelyabinsk Balandino Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 193.8
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Khrabrovo Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 210.6
+    },
+    {
+      "departure": "Sheremetyevo International Airport",
+      "arrival": "Khrabrovo Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 192.8
+    },
+    {
+      "departure": "Roshchino International Airport",
+      "arrival": "Pulkovo Airport",
+      "total_flights": 91,
+      "delayed_flights": 9,
+      "delay_pct": 9.9,
+      "avg_delay_min": 213.9
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Ulyanovsk Baratayevka Airport",
+      "total_flights": 90,
+      "delayed_flights": 8,
+      "delay_pct": 8.9,
+      "avg_delay_min": 198.4
+    },
+    {
+      "departure": "Domodedovo International Airport",
+      "arrival": "Khabarovsk-Novy Airport",
+      "total_flights": 90,
+      "delayed_flights": 8,
+      "delay_pct": 8.9,
+      "avg_delay_min": 179.8
+    }
+  ],
+  "worstAirports": [
+    {
+      "code": "KUF",
+      "airport": "Kurumoch International Airport",
+      "city": "Samara",
+      "total_flights": 273,
+      "delayed": 22,
+      "delay_pct": 8.1,
+      "avg_delay_all_min": 18.3,
+      "avg_delay_late_min": 193.2
+    },
+    {
+      "code": "NAL",
+      "airport": "Nalchik Airport",
+      "city": "Nalchik",
+      "total_flights": 273,
+      "delayed": 21,
+      "delay_pct": 7.7,
+      "avg_delay_all_min": 17.3,
+      "avg_delay_late_min": 189.6
+    },
+    {
+      "code": "GDZ",
+      "airport": "Gelendzhik Airport",
+      "city": "Gelendzhik",
+      "total_flights": 169,
+      "delayed": 13,
+      "delay_pct": 7.7,
+      "avg_delay_all_min": 17.0,
+      "avg_delay_late_min": 186.5
+    },
+    {
+      "code": "KLF",
+      "airport": "Grabtsevo Airport",
+      "city": "Kaluga",
+      "total_flights": 182,
+      "delayed": 13,
+      "delay_pct": 7.1,
+      "avg_delay_all_min": 16.2,
+      "avg_delay_late_min": 189.0
+    },
+    {
+      "code": "VOZ",
+      "airport": "Voronezh International Airport",
+      "city": "Voronezh",
+      "total_flights": 180,
+      "delayed": 12,
+      "delay_pct": 6.7,
+      "avg_delay_all_min": 16.0,
+      "avg_delay_late_min": 197.8
+    },
+    {
+      "code": "CEK",
+      "airport": "Chelyabinsk Balandino Airport",
+      "city": "Chelyabinsk",
+      "total_flights": 608,
+      "delayed": 42,
+      "delay_pct": 6.9,
+      "avg_delay_all_min": 15.9,
+      "avg_delay_late_min": 189.1
+    },
+    {
+      "code": "RTW",
+      "airport": "Saratov Central Airport",
+      "city": "Saratov",
+      "total_flights": 364,
+      "delayed": 24,
+      "delay_pct": 6.6,
+      "avg_delay_all_min": 15.8,
+      "avg_delay_late_min": 196.7
+    },
+    {
+      "code": "UIK",
+      "airport": "Ust-Ilimsk Airport",
+      "city": "Ust Ilimsk",
+      "total_flights": 260,
+      "delayed": 18,
+      "delay_pct": 6.9,
+      "avg_delay_all_min": 15.6,
+      "avg_delay_late_min": 185.7
+    },
+    {
+      "code": "SCW",
+      "airport": "Syktyvkar Airport",
+      "city": "Syktyvkar",
+      "total_flights": 377,
+      "delayed": 25,
+      "delay_pct": 6.6,
+      "avg_delay_all_min": 15.3,
+      "avg_delay_late_min": 187.0
+    },
+    {
+      "code": "ULY",
+      "airport": "Ulyanovsk East Airport",
+      "city": "Ulyanovsk",
+      "total_flights": 285,
+      "delayed": 17,
+      "delay_pct": 6.0,
+      "avg_delay_all_min": 15.2,
+      "avg_delay_late_min": 205.4
+    },
+    {
+      "code": "CSY",
+      "airport": "Cheboksary Airport",
+      "city": "Cheboksary",
+      "total_flights": 454,
+      "delayed": 28,
+      "delay_pct": 6.2,
+      "avg_delay_all_min": 14.7,
+      "avg_delay_late_min": 194.6
+    },
+    {
+      "code": "OGZ",
+      "airport": "Beslan Airport",
+      "city": "Beslan",
+      "total_flights": 181,
+      "delayed": 11,
+      "delay_pct": 6.1,
+      "avg_delay_all_min": 14.7,
+      "avg_delay_late_min": 193.3
+    },
+    {
+      "code": "AAQ",
+      "airport": "Anapa Vityazevo Airport",
+      "city": "Anapa",
+      "total_flights": 195,
+      "delayed": 12,
+      "delay_pct": 6.2,
+      "avg_delay_all_min": 14.6,
+      "avg_delay_late_min": 188.1
+    },
+    {
+      "code": "IKT",
+      "airport": "Irkutsk Airport",
+      "city": "Irkutsk",
+      "total_flights": 546,
+      "delayed": 32,
+      "delay_pct": 5.9,
+      "avg_delay_all_min": 14.3,
+      "avg_delay_late_min": 195.1
+    },
+    {
+      "code": "HTA",
+      "airport": "Chita-Kadala Airport",
+      "city": "Chita",
+      "total_flights": 143,
+      "delayed": 8,
+      "delay_pct": 5.6,
+      "avg_delay_all_min": 14.1,
+      "avg_delay_late_min": 200.8
+    }
+  ],
+  "byHour": [
+    {
+      "hour_local": 9,
+      "flights": 4560,
+      "delayed": 214,
+      "delay_pct": 4.7,
+      "avg_offset_min": 12.0
+    },
+    {
+      "hour_local": 10,
+      "flights": 4431,
+      "delayed": 224,
+      "delay_pct": 5.1,
+      "avg_offset_min": 12.6
+    },
+    {
+      "hour_local": 11,
+      "flights": 6393,
+      "delayed": 312,
+      "delay_pct": 4.9,
+      "avg_offset_min": 12.5
+    },
+    {
+      "hour_local": 12,
+      "flights": 4601,
+      "delayed": 235,
+      "delay_pct": 5.1,
+      "avg_offset_min": 13.0
+    },
+    {
+      "hour_local": 13,
+      "flights": 4977,
+      "delayed": 250,
+      "delay_pct": 5.0,
+      "avg_offset_min": 12.6
+    },
+    {
+      "hour_local": 14,
+      "flights": 4727,
+      "delayed": 236,
+      "delay_pct": 5.0,
+      "avg_offset_min": 12.7
+    },
+    {
+      "hour_local": 15,
+      "flights": 4033,
+      "delayed": 181,
+      "delay_pct": 4.5,
+      "avg_offset_min": 11.5
+    },
+    {
+      "hour_local": 16,
+      "flights": 4644,
+      "delayed": 240,
+      "delay_pct": 5.2,
+      "avg_offset_min": 13.0
+    },
+    {
+      "hour_local": 17,
+      "flights": 3479,
+      "delayed": 141,
+      "delay_pct": 4.1,
+      "avg_offset_min": 10.9
+    },
+    {
+      "hour_local": 18,
+      "flights": 3708,
+      "delayed": 186,
+      "delay_pct": 5.0,
+      "avg_offset_min": 12.8
+    },
+    {
+      "hour_local": 19,
+      "flights": 2599,
+      "delayed": 119,
+      "delay_pct": 4.6,
+      "avg_offset_min": 11.6
+    },
+    {
+      "hour_local": 20,
+      "flights": 1083,
+      "delayed": 56,
+      "delay_pct": 5.2,
+      "avg_offset_min": 12.8
+    }
+  ],
+  "byDay": [
+    {
+      "day_of_week": 1,
+      "day_name": "Monday",
+      "flights": 6966,
+      "delay_pct": 5.0
+    },
+    {
+      "day_of_week": 2,
+      "day_name": "Tuesday",
+      "flights": 6978,
+      "delay_pct": 4.1
+    },
+    {
+      "day_of_week": 3,
+      "day_name": "Wednesday",
+      "flights": 7105,
+      "delay_pct": 5.3
+    },
+    {
+      "day_of_week": 4,
+      "day_name": "Thursday",
+      "flights": 7147,
+      "delay_pct": 4.6
+    },
+    {
+      "day_of_week": 5,
+      "day_name": "Friday",
+      "flights": 6404,
+      "delay_pct": 5.2
+    },
+    {
+      "day_of_week": 6,
+      "day_name": "Saturday",
+      "flights": 7396,
+      "delay_pct": 4.8
+    },
+    {
+      "day_of_week": 7,
+      "day_name": "Sunday",
+      "flights": 7239,
+      "delay_pct": 5.1
+    }
+  ],
+  "recovery": {
+    "departed_late": 2394,
+    "recovered_on_arrival": 0,
+    "recovery_pct": 0.0,
+    "stayed_late": 2394
+  },
+  "byAircraft": [
+    {
+      "aircraft": "Airbus A321-200",
+      "max_range_km": 5600,
+      "total_flights": 2902,
+      "delay_pct": 5.9,
+      "avg_offset_min": 14.5
+    },
+    {
+      "aircraft": "Boeing 737-300",
+      "max_range_km": 4200,
+      "total_flights": 1894,
+      "delay_pct": 5.4,
+      "avg_offset_min": 13.4
+    },
+    {
+      "aircraft": "Sukhoi Superjet-100",
+      "max_range_km": 3000,
+      "total_flights": 12652,
+      "delay_pct": 4.9,
+      "avg_offset_min": 12.5
+    },
+    {
+      "aircraft": "Cessna 208 Caravan",
+      "max_range_km": 1200,
+      "total_flights": 13789,
+      "delay_pct": 4.9,
+      "avg_offset_min": 12.4
+    },
+    {
+      "aircraft": "Bombardier CRJ-200",
+      "max_range_km": 2700,
+      "total_flights": 13439,
+      "delay_pct": 4.7,
+      "avg_offset_min": 12.2
+    },
+    {
+      "aircraft": "Boeing 767-300",
+      "max_range_km": 7900,
+      "total_flights": 1812,
+      "delay_pct": 4.1,
+      "avg_offset_min": 10.9
+    },
+    {
+      "aircraft": "Boeing 777-300",
+      "max_range_km": 11100,
+      "total_flights": 907,
+      "delay_pct": 3.9,
+      "avg_offset_min": 10.7
+    },
+    {
+      "aircraft": "Airbus A319-100",
+      "max_range_km": 6700,
+      "total_flights": 1840,
+      "delay_pct": 3.9,
+      "avg_offset_min": 10.4
+    }
+  ]
+}

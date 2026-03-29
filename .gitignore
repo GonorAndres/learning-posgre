@@ -41,6 +41,10 @@ docs/
 # Subagent outputs
 subagents_outputs/
 
+# Test artifacts
+.playwright-mcp/
+*.png
+
 # Claude ephemeral (config files ARE tracked)
 .claude/cache/
 .claude/debug/

@@ -1,0 +1,129 @@
+{
+  "performance": [
+    {
+      "query": "Route delay analysis",
+      "pg_no_index": "292ms",
+      "pg_with_index": "111ms",
+      "bigquery": "~1.5s / ~0.5s cached",
+      "bq_bytes": "~4MB"
+    },
+    {
+      "query": "Revenue by fare class",
+      "pg_no_index": "1,635ms",
+      "pg_with_index": "~400ms",
+      "bigquery": "~1.2s",
+      "bq_bytes": "~25MB"
+    },
+    {
+      "query": "Single flight revenue",
+      "pg_no_index": "1,283ms",
+      "pg_with_index": "2.6ms",
+      "bigquery": "~0.8s",
+      "bq_bytes": "~25MB"
+    },
+    {
+      "query": "Flights from SVO",
+      "pg_no_index": "33.9ms",
+      "pg_with_index": "2.6ms",
+      "bigquery": "~0.5s",
+      "bq_bytes": "~3MB"
+    },
+    {
+      "query": "Materialized view query",
+      "pg_no_index": "174ms",
+      "pg_with_index": "0.13ms",
+      "bigquery": "N/A",
+      "bq_bytes": "N/A"
+    }
+  ],
+  "syntax": [
+    {
+      "concept": "Conditional count",
+      "postgresql": "COUNT(*) FILTER (WHERE ...)",
+      "bigquery": "COUNTIF(...)"
+    },
+    {
+      "concept": "Time interval",
+      "postgresql": "INTERVAL '15 min'",
+      "bigquery": "INTERVAL 15 MINUTE"
+    },
+    {
+      "concept": "Epoch extraction",
+      "postgresql": "EXTRACT(EPOCH FROM (ts1 - ts2))",
+      "bigquery": "TIMESTAMP_DIFF(ts1, ts2, SECOND)"
+    },
+    {
+      "concept": "JSONB access",
+      "postgresql": "column->>'key'",
+      "bigquery": "JSON_VALUE(col, '$.key')"
+    },
+    {
+      "concept": "Timezone conversion",
+      "postgresql": "timezone('UTC', ts)",
+      "bigquery": "Not needed (always UTC)"
+    },
+    {
+      "concept": "Median",
+      "postgresql": "PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY col)",
+      "bigquery": "APPROX_QUANTILES(col, 2)[OFFSET(1)]"
+    },
+    {
+      "concept": "LATERAL join",
+      "postgresql": "JOIN LATERAL (...) ON TRUE",
+      "bigquery": "Not supported; use correlated subquery"
+    },
+    {
+      "concept": "Window functions",
+      "postgresql": "Full support",
+      "bigquery": "Full support (identical syntax)"
+    }
+  ],
+  "architecture": [
+    {
+      "dimension": "Storage model",
+      "postgresql": "Row-oriented (heap)",
+      "bigquery": "Columnar (Capacitor)"
+    },
+    {
+      "dimension": "Query execution",
+      "postgresql": "Single-node, multi-process",
+      "bigquery": "Massively parallel (Dremel)"
+    },
+    {
+      "dimension": "Indexing",
+      "postgresql": "B-tree, GIN, GiST, BRIN, partial, expression",
+      "bigquery": "Partition pruning, clustering, search indexes"
+    },
+    {
+      "dimension": "Transactions",
+      "postgresql": "Full ACID, MVCC",
+      "bigquery": "Snapshot isolation, no row-level locks"
+    },
+    {
+      "dimension": "Schema changes",
+      "postgresql": "ALTER TABLE (may lock)",
+      "bigquery": "ALTER TABLE (instant, metadata-only)"
+    },
+    {
+      "dimension": "Vacuuming",
+      "postgresql": "Required (dead tuples from MVCC)",
+      "bigquery": "Not applicable (append-only storage)"
+    },
+    {
+      "dimension": "Connections",
+      "postgresql": "Per-client process (max_connections)",
+      "bigquery": "Serverless (no connection management)"
+    },
+    {
+      "dimension": "Replication",
+      "postgresql": "Streaming + logical replication",
+      "bigquery": "Automatic (multi-region optional)"
+    }
+  ],
+  "etl": {
+    "total_rows": 5740000,
+    "tables": 8,
+    "duration_seconds": 102,
+    "throughput_rows_per_sec": 56000
+  }
+}
