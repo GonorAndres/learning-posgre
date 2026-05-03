@@ -1,0 +1,706 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=2.3cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+% -- Palette (minimal) --
+\definecolor{royalblue}{RGB}{28, 58, 185}
+\definecolor{inkblack}{RGB}{20, 20, 25}
+\definecolor{mutedgray}{RGB}{130, 130, 135}
+
+% -- Hyperref --
+\hypersetup{
+  colorlinks=true,
+  linkcolor=royalblue,
+  urlcolor=royalblue,
+  citecolor=royalblue,
+  pdfauthor={Andres Gonzalez Ortega},
+  pdftitle={Firebase Hosting Deployment with Workload Identity Federation},
+}
+
+% -- Theorem environments --
+\newtheoremstyle{plainref}
+  {6pt}{6pt}
+  {\normalfont}
+  {}
+  {\bfseries}
+  {.}
+  {.5em}
+  {}
+
+\theoremstyle{plainref}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{remark}[definition]{Remark}
+
+% -- Section titles --
+\titleformat{\section}
+  {\large\bfseries\color{inkblack}}
+  {\thesection}{0.7em}{}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{inkblack}}
+  {\thesubsection}{0.6em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\itshape\color{inkblack}}
+  {\thesubsubsection}{0.6em}{}
+
+% -- Header / Footer --
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\color{mutedgray}Firebase Hosting with WIF}
+\fancyhead[R]{\small\color{mutedgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{mutedgray}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+% ── Title Block ──────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Firebase Hosting Deployment\\[2pt]with Workload Identity Federation}\\[4pt]
+  {\normalsize\itshape Technical Reference and Replication Guide}\\[10pt]
+  {\small Andres Gonzalez Ortega \quad\textbullet\quad \today}
+\end{center}
+\vspace{4pt}
+\hrule height 0.6pt
+\vspace{14pt}
+
+% ── Abstract ─────────────────────────────────────────────
+\begin{quote}
+\small
+\textbf{Abstract.} This document describes the complete setup of automated
+CI/CD deployment for a Next.js static dashboard to Firebase Hosting, using
+Google Cloud Workload Identity Federation (WIF) for keyless authentication
+from GitHub Actions. It covers the GCP infrastructure (service account, IAM
+roles, WIF pool and provider), the GitHub Actions workflow, the security
+posture of the configuration, and step-by-step replication instructions.
+The approach eliminates long-lived credentials entirely: no JSON key files,
+no CI tokens---only short-lived, automatically rotated access tokens scoped
+to a single repository and a single GCP role.
+\end{quote}
+\vspace{4pt}
+\tableofcontents
+\newpage
+
+% ── Reading Guide ────────────────────────────────────────
+\section*{Reading Guide}
+\addcontentsline{toc}{section}{Reading Guide}
+
+This document uses three numbered theorem-style environments. Their meaning is
+fixed for the rest of the document; the environment name and its number identify
+the kind of statement, so no further explanatory titles are added.
+
+\begin{itemize}
+  \item \textbf{Definition} --- a formal statement that fixes the meaning of a
+        term. The numbered label is the canonical reference for that term.
+  \item \textbf{Proposition} --- a load-bearing claim used in subsequent reasoning.
+        Numbered in the same sequence as definitions so cross-references read
+        naturally.
+  \item \textbf{Remark} --- an aside that clarifies an edge case, an alternate
+        notation, or an implication that does not justify a full proposition.
+\end{itemize}
+
+\noindent After this guide, the environments appear without descriptive labels;
+only the standard mathematical convention of placing the defined term in the
+optional argument (e.g.\ \texttt{\textbackslash begin\{definition\}[Hazard rate]})
+is preserved.
+
+\vspace{6pt}
+
+% ══════════════════════════════════════════════════════════
+\section{Introduction}
+% ══════════════════════════════════════════════════════════
+
+The \texttt{learning-posgre} project is a flight analytics platform built around
+a PostgreSQL~16 demo database containing 5.74~million flight records. The project
+includes SQL analysis scripts, a BigQuery migration layer, an ETL pipeline, and a
+Next.js~16 dashboard deployed as a static site to Firebase Hosting.
+
+Deploying from a local machine via \texttt{firebase deploy} works but introduces
+two risks: (1)~it depends on a human remembering to deploy after changes, and
+(2)~it requires the deployer's personal Firebase credentials. The standard
+solution is CI/CD via GitHub Actions, but the authentication mechanism matters.
+
+Three approaches exist for authenticating GitHub Actions to GCP:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{Firebase CI token}: a long-lived OAuth refresh token generated by
+        \texttt{firebase login:ci}. Never expires. Full permissions of the issuing
+        user account.
+  \item \textbf{Service account JSON key}: a long-lived private key file stored as
+        a GitHub secret. Must be manually rotated.
+  \item \textbf{Workload Identity Federation (WIF)}: a keyless mechanism where
+        GitHub's OIDC tokens are exchanged for short-lived GCP access tokens.
+        No persistent credentials are stored anywhere.
+\end{enumerate}
+
+This document describes option~(3). WIF was chosen because it eliminates
+credential management entirely and provides the smallest blast radius if any
+component is compromised.
+
+% ══════════════════════════════════════════════════════════
+\section{Background and Notation}
+% ══════════════════════════════════════════════════════════
+
+\begin{table}[h]
+\centering
+\caption{Notation and identifiers used throughout this document.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Symbol / Identifier} & \textbf{Meaning} & \textbf{Value} \\
+\midrule
+\texttt{PROJECT\_ID} & GCP project identifier & \texttt{project-ad7a5be2-a1c7-4510-82d} \\
+\texttt{PROJECT\_NUMBER} & GCP project number & \texttt{451451662791} \\
+\texttt{SA\_EMAIL} & Service account email & \texttt{firebase-hosting-deploy@\{...\}.iam...} \\
+\texttt{REPO} & GitHub repository & \texttt{GonorAndres/learning-posgre} \\
+\texttt{POOL} & WIF pool name & \texttt{github-pool} \\
+\texttt{PROVIDER} & WIF provider name & \texttt{github-provider} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{definition}[Workload Identity Federation]
+A GCP mechanism that allows external identities (e.g., GitHub Actions runners)
+to impersonate GCP service accounts without storing private keys. It works by
+establishing a trust relationship between an external OIDC identity provider
+and a GCP Workload Identity Pool.
+\end{definition}
+
+\begin{definition}[OIDC Token]
+An OpenID Connect JSON Web Token (JWT) issued by GitHub's token endpoint
+(\texttt{token.actions.githubusercontent.com}) during each workflow run. The
+token contains claims identifying the repository, branch, workflow, and actor.
+It is short-lived (valid for approximately 15~minutes).
+\end{definition}
+
+\begin{definition}[Workload Identity Pool]
+A GCP resource that acts as a trust boundary for external identities. A pool
+contains one or more providers and defines attribute conditions that restrict
+which external tokens are accepted.
+\end{definition}
+
+\begin{definition}[Static Export]
+A Next.js build mode (\texttt{output: "export"}) that generates plain HTML, CSS,
+and JavaScript files with no server-side runtime. All data must be available at
+build time. The output directory (\texttt{dashboard/out/}) can be served by any
+static hosting provider.
+\end{definition}
+
+% ══════════════════════════════════════════════════════════
+\section{Architecture}
+% ══════════════════════════════════════════════════════════
+
+\subsection{Data and Build Pipeline}
+
+The deployment pipeline has three stages:
+
+\begin{enumerate}[label=\textbf{Stage~\arabic*:}]
+  \item \textbf{Data generation.} The script \texttt{dashboard/scripts/prepare-data.py}
+        connects to PostgreSQL, runs analytical queries, and writes 10~JSON files to
+        \texttt{dashboard/data/}. These files contain pre-computed metrics for delays,
+        revenue, utilization, geospatial routes, and PostgreSQL internals.
+
+  \item \textbf{Static build.} Running \texttt{npx next build} in the \texttt{dashboard/}
+        directory compiles TypeScript, bundles React components, and generates static
+        HTML for each route into \texttt{dashboard/out/}. The JSON data files are
+        embedded via static imports.
+
+  \item \textbf{Deployment.} The contents of \texttt{dashboard/out/} are uploaded to
+        Firebase Hosting, which distributes them across Google's global CDN (200+
+        edge locations). A new ``release'' is created, and the previous release
+        remains available for instant rollback.
+\end{enumerate}
+
+\subsection{Authentication Flow}
+
+The WIF authentication flow during a GitHub Actions run proceeds as follows:
+
+\begin{enumerate}[label=\arabic*.]
+  \item The GitHub Actions runner requests an OIDC token from GitHub's token
+        endpoint. This requires the workflow to declare
+        \texttt{permissions:\ id-token:\ write}.
+  \item GitHub issues a JWT containing claims: \texttt{repository},
+        \texttt{repository\_owner}, \texttt{actor}, \texttt{ref}, and others.
+  \item The \texttt{google-github-actions/auth@v2} action sends this JWT to
+        GCP's Security Token Service (STS) at \texttt{sts.googleapis.com/v1/token}.
+  \item STS validates the JWT against the WIF pool and provider configuration:
+        \begin{itemize}
+          \item Issuer matches \texttt{token.actions.githubusercontent.com}.
+          \item Attribute condition passes:
+                \texttt{assertion.repository\_owner == 'GonorAndres'}.
+        \end{itemize}
+  \item STS checks the IAM binding on the target service account: only
+        principals matching
+        \texttt{attribute.repository/GonorAndres/learning-posgre}
+        have \texttt{roles/iam.workloadIdentityUser}.
+  \item If all checks pass, STS returns a short-lived access token (valid
+        approximately 15~minutes) that can act as the service account.
+  \item The \texttt{FirebaseExtended/action-hosting-deploy@v0} action uses this
+        token to upload \texttt{dashboard/out/} to Firebase Hosting.
+\end{enumerate}
+
+\begin{proposition}
+No persistent credentials are stored at any point in this flow. The GitHub
+OIDC token is generated per-run and expires within minutes. The GCP access
+token is generated per-run and expires within 15~minutes. The
+\texttt{FIREBASE\_SERVICE\_ACCOUNT} GitHub secret contains only a credential
+configuration file (URLs and resource identifiers), not a private key.
+\end{proposition}
+
+% ══════════════════════════════════════════════════════════
+\section{GCP Infrastructure}
+% ══════════════════════════════════════════════════════════
+
+\subsection{Service Account}
+
+A dedicated service account was created with the principle of least privilege:
+
+\begin{table}[h]
+\centering
+\caption{Service account configuration.}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Property} & \textbf{Value} \\
+\midrule
+Name & \texttt{firebase-hosting-deploy} \\
+Email & \texttt{firebase-hosting-deploy@project-ad7a5be2-a1c7-4510-82d.iam.gserviceaccount.com} \\
+Display name & Firebase Hosting GitHub Actions \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{IAM Roles}
+
+\begin{table}[h]
+\centering
+\caption{IAM roles granted to the service account.}
+\begin{tabular}{@{}lp{9cm}@{}}
+\toprule
+\textbf{Role} & \textbf{Purpose} \\
+\midrule
+\texttt{roles/firebasehosting.admin} & Create and update Firebase Hosting releases. This is the only role needed for deployment. \\
+\texttt{roles/iam.serviceAccountTokenCreator} & Required for WIF token exchange. Allows the STS to generate access tokens on behalf of this service account. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}
+The service account has no access to Cloud Storage, BigQuery, Compute Engine, or any other GCP service. If the credentials were somehow compromised, the attacker could only deploy static files to this specific Firebase Hosting site.
+\end{remark}
+
+\subsection{Workload Identity Pool and Provider}
+
+An existing pool (\texttt{github-pool}) was reused. It was originally created for Cloud Run deployments from other repositories under the same GCP project.
+
+\begin{table}[h]
+\centering
+\caption{WIF pool and provider configuration.}
+\begin{tabular}{@{}lp{9cm}@{}}
+\toprule
+\textbf{Property} & \textbf{Value} \\
+\midrule
+Pool ID & \texttt{projects/451451662791/locations/global/workloadIdentityPools/github-pool} \\
+Provider ID & \texttt{github-provider} \\
+OIDC issuer & \texttt{https://token.actions.githubusercontent.com} \\
+Attribute condition & \texttt{assertion.repository\_owner == 'GonorAndres'} \\
+Attribute mapping & \texttt{google.subject = assertion.sub}, \texttt{attribute.repository = assertion.repository} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{IAM Binding}
+
+The binding that connects WIF to the service account is scoped to a single repository:
+
+\begin{verbatim}
+principalSet://iam.googleapis.com/projects/451451662791
+  /locations/global/workloadIdentityPools/github-pool
+  /attribute.repository/GonorAndres/learning-posgre
+\end{verbatim}
+
+\begin{remark}
+The pool-level attribute condition (\texttt{repository\_owner == 'GonorAndres'})
+is a coarse filter: it accepts tokens from any repository under the
+\texttt{GonorAndres} GitHub account. The fine-grained security comes from the
+IAM binding above, which restricts impersonation to a specific repository.
+This is a layered defense: even if a new repository were created under the same
+GitHub account, it could not impersonate this service account without an
+explicit IAM binding.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════
+\section{GitHub Actions Workflow}
+% ══════════════════════════════════════════════════════════
+
+The workflow file is located at \texttt{.github/workflows/firebase-deploy.yml}.
+
+\subsection{Triggers}
+
+\begin{table}[h]
+\centering
+\caption{Workflow trigger configuration.}
+\begin{tabular}{@{}lp{9cm}@{}}
+\toprule
+\textbf{Trigger} & \textbf{Condition} \\
+\midrule
+\texttt{push} & Branch \texttt{main}, paths: \texttt{dashboard/**}, \texttt{firebase.json} \\
+\texttt{workflow\_dispatch} & Manual trigger from GitHub Actions UI \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The path filter ensures that commits touching only SQL scripts, documentation,
+or pipeline code do not trigger a rebuild of the dashboard.
+
+\subsection{Permissions}
+
+\begin{table}[h]
+\centering
+\caption{Workflow-level GITHUB\_TOKEN permissions.}
+\begin{tabular}{@{}lp{9cm}@{}}
+\toprule
+\textbf{Permission} & \textbf{Purpose} \\
+\midrule
+\texttt{contents: read} & Required for \texttt{actions/checkout} to clone the repository. \\
+\texttt{id-token: write} & Required for GitHub to issue the OIDC token consumed by the WIF exchange. Without this permission, the \texttt{google-github-actions/auth} step fails silently. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Steps}
+
+\begin{table}[h]
+\centering
+\caption{Workflow steps in execution order.}
+\begin{tabular}{@{}clp{7cm}@{}}
+\toprule
+\textbf{Step} & \textbf{Action / Command} & \textbf{Purpose} \\
+\midrule
+1 & \texttt{actions/checkout@v4} & Clone repository \\
+2 & \texttt{actions/setup-node@v4} & Install Node.js 20, restore npm cache \\
+3 & \texttt{npm ci} & Install dependencies from lockfile \\
+4 & \texttt{npx next build} & Generate static export to \texttt{dashboard/out/} \\
+5 & \texttt{google-github-actions/auth@v2} & Exchange OIDC token for GCP access token via WIF \\
+6 & \texttt{action-hosting-deploy@v0} & Deploy to Firebase Hosting \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Credential Configuration}
+
+The \texttt{FIREBASE\_SERVICE\_ACCOUNT} GitHub secret contains a JSON credential
+configuration file. This file is \emph{not} a private key. Its structure:
+
+\begin{verbatim}
+{
+  "type": "external_account",
+  "audience": "//iam.googleapis.com/projects/451451662791
+    /locations/global/workloadIdentityPools
+    /github-pool/providers/github-provider",
+  "subject_token_type":
+    "urn:ietf:params:oauth:token-type:jwt",
+  "token_url":
+    "https://sts.googleapis.com/v1/token",
+  "credential_source": {
+    "url":
+      "https://token.actions.githubusercontent.com",
+    "format": {
+      "type": "json",
+      "subject_token_field_name": "value"
+    }
+  },
+  "service_account_impersonation_url":
+    "https://iamcredentials.googleapis.com/v1
+    /projects/-/serviceAccounts/
+    firebase-hosting-deploy@...
+    :generateAccessToken"
+}
+\end{verbatim}
+
+\begin{remark}
+This JSON tells the Google Auth library \emph{where} to exchange tokens, not
+\emph{how} to authenticate. The actual authentication comes from the OIDC token
+that GitHub issues at runtime. Without a valid GitHub Actions environment, this
+configuration file is inert.
+\end{remark}
+
+% ══════════════════════════════════════════════════════════
+\section{Security Audit}
+% ══════════════════════════════════════════════════════════
+
+\begin{table}[h]
+\centering
+\caption{Security checklist for the deployment configuration.}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Check} & \textbf{Result} \\
+\midrule
+API keys, passwords, or tokens in committed files & None \\
+JSON key files for service account & None (keyless) \\
+Workflow permissions scope & Least-privilege \\
+WIF binding scope & Single repository \\
+Service account IAM roles & \texttt{firebasehosting.admin} only \\
+Workflow dispatch input injection & No inputs defined \\
+Actions version pinning & Major versions \\
+GitHub secret content & Non-sensitive config \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Comparison of Authentication Methods}
+
+\begin{table}[h]
+\centering
+\caption{Security properties across three authentication approaches.}
+\begin{tabular}{@{}lp{3.3cm}p{3.3cm}p{3.3cm}@{}}
+\toprule
+\textbf{Property} & \textbf{CI Token} & \textbf{JSON Key} & \textbf{WIF} \\
+\midrule
+Credential type & Long-lived OAuth refresh token & Long-lived private key & Short-lived (15\,min) auto-generated \\
+Rotation & Manual revoke & Manual rotation & Automatic \\
+Blast radius if leaked & Full Firebase access as user & Full SA access until revoked & Useless after $\sim$15\,min \\
+Stored as GitHub Secret & Sensitive & Sensitive & Non-sensitive config \\
+Permission scope & User's full permissions & SA's full permissions & SA's permissions (hosting only) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ══════════════════════════════════════════════════════════
+\section{Operational Procedures}
+% ══════════════════════════════════════════════════════════
+
+\subsection{Automated Deployment}
+
+Push any change to \texttt{dashboard/**} or \texttt{firebase.json} on the
+\texttt{main} branch. GitHub Actions builds the static site and deploys it
+automatically. No manual intervention required.
+
+\subsection{Manual Deployment}
+
+Two options:
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{GitHub Actions UI}: navigate to the Actions tab, select
+        ``Deploy to Firebase Hosting'', click ``Run workflow''.
+  \item \textbf{Local CLI}:
+\begin{verbatim}
+cd dashboard
+python scripts/prepare-data.py   # if data changed
+npx next build
+cd ..
+firebase deploy --only hosting
+\end{verbatim}
+\end{enumerate}
+
+\subsection{Rollback}
+
+Firebase Hosting retains previous releases. To revert:
+
+\begin{verbatim}
+firebase hosting:rollback
+\end{verbatim}
+
+Alternatively, use the Firebase Console to select a specific previous release.
+
+\subsection{Data Refresh}
+
+If the underlying PostgreSQL data changes:
+
+\begin{enumerate}
+  \item Run \texttt{python scripts/prepare-data.py} in the \texttt{dashboard/}
+        directory to regenerate the 10~JSON files.
+  \item Commit the updated JSON files to \texttt{main}.
+  \item The push triggers an automatic rebuild and deploy.
+\end{enumerate}
+
+% ══════════════════════════════════════════════════════════
+\section{Replication Guide}
+% ══════════════════════════════════════════════════════════
+
+This section provides the complete sequence of commands to reproduce this setup
+from scratch on any GCP project with a GitHub repository.
+
+\subsection{Prerequisites}
+
+\begin{itemize}
+  \item \texttt{gcloud} CLI installed and authenticated
+  \item \texttt{gh} CLI installed and authenticated
+  \item \texttt{firebase} CLI installed and authenticated
+  \item A GitHub repository with a static site to deploy
+  \item Firebase Hosting initialized (\texttt{firebase init hosting})
+\end{itemize}
+
+\subsection{Step 1: Create Service Account}
+
+\begin{verbatim}
+PROJECT_ID="<your-project-id>"
+SA_NAME="firebase-hosting-deploy"
+
+gcloud iam service-accounts create "$SA_NAME" \
+  --display-name="Firebase Hosting GitHub Actions" \
+  --project="$PROJECT_ID"
+\end{verbatim}
+
+\subsection{Step 2: Grant IAM Roles}
+
+\begin{verbatim}
+SA_EMAIL="${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member="serviceAccount:${SA_EMAIL}" \
+  --role="roles/firebasehosting.admin" \
+  --condition=None --quiet
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+  --member="serviceAccount:${SA_EMAIL}" \
+  --role="roles/iam.serviceAccountTokenCreator" \
+  --condition=None --quiet
+\end{verbatim}
+
+\subsection{Step 3: Create WIF Pool (if none exists)}
+
+\begin{verbatim}
+gcloud iam workload-identity-pools create github-pool \
+  --location="global" \
+  --display-name="GitHub Actions Pool" \
+  --project="$PROJECT_ID"
+\end{verbatim}
+
+\subsection{Step 4: Create GitHub OIDC Provider}
+
+\begin{verbatim}
+GITHUB_USER="<your-github-username>"
+
+gcloud iam workload-identity-pools providers \
+  create-oidc github-provider \
+  --location="global" \
+  --workload-identity-pool="github-pool" \
+  --display-name="GitHub Provider" \
+  --issuer-uri=\
+    "https://token.actions.githubusercontent.com" \
+  --attribute-mapping=\
+    "google.subject=assertion.sub,\
+    attribute.repository=assertion.repository" \
+  --attribute-condition=\
+    "assertion.repository_owner==\
+    '${GITHUB_USER}'" \
+  --project="$PROJECT_ID"
+\end{verbatim}
+
+\subsection{Step 5: Bind WIF to Service Account}
+
+\begin{verbatim}
+PROJECT_NUMBER=$(gcloud projects describe \
+  "$PROJECT_ID" --format="value(projectNumber)")
+REPO="${GITHUB_USER}/<your-repo>"
+
+gcloud iam service-accounts add-iam-policy-binding \
+  "$SA_EMAIL" \
+  --project="$PROJECT_ID" \
+  --role="roles/iam.workloadIdentityUser" \
+  --member="principalSet://iam.googleapis.com/\
+    projects/${PROJECT_NUMBER}/locations/global/\
+    workloadIdentityPools/github-pool/\
+    attribute.repository/${REPO}"
+\end{verbatim}
+
+\subsection{Step 6: Store Credential Config as GitHub Secret}
+
+Generate the WIF credential configuration JSON (see Section~5.4 for the
+structure) and store it:
+
+\begin{verbatim}
+gh secret set FIREBASE_SERVICE_ACCOUNT \
+  --repo="${REPO}" < wif_cred.json
+\end{verbatim}
+
+\subsection{Step 7: Create Workflow File}
+
+Copy the workflow YAML (Section~5) to
+\texttt{.github/workflows/firebase-deploy.yml}, replacing the
+\texttt{workload\_identity\_provider} and \texttt{service\_account}
+values with your project-specific identifiers.
+
+\subsection{Step 8: Commit and Verify}
+
+\begin{verbatim}
+git add .github/workflows/firebase-deploy.yml
+git commit -m "Add Firebase deploy with WIF auth"
+git push origin main
+\end{verbatim}
+
+Monitor the first run in the GitHub Actions tab to confirm successful
+authentication and deployment.
+
+% ══════════════════════════════════════════════════════════
+\section{Limitations}
+% ══════════════════════════════════════════════════════════
+
+\begin{itemize}
+  \item \textbf{Data freshness.} The dashboard shows pre-computed data. If the
+        PostgreSQL database is updated, \texttt{prepare-data.py} must be re-run
+        manually and the JSON files committed. The CI/CD pipeline does not
+        connect to the database.
+
+  \item \textbf{Action version pinning.} The workflow pins to major versions
+        (\texttt{@v4}, \texttt{@v2}, \texttt{@v0}). For maximum supply-chain
+        security, these could be pinned to specific commit SHAs, at the cost
+        of manual updates when new versions are released.
+
+  \item \textbf{Single environment.} There is no staging/production split.
+        Every push to \texttt{main} deploys directly to the live site. For a
+        portfolio project this is acceptable; for production use, Firebase
+        preview channels should be added.
+
+  \item \textbf{No preview deploys on PRs.} The current workflow only deploys
+        on merge to \texttt{main}. Adding a second job triggered on
+        \texttt{pull\_request} with a non-live \texttt{channelId} would enable
+        preview URLs for each PR.
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════
+\section*{Appendix: Project Context}
+\addcontentsline{toc}{section}{Appendix: Project Context}
+% ══════════════════════════════════════════════════════════
+
+This setup was implemented for the \texttt{learning-posgre} project, a flight
+analytics platform hosted at
+\url{https://github.com/GonorAndres/learning-posgre}. The Firebase Hosting
+site is available at
+\url{https://project-ad7a5be2-a1c7-4510-82d.web.app}.
+
+\begin{table}[h]
+\centering
+\caption{File inventory for the deployment configuration.}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Artifact} & \textbf{Location} \\
+\midrule
+GitHub Actions workflow & \texttt{.github/workflows/firebase-deploy.yml} \\
+Firebase config & \texttt{firebase.json} \\
+Firebase project alias & \texttt{.firebaserc} \\
+Next.js config (static export) & \texttt{dashboard/next.config.ts} \\
+Data generation script & \texttt{dashboard/scripts/prepare-data.py} \\
+Pre-computed JSON data & \texttt{dashboard/data/*.json} (10 files) \\
+Static build output & \texttt{dashboard/out/} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
