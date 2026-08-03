@@ -1,6 +1,8 @@
-# Russian Airlines Flight Analytics + PostgreSQL-to-BigQuery Migration
+# Flight Analytics Platform
 
-> 5.74M rows of real airline data analyzed in PostgreSQL, then migrated to BigQuery via Python ETL -- with documented performance comparison between both systems.
+> Route, revenue and fleet analytics over an airline network of 104 airports and 532 routes, served as a static dashboard and backed by a PostgreSQL-to-BigQuery pipeline.
+
+**Live:** https://analytics-flights.gonor.me
 
 ---
 
@@ -8,7 +10,7 @@
 
 **"Which routes lose the most time to delays, where does revenue concentrate, and how do PostgreSQL and BigQuery compare for the same analytical workload?"**
 
-This project uses the [PostgresPro Airlines demo database](https://postgrespro.com/community/demodb) (8 tables, 5.74M rows across 104 Russian airports) to build production-grade SQL analytics, advanced PostgreSQL internals demonstrations, and a complete migration pipeline to BigQuery.
+The platform runs SQL analytics over an 8-table, 5.74M-row flight schema, documents the query-performance work behind each dashboard view, and ships a complete migration pipeline to BigQuery.
 
 ---
 
@@ -28,7 +30,7 @@ This project uses the [PostgresPro Airlines demo database](https://postgrespro.c
 ## Architecture
 
 ```
-PostgresPro Demo Database (5.74M rows, 8 tables)
+Source dataset (5.74M rows, 8 tables)
         |
         v
 Local PostgreSQL 16 (Docker, production-like config)

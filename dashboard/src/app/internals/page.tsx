@@ -67,7 +67,7 @@ export default function InternalsPage() {
       <SectionHeader title={t("internals.topics")} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {[
-          { title: "EXPLAIN Deep Dive", desc: "Seq Scan, Index Scan, Index-Only Scan, Bitmap Scan. Hash Join, Nested Loop, Merge Join. Cost model and actual vs estimated rows." },
+          { title: "Query Plan Analysis", desc: "Seq Scan, Index Scan, Index-Only Scan, Bitmap Scan. Hash Join, Nested Loop, Merge Join. Cost model and actual vs estimated rows." },
           { title: "Index Strategies", desc: "Composite B-tree, partial indexes, expression indexes, GIN for JSONB, covering indexes with INCLUDE. 4,780x speedup on JSONB search." },
           { title: "Table Partitioning", desc: "Range partitioning by month. Partition pruning eliminates 80% of scans. Trade-off: point lookups 5x slower." },
           { title: "Statistics & Monitoring", desc: "pg_stat_user_tables, pg_stat_user_indexes, cache hit ratios. 93-100% cache hit across tables." },
