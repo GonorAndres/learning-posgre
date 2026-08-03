@@ -29,6 +29,12 @@ contents rather than trusting a green build.
 
 ## Deployment
 
-Pushing to `dev` or `main` runs CI; only a green CI run triggers the Cloudflare
-Pages deploy. `main` publishes to production, `dev` to an Access-protected
-preview. See `.github/workflows/` in the repository root.
+Cloudflare Pages builds this directory directly from GitHub: `main` publishes to
+production at the custom domain, `dev` to a preview on `*.pages.dev` that sits
+behind Cloudflare Access.
+
+Cloudflare builds whatever is on the branch, so the gate on production is
+`main`'s branch protection rather than the build itself: the merge is refused
+until `.github/workflows/ci.yml` passes, and only then does Cloudflare see the
+commit. Pushing straight to `dev` deploys without waiting for CI, which is why
+the preview is access-controlled.
