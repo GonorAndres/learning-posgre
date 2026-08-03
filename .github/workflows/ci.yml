@@ -1,0 +1,60 @@
+name: CI
+
+# No branch filter: every working branch is verified, not just the ones that
+# deploy. A feature branch that only gets checked at PR time can accumulate
+# commits that were never built.
+on:
+  push:
+  pull_request:
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      # `next build` runs the TypeScript check as part of the build, so this is
+      # the type gate as well as the build gate.
+      - name: Build static export
+        run: npx next build
+
+      # The build can succeed while producing an export that is missing pages:
+      # a route removed from the router still leaves a green build behind. The
+      # deploy consumes `out/`, so `out/` is what has to be checked.
+      - name: Every route has to be present in the export
+        run: |
+          missing=0
+          for page in index overview delays revenue fleet map pipeline internals 404; do
+            if [ ! -f "out/$page.html" ]; then
+              echo "missing: out/$page.html"
+              missing=1
+            fi
+          done
+          exit $missing
+
+      # The dashboard renders from these files and nothing else. An empty or
+      # absent one produces a page that builds and then shows no data.
+      - name: The precomputed data files have to be in the bundle
+        run: |
+          missing=0
+          for f in airports delays geospatial heatmap materialized-views \
+                   optimization pipeline revenue routes utilization; do
+            if [ ! -s "data/$f.json" ]; then
+              echo "missing or empty: data/$f.json"
+              missing=1
+            fi
+          done
+          exit $missing

@@ -17,9 +17,9 @@ const jetbrainsMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Flight Analytics // PostgreSQL Deep Dive",
+  title: "Flight Analytics // Route & Revenue Intelligence",
   description:
-    "5.74M rows of Russian airline data analyzed in PostgreSQL, migrated to BigQuery. Interactive brutalist dashboard.",
+    "Interactive analytics across 104 airports and 532 routes: delay patterns, revenue concentration, fleet utilization and network geography.",
 };
 
 export default function RootLayout({

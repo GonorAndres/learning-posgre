@@ -27,17 +27,17 @@ const translations: Record<string, Record<Lang, string>> = {
   "nav.delays": { en: "DELAYS", es: "RETRASOS" },
   "nav.revenue": { en: "REVENUE", es: "INGRESOS" },
   "nav.fleet": { en: "FLEET", es: "FLOTA" },
-  "nav.internals": { en: "PG INTERNALS", es: "PG INTERNOS" },
+  "nav.internals": { en: "PERFORMANCE", es: "RENDIMIENTO" },
   "nav.pipeline": { en: "PIPELINE", es: "PIPELINE" },
 
   // Overview page
   "overview.title": { en: "FLIGHT//DB", es: "FLIGHT//DB" },
   "overview.desc": {
-    en: "5.74M rows of Russian airline data analyzed in PostgreSQL 16, migrated to BigQuery, visualized interactively. A deep dive into query optimization, indexing strategies, and data pipeline engineering.",
-    es: "5.74M registros de datos reales de aerolíneas rusas analizados en PostgreSQL 16, migrados a BigQuery y visualizados de forma interactiva. Un análisis a fondo sobre optimización de consultas, estrategias de indexación e ingeniería de pipelines de datos.",
+    en: "Interactive analytics across 104 airports and 532 routes: delay patterns, revenue concentration, fleet utilization and the network geography underneath them.",
+    es: "Analítica interactiva sobre 104 aeropuertos y 532 rutas: patrones de retraso, concentración de ingresos, utilización de flota y la geografía de red que hay debajo.",
   },
-  "overview.kpi.rows": { en: "Total rows analyzed", es: "Registros analizados" },
-  "overview.kpi.airports": { en: "Russian airports", es: "Aeropuertos rusos" },
+  "overview.kpi.rows": { en: "Records analyzed", es: "Registros analizados" },
+  "overview.kpi.airports": { en: "Airports", es: "Aeropuertos" },
   "overview.kpi.revenue": { en: "Total revenue (RUB)", es: "Ingresos totales (RUB)" },
   "overview.kpi.delay": { en: "Avg delay rate", es: "Tasa promedio de retraso" },
   "overview.kpi.speedup": { en: "Mat view speedup", es: "Aceleración vista mat." },
@@ -52,10 +52,10 @@ const translations: Record<string, Record<Lang, string>> = {
   "overview.card.revenue.desc": { en: "Pareto curves, fare class split, monthly trends", es: "Curvas de Pareto, distribución por clase, tendencias mensuales" },
   "overview.card.fleet": { en: "FLEET", es: "FLOTA" },
   "overview.card.fleet.desc": { en: "Load factors, turnaround times, seat configurations", es: "Factores de ocupación, tiempos de rotación, configuraciones de asientos" },
-  "overview.card.internals": { en: "PG INTERNALS", es: "PG INTERNOS" },
-  "overview.card.internals.desc": { en: "EXPLAIN plans, index strategies, partitioning, VACUUM", es: "Planes EXPLAIN, estrategias de índice, particionamiento, VACUUM" },
-  "overview.card.pipeline": { en: "ETL PIPELINE", es: "PIPELINE ETL" },
-  "overview.card.pipeline.desc": { en: "PostgreSQL to BigQuery migration + performance comparison", es: "Migración de PostgreSQL a BigQuery + comparación de rendimiento" },
+  "overview.card.internals": { en: "PERFORMANCE", es: "RENDIMIENTO" },
+  "overview.card.internals.desc": { en: "Query plans, index strategy, partitioning, storage reclamation", es: "Planes de consulta, estrategia de índices, particionamiento, recuperación de espacio" },
+  "overview.card.pipeline": { en: "DATA PIPELINE", es: "PIPELINE DE DATOS" },
+  "overview.card.pipeline.desc": { en: "Warehouse migration + engine performance comparison", es: "Migración al almacén de datos + comparación de rendimiento entre motores" },
 
   // Map page
   "map.color": { en: "COLOR:", es: "COLOR:" },
@@ -91,7 +91,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "delays.topRoutes.sub": { en: "Routes with >50 flights", es: "Rutas con más de 50 vuelos" },
 
   // Revenue page
-  "revenue.title": { en: "REVENUE DEEP DIVE", es: "ANÁLISIS DE INGRESOS" },
+  "revenue.title": { en: "REVENUE ANALYSIS", es: "ANÁLISIS DE INGRESOS" },
   "revenue.summary": {
     en: "37.7 billion rubles flow through 451 routes, but the distribution is radically uneven. Just 38 routes generate half of all revenue. The Moscow-Khabarovsk corridor alone pulls in 1.4B RUB, with an average ticket price of 78,280 RUB. Meanwhile, Business class passengers represent only 10% of tickets but capture 26.5% of total revenue. The Pareto curve below bends sharply: by route 128, you have already accounted for 80% of income.",
     es: "37.7 mil millones de rublos fluyen a través de 451 rutas, pero la distribución es radicalmente desigual. Apenas 38 rutas generan la mitad de todos los ingresos. Solo el corredor Moscú-Jabárovsk recauda 1.4B RUB, con un precio promedio por boleto de 78,280 RUB. Por otro lado, los pasajeros de clase Business representan apenas el 10% de los boletos, pero capturan el 26.5% del ingreso total. La curva de Pareto de abajo se dobla con fuerza: para la ruta número 128, ya se ha contabilizado el 80% del ingreso.",
@@ -123,10 +123,10 @@ const translations: Record<string, Record<Lang, string>> = {
   "fleet.seats": { en: "Seat Configuration", es: "Configuración de asientos" },
 
   // Internals page
-  "internals.title": { en: "POSTGRESQL INTERNALS", es: "INTERNOS DE POSTGRESQL" },
+  "internals.title": { en: "QUERY PERFORMANCE", es: "RENDIMIENTO DE CONSULTAS" },
   "internals.desc": {
-    en: "Deep dive into query optimization, indexing strategies, and database internals. All measurements from EXPLAIN ANALYZE on the 5.74M row airline dataset.",
-    es: "Análisis a fondo de optimización de consultas, estrategias de indexación e internos de la base de datos. Todas las mediciones provienen de EXPLAIN ANALYZE sobre el dataset de 5.74M registros de aerolíneas.",
+    en: "Query optimization, indexing strategy and storage behaviour behind the dashboard. Every measurement is taken with EXPLAIN ANALYZE against the live dataset.",
+    es: "Optimización de consultas, estrategia de indexación y comportamiento del almacenamiento detrás del dashboard. Cada medición se toma con EXPLAIN ANALYZE sobre el dataset en vivo.",
   },
   "internals.summary": {
     en: "A revenue lookup that took 381ms now returns in 0.13ms. That is a 3,024x improvement from a single composite index. The dashboard query that joins flights, airports, and aggregates delay rates dropped from 147ms to 0.14ms using a materialized view with targeted indexes. Below you can trace each optimization: what the query planner chose before, what it chooses after, and how much storage each index costs. Twenty indexes consume 300+ MB across the database, but two of them (boarding_passes_pkey at 73 MB) have never been used.",
@@ -140,10 +140,10 @@ const translations: Record<string, Record<Lang, string>> = {
   "internals.perf.sub": { en: "Measured with EXPLAIN ANALYZE", es: "Medido con EXPLAIN ANALYZE" },
   "internals.indexSize": { en: "Index Size Analysis", es: "Análisis de tamaño de índices" },
   "internals.indexSize.sub": { en: "Sorted by size, with usage statistics", es: "Ordenados por tamaño, con estadísticas de uso" },
-  "internals.topics": { en: "PostgreSQL Topics Covered", es: "Temas de PostgreSQL cubiertos" },
+  "internals.topics": { en: "Optimization Areas", es: "Áreas de optimización" },
 
   // Pipeline page
-  "pipeline.title": { en: "ETL PIPELINE + PG vs BQ", es: "PIPELINE ETL + PG vs BQ" },
+  "pipeline.title": { en: "DATA PIPELINE", es: "PIPELINE DE DATOS" },
   "pipeline.summary": {
     en: "The same 5.74M rows live in two systems now. A Python pipeline using server-side cursors extracted everything from PostgreSQL at 56K rows/second, flattened JSONB columns and point geometries, then loaded it all into BigQuery in 102 seconds. Running the same five analytical queries on both systems reveals a split personality: PostgreSQL with indexes returns a single flight's revenue in 2.6ms, while BigQuery needs 800ms just to spin up the job. But flip to a full-table revenue scan and BigQuery's columnar engine finishes before PostgreSQL is halfway through its sequential read.",
     es: "Los mismos 5.74M registros ahora viven en dos sistemas. Un pipeline en Python con cursores del lado del servidor extrajo todo desde PostgreSQL a 56K registros por segundo, aplanó las columnas JSONB y las geometrías de punto, y después cargó todo en BigQuery en 102 segundos. Al correr las mismas cinco consultas analíticas en ambos sistemas se revela una doble personalidad: PostgreSQL con índices devuelve el ingreso de un solo vuelo en 2.6ms, mientras que BigQuery necesita 800ms nada más para levantar el job. Pero si pasas a un escaneo completo de ingresos, el motor columnar de BigQuery termina antes de que PostgreSQL llegue a la mitad de su lectura secuencial.",
