@@ -1,6 +1,11 @@
 # Project: learning_posgre
 
-Flight analytics platform built around a PostgreSQL 16 demo database (5.74M rows). Spans SQL analysis, BigQuery migration, an ETL pipeline, and a Next.js dashboard deployed to Firebase Hosting.
+Flight analytics platform built on a PostgreSQL 16 database of 5.74M rows. Spans SQL analysis, BigQuery migration, an ETL pipeline, and a Next.js dashboard deployed to Cloudflare Pages.
+
+Note the dashboard presents itself as a product, not a study project: the
+visible copy avoids tutorial framing ("deep dive", "topics covered", the
+dataset's provenance as a selling point). Keep new copy consistent with that.
+Naming the stack is fine; the README's `Data Source` section stays.
 
 ## Project Structure
 
@@ -37,44 +42,70 @@ Flight analytics platform built around a PostgreSQL 16 demo database (5.74M rows
 PostgreSQL -> prepare-data.py -> dashboard/data/*.json -> npx next build -> dashboard/out/
 ```
 
-## Firebase Hosting
-- **Live URL**: https://project-ad7a5be2-a1c7-4510-82d.web.app
-- **GCP Project**: `project-ad7a5be2-a1c7-4510-82d` (number: `451451662791`)
-- **Config**: `firebase.json` (public dir: `dashboard/out`, SPA rewrites), `.firebaserc` (project alias)
-- **Manual deploy**:
+## Hosting (Cloudflare Pages)
+- **Live URL**: https://analytics-flights.gonor.me
+- **Pages project**: `analytics-flights` (Cloudflare account `9e88860c389c87f4ec09baa1e9675a61`)
+- **Connected to Git**: Cloudflare builds from this repository directly, so there
+  are no Cloudflare credentials in GitHub secrets
+- **Build**: `root_dir=dashboard`, `npm run build`, output `out/`, `NODE_VERSION=20`
+- **Zone**: `gonor.me` (`18363fe312514db930981ca720f30b59`); `analytics-flights`
+  is a proxied CNAME to `analytics-flights.pages.dev`
+
+| Branch | Environment | Address |
+|--------|-------------|---------|
+| `main` | production | https://analytics-flights.gonor.me |
+| `dev` | preview | `<hash>.analytics-flights.pages.dev` and `dev.analytics-flights.pages.dev` |
+
+- **Preview access**: an Access app on `*.analytics-flights.pages.dev` allows only
+  `andtega349@gmail.com` (one-time PIN). The wildcard does not cover the project
+  apex, so production stays public
+- **Manual deploy** (rarely needed; a push is the normal path):
   ```
-  cd dashboard && npx next build && cd .. && firebase deploy --only hosting
+  cd dashboard && npx next build && npx wrangler pages deploy out --project-name=analytics-flights --branch=main
   ```
-- **Rollback**: `firebase hosting:rollback` or via Firebase Console
+- **Rollback**: Cloudflare dashboard -> Pages -> analytics-flights -> Deployments -> Rollback
 
-## CI/CD (GitHub Actions + WIF)
-- **Workflow**: `.github/workflows/firebase-deploy.yml`
-- **Auth**: Workload Identity Federation (keyless) via `google-github-actions/auth@v2`
-- **Service account**: `firebase-hosting-deploy@project-ad7a5be2-a1c7-4510-82d.iam.gserviceaccount.com`
-  - Roles: `firebasehosting.admin`, `iam.serviceAccountTokenCreator`
-- **WIF pool**: `github-pool` / provider: `github-provider` (shared across GonorAndres projects)
-  - IAM binding scoped to `GonorAndres/learning-posgre` only
-- **Triggers**:
-  - Push to `main` when `dashboard/**` or `firebase.json` changes
-  - PR merged to `main`
-  - Manual via `workflow_dispatch` (Actions tab -> Run workflow)
-- **GitHub secret**: `FIREBASE_SERVICE_ACCOUNT` = WIF credential config JSON (NOT a private key, just URLs)
-- **Reference doc**: `firebase-wif-deploy_technical.pdf` (11 pages, full replication steps)
+## CI and the production gate
+- **Workflow**: `.github/workflows/ci.yml` -- builds the dashboard on every branch,
+  then checks `out/` for every route and `data/` for every JSON file. A green
+  `next build` can still produce an export missing a page, and `out/` is what
+  gets served
+- Cloudflare builds whatever is on the branch, so CI cannot gate the build
+  itself. The gate is `main`'s branch protection instead: the **merge** is
+  refused until the `dashboard` check passes, and only merged commits are built
+  as production
+- `enforce_admins` is **on**. Without it the rules are evaluated, logged as
+  violated and then waived for repo admins -- the push succeeds with a
+  "Bypassed rule violations" notice. Nobody, including the owner, can push
+  straight to `main`
+- Pushing to `dev` deploys a preview without waiting for CI, which is why the
+  preview is behind Access
 
-### Adding WIF to a new repo (same GCP project)
-The WIF pool/provider already exist. Only need:
-1. `gcloud iam service-accounts add-iam-policy-binding` with the new repo's principal
-2. `gh secret set FIREBASE_SERVICE_ACCOUNT` on the new repo
-3. Copy/adapt the workflow YAML
+## GCP (still in use)
+- **Project**: `project-ad7a5be2-a1c7-4510-82d` (number: `451451662791`)
+- BigQuery remains the warehouse side of the pipeline. Hosting no longer runs
+  here: Firebase Hosting was retired when the dashboard moved to Cloudflare Pages
+- Leftovers from that setup that were **not** deleted, in case they are wanted
+  again: the `firebase-hosting-deploy` service account, the `github-pool` WIF
+  pool/provider, and the `FIREBASE_SERVICE_ACCOUNT` GitHub secret.
+  `firebase-wif-deploy_technical.pdf` documents how it was built
 
-## Firestore (future integration notes)
-When adding Firestore to this project:
-- The Firebase project (`project-ad7a5be2-a1c7-4510-82d`) already exists with Hosting enabled
-- To enable Firestore: `firebase init firestore` (creates `firestore.rules`, `firestore.indexes.json`)
-- The `firebase-hosting-deploy` SA will need an additional role: `roles/datastore.user` (for read/write) or `roles/datastore.viewer` (read-only)
-- Grant via: `gcloud projects add-iam-policy-binding project-ad7a5be2-a1c7-4510-82d --member="serviceAccount:firebase-hosting-deploy@project-ad7a5be2-a1c7-4510-82d.iam.gserviceaccount.com" --role="roles/datastore.user"`
-- If the dashboard needs to read Firestore client-side, add Firebase JS SDK (`firebase` package) and configure with the project's web app config from Firebase Console
-- If using Firestore for server-side data (e.g., replacing JSON files), the dashboard would need to switch from static export to SSR (`output: "standalone"`) or use client-side fetching
+## Adding a backend later
+The dashboard is a static export with no runtime server: every figure is baked
+in at build time from `dashboard/data/*.json`. If it needs live data, the two
+paths are:
+
+- **Cloudflare**: add a `_worker.js` to the Pages output that proxies `/api/*`
+  to the backend. Same origin means no CORS preflight and one Access policy
+  covering site and API together. `repos/suite-actuarial/frontend/cloudflare/_worker.js`
+  is a working example, including the shared-secret header that lets the origin
+  reject anything that did not come through the proxy
+- **GCP**: the project already has BigQuery and a WIF pool. A Cloud Run service
+  querying BigQuery would follow `repos/suite-actuarial/.github/workflows/deploy.yml`
+
+Either way the dashboard would have to fetch at runtime instead of reading the
+baked JSON, and `output: "export"` only stays viable if the fetching is
+client-side.
 
 ## Obsidian Vault
 - The `docs/` folder is a symlink to `/mnt/c/Users/andre/Documents/learning-postgres-docs` (Windows Obsidian vault)
