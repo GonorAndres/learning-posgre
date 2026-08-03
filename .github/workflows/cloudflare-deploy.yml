@@ -1,0 +1,65 @@
+name: Deploy dashboard to Cloudflare Pages
+
+# Triggered by CI finishing, not by the push itself. Running both on the same
+# push means they race, and a red gate does not stop a deploy -- which is what
+# the previous Firebase workflow did. Here the deploy only starts once CI has
+# reported, and only runs if it reported success.
+#
+#   main -> production  -> analytics-flights.gonor.me
+#   dev  -> preview     -> <hash>.analytics-flights.pages.dev (behind Access)
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main, dev]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    # Without this, a failed CI run would still deploy.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+
+    steps:
+      - name: Checkout the commit that passed CI
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Rebuilt rather than carried over from CI as an artifact: the build is
+      # ~20s and deterministic, and passing `out/` between workflow runs adds a
+      # download step that can hand the deploy a stale bundle.
+      - name: Build static export
+        run: npx next build
+
+      - name: Resolve target branch
+        id: target
+        run: |
+          BRANCH="${{ github.event.workflow_run.head_branch || github.ref_name }}"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      # `--branch` decides the environment: it matches the project's production
+      # branch (main) so that deploy is production, anything else is a preview.
+      - name: Deploy to Cloudflare Pages
+        run: |
+          npx wrangler@4 pages deploy out \
+            --project-name=analytics-flights \
+            --branch=${{ steps.target.outputs.branch }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

@@ -50,6 +50,9 @@ subagents_outputs/
 firebase-debug.log
 firebase-hosting-docs/
 
+# Wrangler local state (deploy metadata, caches)
+.wrangler/
+
 # Claude ephemeral (config files ARE tracked)
 .claude/cache/
 .claude/debug/
