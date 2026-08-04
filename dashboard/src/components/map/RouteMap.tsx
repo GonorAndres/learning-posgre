@@ -77,7 +77,7 @@ export default function RouteMap({ airports, routes, colorMode, onAirportClick }
           style={{ left: hoverInfo.x + 10, top: hoverInfo.y - 10 }}
         >
           <div className="font-bold text-brutal-white">{obj.dep} &rarr; {obj.arr}</div>
-          <div className="text-brutal-gray">{obj.flights} flights</div>
+          <div className="text-brutal-muted">{obj.flights} flights</div>
           <div style={{ color: delayColor(obj.delay_pct) }}>{obj.delay_pct}% delayed</div>
         </div>
       );
@@ -90,8 +90,8 @@ export default function RouteMap({ airports, routes, colorMode, onAirportClick }
         >
           <div className="font-bold text-brutal-yellow">{obj.code}</div>
           <div className="text-brutal-white">{obj.name}</div>
-          <div className="text-brutal-gray">{obj.city}</div>
-          <div className="text-brutal-gray mt-1">{obj.departures} departures / {obj.destinations} destinations</div>
+          <div className="text-brutal-muted">{obj.city}</div>
+          <div className="text-brutal-muted mt-1">{obj.departures} departures / {obj.destinations} destinations</div>
         </div>
       );
     }
@@ -102,7 +102,7 @@ export default function RouteMap({ airports, routes, colorMode, onAirportClick }
     return (
       <div className="w-full h-full flex flex-col items-center justify-center bg-brutal-black p-8">
         <div className="text-brutal-yellow text-2xl font-extrabold mb-4">MAP REQUIRES WEBGL</div>
-        <div className="text-brutal-gray text-xs text-center max-w-md mb-6 leading-relaxed">
+        <div className="text-brutal-muted text-xs text-center max-w-md mb-6 leading-relaxed">
           {error} Try Chrome or Firefox with hardware acceleration enabled.
         </div>
         <div className="text-brutal-white text-sm font-bold mb-4">
@@ -117,7 +117,7 @@ export default function RouteMap({ airports, routes, colorMode, onAirportClick }
             .map((a) => (
               <div key={a.code} className="flex justify-between gap-4">
                 <span className="text-brutal-white font-bold">{a.code}</span>
-                <span className="text-brutal-gray">{a.city} -- {a.departures} dep</span>
+                <span className="text-brutal-muted">{a.city} -- {a.departures} dep</span>
               </div>
             ))}
         </div>

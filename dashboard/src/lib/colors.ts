@@ -39,9 +39,14 @@ export function lerpColor(a: string, b: string, t: number): string {
   return `rgb(${r}, ${g}, ${bl})`;
 }
 
-/** Three-stop gradient for heatmaps: green -> yellow -> red */
+/** Heat ramp with monotonically increasing lightness (dark -> red -> yellow),
+ *  readable under red-green color blindness where green->yellow->red is not.
+ *  Brightest cell = worst value, which is also where the eye lands first. */
 export function heatmapColor(value: number, min: number, max: number): string {
   const t = max === min ? 0 : (value - min) / (max - min);
-  if (t < 0.5) return lerpColor(BRUTAL.green, BRUTAL.yellow, t * 2);
-  return lerpColor(BRUTAL.yellow, BRUTAL.red, (t - 0.5) * 2);
+  if (t < 0.5) return lerpColor("#26201e", BRUTAL.red, t * 2);
+  return lerpColor(BRUTAL.red, BRUTAL.yellow, (t - 0.5) * 2);
 }
+
+/** CSS gradient matching heatmapColor, for legends */
+export const HEAT_GRADIENT = `linear-gradient(to right, #26201e, ${BRUTAL.red}, ${BRUTAL.yellow})`;
