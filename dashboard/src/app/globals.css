@@ -7,7 +7,11 @@
   --color-brutal-yellow: #ffcc00;
   --color-brutal-green: #00cc66;
   --color-brutal-blue: #3366ff;
+  --color-brutal-orange: #ff9933;
   --color-brutal-gray: #666666;
+  /* Secondary TEXT color: #666 fails contrast on dark surfaces, keep it for
+     borders/axes only and use this for any gray text */
+  --color-brutal-muted: #9a9a92;
   --color-brutal-dark-gray: #1a1a1a;
   --color-brutal-light-gray: #e0e0d8;
 }
@@ -51,4 +55,26 @@ a {
 *:focus-visible {
   outline: 2px solid var(--color-brutal-yellow);
   outline-offset: 2px;
+}
+
+/* Longform text: monospace with wide tracking is fine for labels but hard to
+   read in paragraphs, so prose blocks get normal tracking and a measure cap */
+.prose-brutal {
+  letter-spacing: normal;
+  line-height: 1.75;
+  max-width: 72ch;
+}
+
+/* Numeric table/KPI alignment */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

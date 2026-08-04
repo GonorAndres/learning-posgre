@@ -5,6 +5,9 @@ import { useEffect, useRef, useState } from "react";
 interface KPICardProps {
   value: number;
   label: string;
+  /** One short line of context under the label: what the number is measured
+      against, or why it matters. */
+  sub?: string;
   format?: (n: number) => string;
   accent?: string;
 }
@@ -14,6 +17,10 @@ function useCountUp(target: number, duration = 1200): number {
   const startTime = useRef<number | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurrent(target);
+      return;
+    }
     startTime.current = null;
     const animate = (timestamp: number) => {
       if (startTime.current === null) startTime.current = timestamp;
@@ -30,21 +37,26 @@ function useCountUp(target: number, duration = 1200): number {
   return current;
 }
 
-export default function KPICard({ value, label, format, accent }: KPICardProps) {
+export default function KPICard({ value, label, sub, format, accent }: KPICardProps) {
   const animated = useCountUp(value);
   const display = format ? format(animated) : Math.round(animated).toLocaleString();
 
   return (
     <div className="border-3 border-brutal-white bg-brutal-dark-gray p-5 shadow-[4px_4px_0px_0px_#f5f5f0]">
       <div
-        className="text-4xl md:text-5xl font-extrabold tracking-tight leading-none"
+        className="text-4xl md:text-5xl font-extrabold tracking-tight leading-none tabular"
         style={{ color: accent || "#f5f5f0" }}
       >
         {display}
       </div>
-      <div className="text-xs tracking-[0.2em] uppercase text-brutal-gray mt-2 font-bold">
+      <div className="text-xs tracking-[0.2em] uppercase text-brutal-muted mt-2 font-bold">
         {label}
       </div>
+      {sub && (
+        <div className="text-xs text-brutal-muted mt-1 leading-relaxed">
+          {sub}
+        </div>
+      )}
     </div>
   );
 }

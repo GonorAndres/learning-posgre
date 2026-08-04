@@ -10,11 +10,15 @@ import { delays, geospatial, heatmap } from "@/lib/data";
 import { pct } from "@/lib/format";
 import { useI18n } from "@/lib/i18n";
 
+/** "Voronezh International Airport" -> "Voronezh" for tight KPI subtitles */
+const shortName = (s: string) => s.replace(/ (International )?Airport$/i, "");
+
 export default function DelaysPage() {
   const { t } = useI18n();
   const overview = delays.overview;
   const totalDelayed = delays.byHour.reduce((s, h) => s + h.delayed, 0);
   const overallRate = (totalDelayed / overview.arrived) * 100;
+  const worstRoute = delays.topRoutes[0];
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 py-8">
@@ -26,31 +30,26 @@ export default function DelaysPage() {
 
       {/* KPIs */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <KPICard value={overallRate} label={t("delays.kpi.overall")} format={(n) => pct(n)} accent="#ff3333" />
-        <KPICard value={totalDelayed} label={t("delays.kpi.total")} accent="#ffcc00" />
-        <KPICard value={delays.topRoutes[0]?.delay_pct || 0} label={t("delays.kpi.worst")} format={(n) => pct(n)} accent="#ff3333" />
-        <KPICard value={0} label={t("delays.kpi.recovery")} format={(n) => pct(n)} accent="#ff3333" />
+        <KPICard value={overallRate} label={t("delays.kpi.overall")} sub={t("delays.kpi.overall.sub")} format={(n) => pct(n)} accent="#ff3333" />
+        <KPICard value={totalDelayed} label={t("delays.kpi.total")} sub={t("delays.kpi.total.sub")} accent="#ffcc00" />
+        <KPICard
+          value={worstRoute?.delay_pct || 0}
+          label={t("delays.kpi.worst")}
+          sub={worstRoute ? `${shortName(worstRoute.departure)} → ${shortName(worstRoute.arrival)}` : undefined}
+          format={(n) => pct(n)}
+          accent="#ff3333"
+        />
+        <KPICard value={0} label={t("delays.kpi.recovery")} sub={t("delays.kpi.recovery.sub")} format={(n) => pct(n)} accent="#ff3333" />
       </div>
 
       {/* Heatmap */}
-      <SectionHeader title={t("delays.heatmap")} subtitle={t("delays.heatmap.sub")} />
+      <SectionHeader title={t("delays.heatmap")} subtitle={t("delays.heatmap.sub")} takeaway={t("delays.heatmap.take")} />
       <div className="mb-10 bg-brutal-dark-gray border-3 border-brutal-gray p-4">
         <Heatmap data={heatmap} />
-        <div className="flex items-center gap-4 mt-3 text-xs text-brutal-gray">
-          <span className="flex items-center gap-1">
-            <span className="w-3 h-3 inline-block" style={{ background: "#00cc66" }} /> {t("common.low")}
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="w-3 h-3 inline-block" style={{ background: "#ffcc00" }} /> {t("common.medium")}
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="w-3 h-3 inline-block" style={{ background: "#ff3333" }} /> {t("common.high")}
-          </span>
-        </div>
       </div>
 
       {/* By Aircraft */}
-      <SectionHeader title={t("delays.byAircraft")} />
+      <SectionHeader title={t("delays.byAircraft")} takeaway={t("delays.byAircraft.take")} />
       <div className="mb-10 bg-brutal-dark-gray border-3 border-brutal-gray p-4">
         <BrutalBarChart
           data={delays.byAircraft as unknown as Record<string, unknown>[]}
@@ -64,7 +63,7 @@ export default function DelaysPage() {
       </div>
 
       {/* By Distance */}
-      <SectionHeader title={t("delays.byDistance")} />
+      <SectionHeader title={t("delays.byDistance")} takeaway={t("delays.byDistance.take")} />
       <div className="mb-10 bg-brutal-dark-gray border-3 border-brutal-gray p-4">
         <BrutalBarChart
           data={geospatial.delayByDistance as unknown as Record<string, unknown>[]}
@@ -77,7 +76,7 @@ export default function DelaysPage() {
       </div>
 
       {/* Top Delayed Routes */}
-      <SectionHeader title={t("delays.topRoutes")} subtitle={t("delays.topRoutes.sub")} />
+      <SectionHeader title={t("delays.topRoutes")} subtitle={t("delays.topRoutes.sub")} takeaway={t("delays.topRoutes.take")} />
       <div className="bg-brutal-dark-gray border-3 border-brutal-gray p-4">
         <DataTable
           data={delays.topRoutes as unknown as Record<string, unknown>[]}
@@ -86,7 +85,7 @@ export default function DelaysPage() {
             { key: "arrival", label: t("common.to") },
             { key: "total_flights", label: t("common.flights"), align: "right" },
             { key: "delayed_flights", label: t("common.delayed"), align: "right" },
-            { key: "delay_pct", label: t("common.delayPct"), align: "right", format: (v) => pct(Number(v)) },
+            { key: "delay_pct", label: t("common.delayPct"), align: "right", format: (v) => pct(Number(v)), emphasis: true },
             { key: "avg_delay_min", label: t("common.avgDelay"), align: "right", format: (v) => `${Number(v).toFixed(0)} min` },
           ]}
         />
