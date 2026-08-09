@@ -23,9 +23,22 @@
 const POSTHOG_INGEST = "https://us.i.posthog.com";
 const POSTHOG_ASSETS = "https://us-assets.i.posthog.com";
 
+// Cloudflare names every Pages project `<project>.pages.dev` on creation; the
+// custom domain is a CNAME added on top, so both answer and the site is
+// reachable at two public URLs. The Access app covers `*.analytics-flights.pages.dev`,
+// which matches one leading label -- `dev.`, `<hash>.` -- but never the bare
+// apex. Send the apex to the branded domain so search engines consolidate on
+// one URL instead of indexing both.
+const PAGES_APEX = "analytics-flights.pages.dev";
+const CANONICAL_ORIGIN = "https://analytics-flights.gonor.me";
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.hostname === PAGES_APEX) {
+      return Response.redirect(CANONICAL_ORIGIN + url.pathname + url.search, 301);
+    }
 
     if (url.pathname !== "/ingest" && !url.pathname.startsWith("/ingest/")) {
       return env.ASSETS.fetch(request);
